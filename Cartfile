@@ -1,0 +1,29 @@
+github "Moya/Moya"
+
+github "Alamofire/AlamofireImage" ~> 3.3
+
+github "realm/realm-cocoa"
+
+github "Raizlabs/BonMot"
+
+github "Hearst-DD/ObjectMapper"
+
+github "radex/SwiftyUserDefaults" "4.0.0-alpha.1"
+
+github "SwiftyJSON/SwiftyJSON"
+
+github "dzenbot/DZNEmptyDataSet"
+
+github "Instagram/IGListKit" ~> 3.0
+
+github "marcosgriselli/EasyTransitions"
+
+github "MessageKit/MessageKit"
+
+github "corin8823/Popover"
+
+github "serp1412/LazyTransitions"
+
+github "airbnb/lottie-ios" "master"
+
+github "nvzqz/FileKit"
