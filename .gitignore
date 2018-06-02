@@ -97,3 +97,6 @@ fastlane/conf.yml
 
 ## IDE
 /.idea
+
+## Firebase file
+Messenger/GoogleService-Info.plist
