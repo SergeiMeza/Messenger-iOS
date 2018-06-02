@@ -7,6 +7,8 @@ Messenger is a native messenger app written in Swift. It supports audio/video ca
 ### Table of Contents
 - [KEY FEATURES](#key-features)
 - [FEATURES](#features)
+- [REQUIREMENTS](#requirements)
+- [INSTALLATION](#installation)
 
 
 ## KEY FEATURES
