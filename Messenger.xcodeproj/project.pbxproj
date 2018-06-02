@@ -9,6 +9,30 @@
 /* Begin PBXBuildFile section */
 		0DBF0C0F5A9765397B50A0AF /* Pods_Messenger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FBEA1C7472AD8614637218E /* Pods_Messenger.framework */; };
 		E86AB0AA20C32D0200657311 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E86AB0A920C32D0200657311 /* GoogleService-Info.plist */; };
+		E86AB0AD20C3323500657311 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86AB0AC20C3323500657311 /* AudioToolbox.framework */; };
+		E86AB0C720C3343500657311 /* RxMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86AB0AF20C3343300657311 /* RxMoya.framework */; };
+		E86AB0C820C3343500657311 /* DZNEmptyDataSet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86AB0B020C3343300657311 /* DZNEmptyDataSet.framework */; };
+		E86AB0C920C3343500657311 /* BonMot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86AB0B120C3343400657311 /* BonMot.framework */; };
+		E86AB0CA20C3343500657311 /* MessageKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86AB0B220C3343400657311 /* MessageKit.framework */; };
+		E86AB0CC20C3343500657311 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86AB0B420C3343400657311 /* Alamofire.framework */; };
+		E86AB0CD20C3343500657311 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86AB0B520C3343400657311 /* AlamofireImage.framework */; };
+		E86AB0CE20C3343500657311 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86AB0B620C3343400657311 /* Moya.framework */; };
+		E86AB0CF20C3343500657311 /* LazyTransitions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86AB0B720C3343400657311 /* LazyTransitions.framework */; };
+		E86AB0D020C3343500657311 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86AB0B820C3343400657311 /* Result.framework */; };
+		E86AB0D120C3343500657311 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86AB0B920C3343400657311 /* RxBlocking.framework */; };
+		E86AB0D220C3343500657311 /* FileKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86AB0BA20C3343400657311 /* FileKit.framework */; };
+		E86AB0D320C3343500657311 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86AB0BB20C3343400657311 /* SwiftyJSON.framework */; };
+		E86AB0D420C3343500657311 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86AB0BC20C3343400657311 /* RxCocoa.framework */; };
+		E86AB0D520C3343500657311 /* IGListKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86AB0BD20C3343500657311 /* IGListKit.framework */; };
+		E86AB0D620C3343500657311 /* SwiftyUserDefaults.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86AB0BE20C3343500657311 /* SwiftyUserDefaults.framework */; };
+		E86AB0D720C3343500657311 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86AB0BF20C3343500657311 /* ObjectMapper.framework */; };
+		E86AB0D820C3343500657311 /* ReactiveSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86AB0C020C3343500657311 /* ReactiveSwift.framework */; };
+		E86AB0D920C3343500657311 /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86AB0C120C3343500657311 /* Lottie.framework */; };
+		E86AB0DA20C3343500657311 /* ReactiveMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86AB0C220C3343500657311 /* ReactiveMoya.framework */; };
+		E86AB0DB20C3343500657311 /* Popover.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86AB0C320C3343500657311 /* Popover.framework */; };
+		E86AB0DC20C3343500657311 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86AB0C420C3343500657311 /* RealmSwift.framework */; };
+		E86AB0DD20C3343500657311 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86AB0C520C3343500657311 /* RxSwift.framework */; };
+		E86AB0DE20C3343500657311 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86AB0C620C3343500657311 /* Realm.framework */; };
 		E88D6ED120C31B8800F83BDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88D6ED020C31B8800F83BDE /* AppDelegate.swift */; };
 		E88D6ED320C31B8800F83BDE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88D6ED220C31B8800F83BDE /* ViewController.swift */; };
 		E88D6ED620C31B8800F83BDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E88D6ED420C31B8800F83BDE /* Main.storyboard */; };
@@ -21,6 +45,32 @@
 		8FBEA1C7472AD8614637218E /* Pods_Messenger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Messenger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9D8EA1B6381A51FAE593D05 /* Pods-Messenger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messenger.release.xcconfig"; path = "Pods/Target Support Files/Pods-Messenger/Pods-Messenger.release.xcconfig"; sourceTree = "<group>"; };
 		E86AB0A920C32D0200657311 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E86AB0AB20C3322A00657311 /* Messenger.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Messenger.entitlements; sourceTree = "<group>"; };
+		E86AB0AC20C3323500657311 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		E86AB0AF20C3343300657311 /* RxMoya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxMoya.framework; path = Carthage/Build/iOS/RxMoya.framework; sourceTree = "<group>"; };
+		E86AB0B020C3343300657311 /* DZNEmptyDataSet.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DZNEmptyDataSet.framework; path = Carthage/Build/iOS/DZNEmptyDataSet.framework; sourceTree = "<group>"; };
+		E86AB0B120C3343400657311 /* BonMot.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BonMot.framework; path = Carthage/Build/iOS/BonMot.framework; sourceTree = "<group>"; };
+		E86AB0B220C3343400657311 /* MessageKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageKit.framework; path = Carthage/Build/iOS/MessageKit.framework; sourceTree = "<group>"; };
+		E86AB0B320C3343400657311 /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
+		E86AB0B420C3343400657311 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		E86AB0B520C3343400657311 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
+		E86AB0B620C3343400657311 /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = Carthage/Build/iOS/Moya.framework; sourceTree = "<group>"; };
+		E86AB0B720C3343400657311 /* LazyTransitions.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LazyTransitions.framework; path = Carthage/Build/iOS/LazyTransitions.framework; sourceTree = "<group>"; };
+		E86AB0B820C3343400657311 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		E86AB0B920C3343400657311 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
+		E86AB0BA20C3343400657311 /* FileKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FileKit.framework; path = Carthage/Build/iOS/FileKit.framework; sourceTree = "<group>"; };
+		E86AB0BB20C3343400657311 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		E86AB0BC20C3343400657311 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		E86AB0BD20C3343500657311 /* IGListKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IGListKit.framework; path = Carthage/Build/iOS/IGListKit.framework; sourceTree = "<group>"; };
+		E86AB0BE20C3343500657311 /* SwiftyUserDefaults.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyUserDefaults.framework; path = Carthage/Build/iOS/SwiftyUserDefaults.framework; sourceTree = "<group>"; };
+		E86AB0BF20C3343500657311 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
+		E86AB0C020C3343500657311 /* ReactiveSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveSwift.framework; path = Carthage/Build/iOS/ReactiveSwift.framework; sourceTree = "<group>"; };
+		E86AB0C120C3343500657311 /* Lottie.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Lottie.framework; path = Carthage/Build/iOS/Lottie.framework; sourceTree = "<group>"; };
+		E86AB0C220C3343500657311 /* ReactiveMoya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveMoya.framework; path = Carthage/Build/iOS/ReactiveMoya.framework; sourceTree = "<group>"; };
+		E86AB0C320C3343500657311 /* Popover.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Popover.framework; path = Carthage/Build/iOS/Popover.framework; sourceTree = "<group>"; };
+		E86AB0C420C3343500657311 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		E86AB0C520C3343500657311 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		E86AB0C620C3343500657311 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		E88D6ECD20C31B8800F83BDE /* Messenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Messenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E88D6ED020C31B8800F83BDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E88D6ED220C31B8800F83BDE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,7 +85,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E86AB0C720C3343500657311 /* RxMoya.framework in Frameworks */,
+				E86AB0C820C3343500657311 /* DZNEmptyDataSet.framework in Frameworks */,
+				E86AB0C920C3343500657311 /* BonMot.framework in Frameworks */,
+				E86AB0CA20C3343500657311 /* MessageKit.framework in Frameworks */,
+				E86AB0CC20C3343500657311 /* Alamofire.framework in Frameworks */,
+				E86AB0CD20C3343500657311 /* AlamofireImage.framework in Frameworks */,
+				E86AB0CE20C3343500657311 /* Moya.framework in Frameworks */,
+				E86AB0CF20C3343500657311 /* LazyTransitions.framework in Frameworks */,
+				E86AB0D020C3343500657311 /* Result.framework in Frameworks */,
+				E86AB0D120C3343500657311 /* RxBlocking.framework in Frameworks */,
+				E86AB0D220C3343500657311 /* FileKit.framework in Frameworks */,
+				E86AB0D320C3343500657311 /* SwiftyJSON.framework in Frameworks */,
+				E86AB0D420C3343500657311 /* RxCocoa.framework in Frameworks */,
+				E86AB0D520C3343500657311 /* IGListKit.framework in Frameworks */,
+				E86AB0D620C3343500657311 /* SwiftyUserDefaults.framework in Frameworks */,
+				E86AB0D720C3343500657311 /* ObjectMapper.framework in Frameworks */,
+				E86AB0D820C3343500657311 /* ReactiveSwift.framework in Frameworks */,
+				E86AB0D920C3343500657311 /* Lottie.framework in Frameworks */,
+				E86AB0DA20C3343500657311 /* ReactiveMoya.framework in Frameworks */,
+				E86AB0DB20C3343500657311 /* Popover.framework in Frameworks */,
+				E86AB0DC20C3343500657311 /* RealmSwift.framework in Frameworks */,
+				E86AB0DD20C3343500657311 /* RxSwift.framework in Frameworks */,
+				E86AB0DE20C3343500657311 /* Realm.framework in Frameworks */,
 				0DBF0C0F5A9765397B50A0AF /* Pods_Messenger.framework in Frameworks */,
+				E86AB0AD20C3323500657311 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +128,31 @@
 		81770163C1E49F71EBD124B3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E86AB0B420C3343400657311 /* Alamofire.framework */,
+				E86AB0B520C3343400657311 /* AlamofireImage.framework */,
+				E86AB0B120C3343400657311 /* BonMot.framework */,
+				E86AB0B020C3343300657311 /* DZNEmptyDataSet.framework */,
+				E86AB0BA20C3343400657311 /* FileKit.framework */,
+				E86AB0BD20C3343500657311 /* IGListKit.framework */,
+				E86AB0B720C3343400657311 /* LazyTransitions.framework */,
+				E86AB0C120C3343500657311 /* Lottie.framework */,
+				E86AB0B220C3343400657311 /* MessageKit.framework */,
+				E86AB0B620C3343400657311 /* Moya.framework */,
+				E86AB0BF20C3343500657311 /* ObjectMapper.framework */,
+				E86AB0C320C3343500657311 /* Popover.framework */,
+				E86AB0C220C3343500657311 /* ReactiveMoya.framework */,
+				E86AB0C020C3343500657311 /* ReactiveSwift.framework */,
+				E86AB0C620C3343500657311 /* Realm.framework */,
+				E86AB0C420C3343500657311 /* RealmSwift.framework */,
+				E86AB0B820C3343400657311 /* Result.framework */,
+				E86AB0B920C3343400657311 /* RxBlocking.framework */,
+				E86AB0BC20C3343400657311 /* RxCocoa.framework */,
+				E86AB0AF20C3343300657311 /* RxMoya.framework */,
+				E86AB0C520C3343500657311 /* RxSwift.framework */,
+				E86AB0B320C3343400657311 /* RxTest.framework */,
+				E86AB0BB20C3343400657311 /* SwiftyJSON.framework */,
+				E86AB0BE20C3343500657311 /* SwiftyUserDefaults.framework */,
+				E86AB0AC20C3323500657311 /* AudioToolbox.framework */,
 				8FBEA1C7472AD8614637218E /* Pods_Messenger.framework */,
 			);
 			name = Frameworks;
@@ -80,6 +179,7 @@
 		E88D6ECF20C31B8800F83BDE /* Messenger */ = {
 			isa = PBXGroup;
 			children = (
+				E86AB0AB20C3322A00657311 /* Messenger.entitlements */,
 				E86AB0A920C32D0200657311 /* GoogleService-Info.plist */,
 				E88D6ED020C31B8800F83BDE /* AppDelegate.swift */,
 				E88D6ED220C31B8800F83BDE /* ViewController.swift */,
@@ -102,6 +202,7 @@
 				E88D6EC920C31B8800F83BDE /* Sources */,
 				E88D6ECA20C31B8800F83BDE /* Frameworks */,
 				E88D6ECB20C31B8800F83BDE /* Resources */,
+				E86AB0AE20C3327F00657311 /* carthage */,
 				92F2B0486197AA494E7EFACE /* [CP] Embed Pods Frameworks */,
 				7A014CBFCA9E1F0EA9ECAEAE /* [CP] Copy Pods Resources */,
 			);
@@ -126,6 +227,17 @@
 				TargetAttributes = {
 					E88D6ECC20C31B8800F83BDE = {
 						CreatedOnToolsVersion = 9.3.1;
+						SystemCapabilities = {
+							com.apple.InterAppAudio = {
+								enabled = 1;
+							};
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -229,6 +341,7 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
 				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
@@ -251,6 +364,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
@@ -265,6 +379,43 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Messenger/Pods-Messenger-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		E86AB0AE20C3327F00657311 /* carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/AlamofireImage.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/BonMot.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/DZNEmptyDataSet.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/FileKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/IGListKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/LazyTransitions.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Lottie.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/MessageKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Moya.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ObjectMapper.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Popover.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveMoya.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ReactiveSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxBlocking.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxMoya.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyJSON.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SwiftyUserDefaults.framework",
+			);
+			name = carthage;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -419,8 +570,16 @@
 			baseConfigurationReference = 00F71240E251B259B73D2796 /* Pods-Messenger.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUNDLE_DISPLAY_NAME = "Messenger:Staging";
+				BUNDLE_IDENTIFIER = PremiumApps.Messenger;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_ENTITLEMENTS = Messenger/Messenger.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EY5SY49R72;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Messenger/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -438,8 +597,16 @@
 			baseConfigurationReference = B9D8EA1B6381A51FAE593D05 /* Pods-Messenger.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUNDLE_DISPLAY_NAME = Messenger;
+				BUNDLE_IDENTIFIER = PremiumApps.Messenger;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_ENTITLEMENTS = Messenger/Messenger.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EY5SY49R72;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Messenger/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -149,6 +149,7 @@ PODS:
   - SDWebImage/Core (4.3.3)
   - SinchRTC (3.12.5)
   - SinchVerification (2.0.6)
+  - SnapKit (4.0.0)
   - TwitterCore (3.1.0)
   - TwitterKit (3.3.0):
     - TwitterCore (>= 3.1.0)
@@ -170,6 +171,9 @@ DEPENDENCIES:
   - pop (~> 1.0)
   - SinchRTC
   - SinchVerification
+  - SnapKit (~> 4.0.0)
+  - TwitterCore
+  - TwitterKit
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -206,6 +210,7 @@ SPEC REPOS:
     - SDWebImage
     - SinchRTC
     - SinchVerification
+    - SnapKit
     - TwitterCore
     - TwitterKit
 
@@ -243,9 +248,10 @@ SPEC CHECKSUMS:
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
   SinchRTC: c19ff673b25292d247a868b077582f2d11d9dfc6
   SinchVerification: 3bf62ff2d57eb10ecc27796ce9736c786644fe23
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   TwitterCore: 644d59e75abccb26cf0a9050d2c4dea0e5412241
   TwitterKit: a2e60ddcedbf54091eac6f27685ca7a87681e1d7
 
-PODFILE CHECKSUM: 8c76e9354a95fcd5fc3e9d179303df1f9f74768b
+PODFILE CHECKSUM: 8052dbea475869f5bc09beb84209689f627adafc
 
 COCOAPODS: 1.5.2

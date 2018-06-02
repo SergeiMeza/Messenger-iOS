@@ -8,6 +8,10 @@ target 'Messenger' do
 	pod 'Fabric'
 
 	pod 'Crashlytics'
+    
+    pod 'TwitterKit'
+    
+    pod 'TwitterCore'
 
 	pod 'FBSDKCoreKit'
 
@@ -34,5 +38,7 @@ target 'Messenger' do
     pod 'SinchVerification'
     
     pod 'LineSDK', '~> 4.0.2'
+    
+    pod 'SnapKit', '~> 4.0.0'
 
 end
