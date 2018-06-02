@@ -1,0 +1,4 @@
+#!/bin/bash
+
+pod install # CocoaPodsの導入
+carthage bootstrap --platform iOS --no-use-binaries

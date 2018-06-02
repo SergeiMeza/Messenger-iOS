@@ -1,0 +1,5 @@
+
+#!/bin/bash
+
+pod update
+carthage update --platform iOS --no-use-binaries
