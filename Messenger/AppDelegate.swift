@@ -9,7 +9,8 @@
 import UIKit
 import Firebase
 import SwiftyJSON
-
+import RealmSwift
+import GameKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,9 +20,58 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        print(NSHomeDirectory())
+        
         FirebaseApp.configure()
         
+        //  Realm objects initialization
+        let config = Realm.Configuration(schemaVersion: 0, migrationBlock: { (migration, oldSchemaVersion) in
+            
+            //            if (oldSchemaVersion < 1) {
+            //                migration.renameProperty(onType: DBUser.className(), from: "bool1", to: "flagged")
+            //            }
+        })
+        Realm.Configuration.defaultConfiguration = config
+        _ = try! Realm()
+        
+//        Service.users.getUsers { result in
+//            switch result {
+//            case .error(let error):
+//                print(error)
+//            case .success(let users):
+//                DispatchQueue.init(label: "background", qos: DispatchQoS.background).async {
+//                    autoreleasepool {
+//                        let realm = try! Realm()
+//                        try! realm.write {
+//                            users.forEach {
+//                                realm.add($0, update: true)
+//                            }
+//                        }
+//                    }
+//                }
+//            }
+//        }
+        
+        window = UIWindow()
+        window?.makeKeyAndVisible()
+        
+        window?.rootViewController = UINavigationController.init(rootViewController: ViewControllerUsers.instantiate())
+        
         return true
+    }
+    
+    func generateRandomUsers() {
+            let randomGenerator = GKRandomDistribution.init(lowestValue: 0, highestValue: 4)
+            for _ in 1...100 {
+                let user = FirebaseObject.init(path: "USER")
+                user[DeviceConst.object_id] = FirebaseObject.autoId()
+                user["name"] = ["David", "Rose", "Mary", "John", "Paul"][randomGenerator.nextInt()]
+                user["age"] = [13, 10, 18, 22, 24][randomGenerator.nextInt()]
+                user["gender"] = [0 , 1, 2, 3][randomGenerator.nextInt() % 4]
+                user["favorite_color"] = ["red", "blue", "orange", "pink", "yellow"][min(randomGenerator.nextInt(), 3)]
+                user["is_wizard"] = [true, false][randomGenerator.nextInt() % 2]
+                user.saveInBackground()
+            }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

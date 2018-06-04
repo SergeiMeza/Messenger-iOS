@@ -35,7 +35,7 @@ extension UIColor {
     
     static let themeColor = UIColor(red: 239/255, green: 132/255, blue: 145/255, alpha: 1.0)
 
-    static let vcBg = UIColor(red: 232/255, green: 225/255, blue: 225/255, alpha: 1.0)
+    static let backgroundColor: UIColor = .init(white: 0.95, alpha: 1.0)
 
     static let background60 = UIColor(red: 232/255, green: 225/255, blue: 225/255, alpha: 0.6)
     static let background100 = UIColor(red: 232/255, green: 225/255, blue: 225/255, alpha: 1.0)

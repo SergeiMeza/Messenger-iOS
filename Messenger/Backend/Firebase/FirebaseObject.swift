@@ -17,7 +17,12 @@ class FirebaseObject {
     var dictionary: [String: Any]!
     
     var json: JSON {
-        return (dictionary != nil) ? JSON(dictionary) : JSON.null
+        get {
+            return (dictionary != nil) ? JSON(dictionary) : JSON.null
+        }
+        set {
+            dictionary = newValue.dictionaryObject
+        }
     }
     
     // MARK: - Inializers
@@ -93,7 +98,6 @@ class FirebaseObject {
     }
     
     //   MARK: Update Methods
-    /// Override for FUser class
     open func updateInBackground(completion block: ((Error?) -> ())? = nil) {
         let reference = databaseReference()
         if dictionary[DeviceConst.object_id] != nil {
@@ -157,5 +161,9 @@ class FirebaseObject {
         } else {
             return reference.child(dictionary[DeviceConst.object_id] as! String)
         }
+    }
+    
+    class func autoId() -> String {
+        return Database.database().reference().childByAutoId().key
     }
 }

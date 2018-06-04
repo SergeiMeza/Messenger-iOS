@@ -10,9 +10,9 @@ import RxCocoa
 import RxSwift
 import IGListKit
 
-//extension ListCollectionView {
-//    
-//    func createEndScrollingObservable() -> Observable<(cell: UICollectionViewCell, at: IndexPath)> {
-//        return rx.willDisplayCell.filter({ cell, index in cell is CollectionViewCellLoading })
-//    }
-//}
+extension ListCollectionView {
+    
+    func createEndScrollingObservable() -> Observable<(cell: UICollectionViewCell, at: IndexPath)> {
+        return rx.willDisplayCell.filter({ cell, index in cell is CollectionViewCellLoading })
+    }
+}
