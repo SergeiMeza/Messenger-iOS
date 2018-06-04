@@ -31,6 +31,7 @@
 		E86896AD20C512C900EB34EF /* ErrorStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86896AC20C512C900EB34EF /* ErrorStateView.swift */; };
 		E86896B020C5130900EB34EF /* MessengerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86896AF20C5130900EB34EF /* MessengerButton.swift */; };
 		E86896B220C513E000EB34EF /* RxRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86896B120C513DF00EB34EF /* RxRefreshControl.swift */; };
+		E86896B420C51BAD00EB34EF /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86896B320C51BAD00EB34EF /* Connection.swift */; };
 		E86AB0AA20C32D0200657311 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E86AB0A920C32D0200657311 /* GoogleService-Info.plist */; };
 		E86AB0AD20C3323500657311 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86AB0AC20C3323500657311 /* AudioToolbox.framework */; };
 		E86AB0C720C3343500657311 /* RxMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86AB0AF20C3343300657311 /* RxMoya.framework */; };
@@ -116,6 +117,7 @@
 		E86896AC20C512C900EB34EF /* ErrorStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorStateView.swift; sourceTree = "<group>"; };
 		E86896AF20C5130900EB34EF /* MessengerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerButton.swift; sourceTree = "<group>"; };
 		E86896B120C513DF00EB34EF /* RxRefreshControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxRefreshControl.swift; sourceTree = "<group>"; };
+		E86896B320C51BAD00EB34EF /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		E86AB0A920C32D0200657311 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E86AB0AB20C3322A00657311 /* Messenger.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Messenger.entitlements; sourceTree = "<group>"; };
 		E86AB0AC20C3323500657311 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -335,6 +337,7 @@
 			children = (
 				E86896A120C50C4200EB34EF /* ViewModels */,
 				E868968620C4F9BF00EB34EF /* Result.swift */,
+				E86896B320C51BAD00EB34EF /* Connection.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -650,6 +653,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/Reachability/Reachability.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
@@ -673,6 +677,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
@@ -754,6 +759,7 @@
 				E868969720C5096A00EB34EF /* CollectionViewCellLoading.swift in Sources */,
 				E88D6ED320C31B8800F83BDE /* ViewController.swift in Sources */,
 				E88D6ED120C31B8800F83BDE /* AppDelegate.swift in Sources */,
+				E86896B420C51BAD00EB34EF /* Connection.swift in Sources */,
 				E86AB12D20C342F600657311 /* ListBindableViewModel.swift in Sources */,
 				E86AB0E220C335F700657311 /* FirebaseObject.swift in Sources */,
 				E868968D20C504E000EB34EF /* ViewControllerUsers.swift in Sources */,

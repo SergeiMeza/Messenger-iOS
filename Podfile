@@ -40,5 +40,7 @@ target 'Messenger' do
     pod 'LineSDK', '~> 4.0.2'
     
     pod 'SnapKit', '~> 4.0.0'
+    
+    pod 'Reachability'
 
 end
