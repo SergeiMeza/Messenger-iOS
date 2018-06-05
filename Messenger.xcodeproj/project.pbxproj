@@ -32,6 +32,23 @@
 		E86896B020C5130900EB34EF /* MessengerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86896AF20C5130900EB34EF /* MessengerButton.swift */; };
 		E86896B220C513E000EB34EF /* RxRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86896B120C513DF00EB34EF /* RxRefreshControl.swift */; };
 		E86896B420C51BAD00EB34EF /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86896B320C51BAD00EB34EF /* Connection.swift */; };
+		E86896B620C51DE500EB34EF /* NotificationCenter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86896B520C51DE500EB34EF /* NotificationCenter+Extension.swift */; };
+		E86896B820C51FE300EB34EF /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86896B720C51FE300EB34EF /* UserDefaults+Extension.swift */; };
+		E86896BA20C5228000EB34EF /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E86896B920C5228000EB34EF /* Colors.xcassets */; };
+		E86896BC20C52F2A00EB34EF /* FirestoreObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86896BB20C52F2A00EB34EF /* FirestoreObject.swift */; };
+		E86896BE20C587AE00EB34EF /* FirebaseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86896BD20C587AE00EB34EF /* FirebaseObject.swift */; };
+		E86896C120C5895A00EB34EF /* OriginalTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86896C020C5895A00EB34EF /* OriginalTabViewController.swift */; };
+		E86896C320C5898300EB34EF /* OriginalTabInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86896C220C5898300EB34EF /* OriginalTabInfo.swift */; };
+		E86896C520C598CF00EB34EF /* OriginalTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86896C420C598CF00EB34EF /* OriginalTabView.swift */; };
+		E86896C720C598DA00EB34EF /* OriginalTabViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86896C620C598DA00EB34EF /* OriginalTabViewDelegate.swift */; };
+		E86896C920C5994300EB34EF /* OriginalTabPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86896C820C5994300EB34EF /* OriginalTabPageViewController.swift */; };
+		E86896CB20C59AC600EB34EF /* CALayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86896CA20C59AC600EB34EF /* CALayer.swift */; };
+		E86896CD20C60A1500EB34EF /* OriginalTabPageViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86896CC20C60A1500EB34EF /* OriginalTabPageViewControllerDelegate.swift */; };
+		E86896CF20C60DC800EB34EF /* OriginalTabPageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E86896CE20C60DC800EB34EF /* OriginalTabPageViewController.storyboard */; };
+		E86896D120C6149600EB34EF /* OriginalTabViewInfinity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86896D020C6149600EB34EF /* OriginalTabViewInfinity.swift */; };
+		E86896D320C6157D00EB34EF /* OriginalTabView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E86896D220C6157D00EB34EF /* OriginalTabView.xib */; };
+		E86896D520C6158D00EB34EF /* OriginalTabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86896D420C6158C00EB34EF /* OriginalTabCell.swift */; };
+		E86896D720C6159600EB34EF /* OriginalTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E86896D620C6159600EB34EF /* OriginalTabCell.xib */; };
 		E86AB0AA20C32D0200657311 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E86AB0A920C32D0200657311 /* GoogleService-Info.plist */; };
 		E86AB0AD20C3323500657311 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86AB0AC20C3323500657311 /* AudioToolbox.framework */; };
 		E86AB0C720C3343500657311 /* RxMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86AB0AF20C3343300657311 /* RxMoya.framework */; };
@@ -57,7 +74,6 @@
 		E86AB0DC20C3343500657311 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86AB0C420C3343500657311 /* RealmSwift.framework */; };
 		E86AB0DD20C3343500657311 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86AB0C520C3343500657311 /* RxSwift.framework */; };
 		E86AB0DE20C3343500657311 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86AB0C620C3343500657311 /* Realm.framework */; };
-		E86AB0E220C335F700657311 /* FirebaseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86AB0E120C335F700657311 /* FirebaseObject.swift */; };
 		E86AB0F220C338CD00657311 /* DeviceConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86AB0F120C338CD00657311 /* DeviceConst.swift */; };
 		E86AB0F420C3397C00657311 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86AB0F320C3397C00657311 /* String+Extension.swift */; };
 		E86AB0F620C33C6F00657311 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86AB0F520C33C6F00657311 /* Date+Extension.swift */; };
@@ -118,6 +134,23 @@
 		E86896AF20C5130900EB34EF /* MessengerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerButton.swift; sourceTree = "<group>"; };
 		E86896B120C513DF00EB34EF /* RxRefreshControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxRefreshControl.swift; sourceTree = "<group>"; };
 		E86896B320C51BAD00EB34EF /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
+		E86896B520C51DE500EB34EF /* NotificationCenter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+Extension.swift"; sourceTree = "<group>"; };
+		E86896B720C51FE300EB34EF /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
+		E86896B920C5228000EB34EF /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		E86896BB20C52F2A00EB34EF /* FirestoreObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreObject.swift; sourceTree = "<group>"; };
+		E86896BD20C587AE00EB34EF /* FirebaseObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseObject.swift; sourceTree = "<group>"; };
+		E86896C020C5895A00EB34EF /* OriginalTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginalTabViewController.swift; sourceTree = "<group>"; };
+		E86896C220C5898300EB34EF /* OriginalTabInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginalTabInfo.swift; sourceTree = "<group>"; };
+		E86896C420C598CF00EB34EF /* OriginalTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginalTabView.swift; sourceTree = "<group>"; };
+		E86896C620C598DA00EB34EF /* OriginalTabViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginalTabViewDelegate.swift; sourceTree = "<group>"; };
+		E86896C820C5994300EB34EF /* OriginalTabPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginalTabPageViewController.swift; sourceTree = "<group>"; };
+		E86896CA20C59AC600EB34EF /* CALayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CALayer.swift; sourceTree = "<group>"; };
+		E86896CC20C60A1500EB34EF /* OriginalTabPageViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginalTabPageViewControllerDelegate.swift; sourceTree = "<group>"; };
+		E86896CE20C60DC800EB34EF /* OriginalTabPageViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OriginalTabPageViewController.storyboard; sourceTree = "<group>"; };
+		E86896D020C6149600EB34EF /* OriginalTabViewInfinity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginalTabViewInfinity.swift; sourceTree = "<group>"; };
+		E86896D220C6157D00EB34EF /* OriginalTabView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OriginalTabView.xib; sourceTree = "<group>"; };
+		E86896D420C6158C00EB34EF /* OriginalTabCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OriginalTabCell.swift; sourceTree = "<group>"; };
+		E86896D620C6159600EB34EF /* OriginalTabCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OriginalTabCell.xib; sourceTree = "<group>"; };
 		E86AB0A920C32D0200657311 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E86AB0AB20C3322A00657311 /* Messenger.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Messenger.entitlements; sourceTree = "<group>"; };
 		E86AB0AC20C3323500657311 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -145,7 +178,6 @@
 		E86AB0C420C3343500657311 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		E86AB0C520C3343500657311 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		E86AB0C620C3343500657311 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
-		E86AB0E120C335F700657311 /* FirebaseObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseObject.swift; sourceTree = "<group>"; };
 		E86AB0F120C338CD00657311 /* DeviceConst.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceConst.swift; sourceTree = "<group>"; };
 		E86AB0F320C3397C00657311 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		E86AB0F520C33C6F00657311 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
@@ -278,6 +310,7 @@
 		E868969520C5095A00EB34EF /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				E86896BF20C5892300EB34EF /* OriginalTab */,
 				E86896AE20C512FD00EB34EF /* Component */,
 				E868969620C5096A00EB34EF /* CollectionViewCellLoading.swift */,
 				E868969820C509B800EB34EF /* CollectionViewCellLoading.xib */,
@@ -315,6 +348,24 @@
 			path = Component;
 			sourceTree = "<group>";
 		};
+		E86896BF20C5892300EB34EF /* OriginalTab */ = {
+			isa = PBXGroup;
+			children = (
+				E86896C020C5895A00EB34EF /* OriginalTabViewController.swift */,
+				E86896CC20C60A1500EB34EF /* OriginalTabPageViewControllerDelegate.swift */,
+				E86896C820C5994300EB34EF /* OriginalTabPageViewController.swift */,
+				E86896CE20C60DC800EB34EF /* OriginalTabPageViewController.storyboard */,
+				E86896C620C598DA00EB34EF /* OriginalTabViewDelegate.swift */,
+				E86896C420C598CF00EB34EF /* OriginalTabView.swift */,
+				E86896D020C6149600EB34EF /* OriginalTabViewInfinity.swift */,
+				E86896D220C6157D00EB34EF /* OriginalTabView.xib */,
+				E86896D420C6158C00EB34EF /* OriginalTabCell.swift */,
+				E86896D620C6159600EB34EF /* OriginalTabCell.xib */,
+				E86896C220C5898300EB34EF /* OriginalTabInfo.swift */,
+			);
+			path = OriginalTab;
+			sourceTree = "<group>";
+		};
 		E86AB0DF20C335D900657311 /* Backend */ = {
 			isa = PBXGroup;
 			children = (
@@ -327,7 +378,8 @@
 		E86AB0E020C335E100657311 /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
-				E86AB0E120C335F700657311 /* FirebaseObject.swift */,
+				E86896BD20C587AE00EB34EF /* FirebaseObject.swift */,
+				E86896BB20C52F2A00EB34EF /* FirestoreObject.swift */,
 			);
 			path = Firebase;
 			sourceTree = "<group>";
@@ -345,6 +397,7 @@
 		E86AB0E620C3382200657311 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E86896B920C5228000EB34EF /* Colors.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -392,6 +445,9 @@
 				E86AB10820C3401F00657311 /* UICollectionView+Extension.swift */,
 				E86AB0F720C3401C00657311 /* ListCollectionContext+Extension.swift */,
 				E86AB10620C3401F00657311 /* ListCollectionView+Extension.swift */,
+				E86896B520C51DE500EB34EF /* NotificationCenter+Extension.swift */,
+				E86896B720C51FE300EB34EF /* UserDefaults+Extension.swift */,
+				E86896CA20C59AC600EB34EF /* CALayer.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -475,11 +531,11 @@
 		E88D6ECF20C31B8800F83BDE /* Messenger */ = {
 			isa = PBXGroup;
 			children = (
+				E86AB0E620C3382200657311 /* Resources */,
 				E868969220C508A200EB34EF /* SectionControllers */,
 				E86AB0EF20C3389500657311 /* Networking */,
 				E86AB0EE20C3388B00657311 /* Services */,
 				E86AB0ED20C3388400657311 /* Scenes */,
-				E86AB0E620C3382200657311 /* Resources */,
 				E86AB0E720C3382900657311 /* Adapters */,
 				E86AB0E820C3384700657311 /* Delegates */,
 				E86AB0E920C3385100657311 /* DataSources */,
@@ -577,8 +633,12 @@
 				E88D6EDB20C31B8800F83BDE /* LaunchScreen.storyboard in Resources */,
 				E86896A020C50BB300EB34EF /* CollectionViewCellUser.xib in Resources */,
 				E86896A920C5105100EB34EF /* ViewControllerUsers.storyboard in Resources */,
+				E86896D720C6159600EB34EF /* OriginalTabCell.xib in Resources */,
 				E86AB0AA20C32D0200657311 /* GoogleService-Info.plist in Resources */,
 				E88D6ED820C31B8800F83BDE /* Assets.xcassets in Resources */,
+				E86896D320C6157D00EB34EF /* OriginalTabView.xib in Resources */,
+				E86896BA20C5228000EB34EF /* Colors.xcassets in Resources */,
+				E86896CF20C60DC800EB34EF /* OriginalTabPageViewController.storyboard in Resources */,
 				E868969920C509B800EB34EF /* CollectionViewCellLoading.xib in Resources */,
 				E88D6ED620C31B8800F83BDE /* Main.storyboard in Resources */,
 			);
@@ -741,11 +801,17 @@
 			files = (
 				E868968520C4F93400EB34EF /* UsersService.swift in Sources */,
 				E868968320C4F54200EB34EF /* MessengerAPI.swift in Sources */,
+				E86896C720C598DA00EB34EF /* OriginalTabViewDelegate.swift in Sources */,
 				E86AB11A20C3401F00657311 /* UICollectionView+Extension.swift in Sources */,
 				E86896A520C50C8C00EB34EF /* RefreshableModel.swift in Sources */,
+				E86896D120C6149600EB34EF /* OriginalTabViewInfinity.swift in Sources */,
+				E86896B820C51FE300EB34EF /* UserDefaults+Extension.swift in Sources */,
 				E86AB10D20C3401F00657311 /* UILabel+Extension.swift in Sources */,
+				E86896CB20C59AC600EB34EF /* CALayer.swift in Sources */,
 				E86AB11720C3401F00657311 /* UITableView+Extension.swift in Sources */,
+				E86896BE20C587AE00EB34EF /* FirebaseObject.swift in Sources */,
 				E86AB11320C3401F00657311 /* UIViewController+TransitionType.swift in Sources */,
+				E86896C320C5898300EB34EF /* OriginalTabInfo.swift in Sources */,
 				E868969B20C50A5100EB34EF /* SectionControllerUser.swift in Sources */,
 				E868968720C4F9BF00EB34EF /* Result.swift in Sources */,
 				E86AB11420C3401F00657311 /* UIApplication+Extension.swift in Sources */,
@@ -756,13 +822,16 @@
 				E86AB12A20C342F600657311 /* MovableNavBar.swift in Sources */,
 				E868968B20C4FC0D00EB34EF /* Service.swift in Sources */,
 				E86AB0F220C338CD00657311 /* DeviceConst.swift in Sources */,
+				E86896B620C51DE500EB34EF /* NotificationCenter+Extension.swift in Sources */,
+				E86896C920C5994300EB34EF /* OriginalTabPageViewController.swift in Sources */,
 				E868969720C5096A00EB34EF /* CollectionViewCellLoading.swift in Sources */,
 				E88D6ED320C31B8800F83BDE /* ViewController.swift in Sources */,
 				E88D6ED120C31B8800F83BDE /* AppDelegate.swift in Sources */,
+				E86896BC20C52F2A00EB34EF /* FirestoreObject.swift in Sources */,
 				E86896B420C51BAD00EB34EF /* Connection.swift in Sources */,
 				E86AB12D20C342F600657311 /* ListBindableViewModel.swift in Sources */,
-				E86AB0E220C335F700657311 /* FirebaseObject.swift in Sources */,
 				E868968D20C504E000EB34EF /* ViewControllerUsers.swift in Sources */,
+				E86896D520C6158D00EB34EF /* OriginalTabCell.swift in Sources */,
 				E86AB0F620C33C6F00657311 /* Date+Extension.swift in Sources */,
 				E86AB12C20C342F600657311 /* Searchable.swift in Sources */,
 				E86AB11620C3401F00657311 /* UIImageView+Extension.swift in Sources */,
@@ -773,6 +842,7 @@
 				E86AB11220C3401F00657311 /* Collection+Extension.swift in Sources */,
 				E86AB10E20C3401F00657311 /* UIView+Extension.swift in Sources */,
 				E86AB10C20C3401F00657311 /* NSObject+propertyNames.swift in Sources */,
+				E86896CD20C60A1500EB34EF /* OriginalTabPageViewControllerDelegate.swift in Sources */,
 				E86896A320C50C4E00EB34EF /* ViewModelUsers.swift in Sources */,
 				E868968F20C5080400EB34EF /* CollectionViewScrollDelegate.swift in Sources */,
 				E86896A720C50CF800EB34EF /* LoadingState.swift in Sources */,
@@ -780,8 +850,10 @@
 				E86896AD20C512C900EB34EF /* ErrorStateView.swift in Sources */,
 				E86AB12F20C342F600657311 /* StatusBarStyleable.swift in Sources */,
 				E86AB13120C342F600657311 /* NibLoadable.swift in Sources */,
+				E86896C520C598CF00EB34EF /* OriginalTabView.swift in Sources */,
 				E86AB10B20C3401F00657311 /* UIFont+Extension.swift in Sources */,
 				E868969120C5083B00EB34EF /* DataSourceUsers.swift in Sources */,
+				E86896C120C5895A00EB34EF /* OriginalTabViewController.swift in Sources */,
 				E86AB11520C3401F00657311 /* UIImage+Extension.swift in Sources */,
 				E86AB0F420C3397C00657311 /* String+Extension.swift in Sources */,
 				E86AB12E20C342F600657311 /* Reusable.swift in Sources */,

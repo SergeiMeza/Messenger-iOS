@@ -10,11 +10,14 @@ import Foundation
 import IGListKit
 import RxCocoa
 import RxSwift
+import Firebase
 
 class ViewModelUsers: RefreshableModel {
     private let state = BehaviorRelay<LoadingState>(value: .loading)
     private let refreshing = BehaviorRelay<Bool>(value: false)
     private let items = BehaviorRelay<[ListDiffable]>(value: [])
+    
+    private var lastDocument: DocumentSnapshot?
     
     private var currentPage = 0
     private var busy = false
@@ -67,12 +70,13 @@ class ViewModelUsers: RefreshableModel {
         currentPage += 1
         busy = true
         
-        Service.users.getUsers { [weak self] result in
+        Service.users.getUsersFromFirestore(paginate: true, lastDocument: lastDocument) { [weak self] result in
             switch result {
-            case .success( let users):
+            case .success( let users, let lastDocument):
                 if users.isEmpty { self?.isCompleted = true }
                 self?.state.accept(.success)
                 self?.users.append(contentsOf: users)
+                self?.lastDocument = lastDocument
                 self?.setItems()
                 self?.refreshing.accept(false)
                 self?.busy = false

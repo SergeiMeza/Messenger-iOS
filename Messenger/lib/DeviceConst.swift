@@ -9,9 +9,10 @@
 import Foundation
 
 struct DeviceConst {
-    static let defaultFont = "CourierNew"
-    
     static let firebaseDatabaseRootURL = "v0".url!
+    static let firebaseFirestoreRootCollection = "v0"
+    
+    static let defaultFont = "CourierNew"
     
     static let object_id = "object_id"
     static let created_at = "created_at"

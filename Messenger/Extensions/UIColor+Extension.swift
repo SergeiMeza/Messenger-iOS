@@ -33,12 +33,13 @@ extension UIColor {
 
 extension UIColor {
     
-    static let themeColor = UIColor(red: 239/255, green: 132/255, blue: 145/255, alpha: 1.0)
+    static let themeColor = UIColor.init(named: "theme")!
 
-    static let backgroundColor: UIColor = .init(white: 0.95, alpha: 1.0)
+    static let backgroundColor: UIColor = UIColor.init(named: "background")!
 
-    static let background60 = UIColor(red: 232/255, green: 225/255, blue: 225/255, alpha: 0.6)
-    static let background100 = UIColor(red: 232/255, green: 225/255, blue: 225/255, alpha: 1.0)
+    static let background60 = UIColor.init(named: "background")!.withAlphaComponent(0.6)
+    static let background100 = UIColor.init(named: "background")!.withAlphaComponent(1)
+    
     static let lips10 = UIColor(red: 255/255, green: 239/255, blue: 241/255, alpha: 1.0)
     static let lips60 = UIColor(red: 237/255, green: 116/255, blue: 131/255, alpha: 1.0)
     static let alabaster = UIColor(red: 250/255, green: 250/255, blue: 250/255, alpha: 1.0)

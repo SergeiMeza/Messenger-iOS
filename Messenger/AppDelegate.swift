@@ -24,43 +24,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         
+//        generateRandomUsersWithFirebaseDatabase()
+//        generateRandomUsersWithFirebaseFirestore()
+        
         //  Realm objects initialization
         let config = Realm.Configuration(schemaVersion: 0, migrationBlock: { (migration, oldSchemaVersion) in
             
-            //            if (oldSchemaVersion < 1) {
-            //                migration.renameProperty(onType: DBUser.className(), from: "bool1", to: "flagged")
-            //            }
         })
         Realm.Configuration.defaultConfiguration = config
         _ = try! Realm()
         
-//        Service.users.getUsers { result in
-//            switch result {
-//            case .error(let error):
-//                print(error)
-//            case .success(let users):
-//                DispatchQueue.init(label: "background", qos: DispatchQoS.background).async {
-//                    autoreleasepool {
-//                        let realm = try! Realm()
-//                        try! realm.write {
-//                            users.forEach {
-//                                realm.add($0, update: true)
-//                            }
-//                        }
-//                    }
-//                }
-//            }
-//        }
+//        getUsersFromFirebaseDatabaseAndSaveInRealm()
+//        getUsersFromFirebaseFirestoreAndSaveInRealm()
         
         window = UIWindow()
         window?.makeKeyAndVisible()
-        
-        window?.rootViewController = UINavigationController.init(rootViewController: ViewControllerUsers.instantiate())
+//        window?.rootViewController = ViewController()
+        let homeViewController = UINavigationController.init(rootViewController: ViewControllerUsers.instantiate())
+        homeViewController.tabBarItem.title = "Home"
+        homeViewController.tabBarItem.image = UIImage.init(named: "home")
+        let tabBarController = UITabBarController.init()
+        tabBarController.viewControllers = [homeViewController]
+        window?.rootViewController = tabBarController
         
         return true
     }
     
-    func generateRandomUsers() {
+    func generateRandomUsersWithFirebaseDatabase() {
             let randomGenerator = GKRandomDistribution.init(lowestValue: 0, highestValue: 4)
             for _ in 1...100 {
                 let user = FirebaseObject.init(path: "USER")
@@ -72,6 +62,67 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 user["is_wizard"] = [true, false][randomGenerator.nextInt() % 2]
                 user.saveInBackground()
             }
+    }
+    
+    func generateRandomUsersWithFirebaseFirestore() {
+        let database = Firestore.firestore()
+        var reference: DocumentReference!
+        let randomGenerator = GKRandomDistribution.init(lowestValue: 0, highestValue: 4)
+        for _ in 1...100 {
+            reference = database.collection(DeviceConst.firebaseDatabaseRootURL.appendingPathComponent("USERS/active_users/").absoluteString).addDocument(data: [
+                "name":["David", "Rose", "Mary", "John", "Paul"][randomGenerator.nextInt()],
+                 "age": [13, 10, 18, 22, 24][randomGenerator.nextInt()],
+                 "gender": [0 , 1, 2, 3][randomGenerator.nextInt() % 4],
+                 "favorite_color": ["red", "blue", "orange", "pink", "yellow"][min(randomGenerator.nextInt(), 3)],
+                 "is_wizard": [true, false][randomGenerator.nextInt() % 2]
+            ]) { err in
+                if let err = err {
+                    print("Error adding document: \(err)")
+                } else {
+                    print("Document added with ID: \(reference.documentID)")
+                }
+            }
+        }
+    }
+    
+    func getUsersFromFirebaseDatabaseAndSaveInRealm() {
+        Service.users.getUsersFromFirebase { result in
+            switch result {
+            case .error(let error):
+                print(error)
+            case .success(let users):
+                DispatchQueue.init(label: "background", qos: DispatchQoS.background).async {
+                    autoreleasepool {
+                        let realm = try! Realm()
+                        try! realm.write {
+                            users.forEach {
+                                realm.add($0, update: true)
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    func getUsersFromFirebaseFirestoreAndSaveInRealm() {
+        Service.users.getUsersFromFirestore(paginate: false) { result in
+            switch result {
+            case .error(let error):
+                print(error)
+            case .success(let users, _):
+                DispatchQueue.init(label: "background", qos: DispatchQoS.background).async {
+                    autoreleasepool {
+                        let realm = try! Realm()
+                        try! realm.write {
+                            users.forEach {
+                                realm.add($0, update: true)
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

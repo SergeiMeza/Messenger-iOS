@@ -43,7 +43,8 @@ class ViewControllerUsers: UIViewController {
     }
     
     private func setupSubviews() {
-        title = "Users"
+        title = "Home"
+        tabBarItem.title = "Home"
         collectionViewUsers.backgroundColor = .backgroundColor
         collectionViewUsers.addSubview(refreshControl)
         adapter.collectionView = collectionViewUsers
