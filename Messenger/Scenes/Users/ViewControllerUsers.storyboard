@@ -19,18 +19,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2bU-b4-6Jx" customClass="LoadingStateView" customModule="Messenger" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="675"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5kJ-4b-KeZ" customClass="ErrorStateView" customModule="Messenger" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="675"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Agz-MC-mv9">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="675"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cq4-4g-l08" customClass="IGListCollectionView">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="675"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aEe-oB-g3g">
                                             <size key="itemSize" width="50" height="50"/>
@@ -55,10 +55,10 @@
                             <constraint firstItem="5kJ-4b-KeZ" firstAttribute="trailing" secondItem="Agz-MC-mv9" secondAttribute="trailing" id="1Yc-K2-TJ9"/>
                             <constraint firstAttribute="trailing" secondItem="Agz-MC-mv9" secondAttribute="trailing" id="7C4-dq-E9x"/>
                             <constraint firstItem="2bU-b4-6Jx" firstAttribute="leading" secondItem="5kJ-4b-KeZ" secondAttribute="leading" id="8HC-B5-rmw"/>
-                            <constraint firstItem="5kJ-4b-KeZ" firstAttribute="bottom" secondItem="edx-tu-kZ1" secondAttribute="bottom" id="BEm-7V-AUn"/>
-                            <constraint firstItem="2bU-b4-6Jx" firstAttribute="bottom" secondItem="edx-tu-kZ1" secondAttribute="bottom" id="JHp-DN-tmY"/>
+                            <constraint firstItem="5kJ-4b-KeZ" firstAttribute="bottom" secondItem="edx-tu-kZ1" secondAttribute="bottom" constant="8" id="BEm-7V-AUn"/>
+                            <constraint firstItem="2bU-b4-6Jx" firstAttribute="bottom" secondItem="edx-tu-kZ1" secondAttribute="bottom" constant="8" id="JHp-DN-tmY"/>
                             <constraint firstItem="5kJ-4b-KeZ" firstAttribute="top" secondItem="Agz-MC-mv9" secondAttribute="top" id="N8S-vC-Ph0"/>
-                            <constraint firstItem="Agz-MC-mv9" firstAttribute="bottom" secondItem="edx-tu-kZ1" secondAttribute="bottom" id="NK4-nN-4Gf"/>
+                            <constraint firstItem="Agz-MC-mv9" firstAttribute="bottom" secondItem="edx-tu-kZ1" secondAttribute="bottom" constant="8" id="NK4-nN-4Gf"/>
                             <constraint firstItem="Agz-MC-mv9" firstAttribute="leading" secondItem="E2O-xg-FIJ" secondAttribute="leading" id="Oe3-5D-Fsq"/>
                             <constraint firstItem="5kJ-4b-KeZ" firstAttribute="leading" secondItem="Agz-MC-mv9" secondAttribute="leading" id="a3e-Nh-hTt"/>
                             <constraint firstItem="2bU-b4-6Jx" firstAttribute="top" secondItem="Agz-MC-mv9" secondAttribute="top" id="bQJ-N6-gDX"/>

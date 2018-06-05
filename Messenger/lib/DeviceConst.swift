@@ -6,7 +6,7 @@
 //  Copyright © 2018 Sergei Meza. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct DeviceConst {
     static let firebaseDatabaseRootURL = "v0".url!
@@ -23,4 +23,6 @@ struct DeviceConst {
     static let kilo = 1000
     static let mega = kilo * kilo
     static let giga = mega * kilo
+    
+    static let tabBarOffset: CGFloat = 8
 }

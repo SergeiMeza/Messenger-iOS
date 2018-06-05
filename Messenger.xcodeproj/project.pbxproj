@@ -49,6 +49,9 @@
 		E86896D320C6157D00EB34EF /* OriginalTabView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E86896D220C6157D00EB34EF /* OriginalTabView.xib */; };
 		E86896D520C6158D00EB34EF /* OriginalTabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86896D420C6158C00EB34EF /* OriginalTabCell.swift */; };
 		E86896D720C6159600EB34EF /* OriginalTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E86896D620C6159600EB34EF /* OriginalTabCell.xib */; };
+		E86896DA20C6F03E00EB34EF /* TabBarControllerHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86896D920C6F03E00EB34EF /* TabBarControllerHome.swift */; };
+		E86896DF20C6F78600EB34EF /* MessengerPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86896DE20C6F78600EB34EF /* MessengerPopover.swift */; };
+		E86896E120C700F900EB34EF /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86896E020C700F900EB34EF /* UIHelper.swift */; };
 		E86AB0AA20C32D0200657311 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E86AB0A920C32D0200657311 /* GoogleService-Info.plist */; };
 		E86AB0AD20C3323500657311 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86AB0AC20C3323500657311 /* AudioToolbox.framework */; };
 		E86AB0C720C3343500657311 /* RxMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86AB0AF20C3343300657311 /* RxMoya.framework */; };
@@ -151,6 +154,9 @@
 		E86896D220C6157D00EB34EF /* OriginalTabView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OriginalTabView.xib; sourceTree = "<group>"; };
 		E86896D420C6158C00EB34EF /* OriginalTabCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OriginalTabCell.swift; sourceTree = "<group>"; };
 		E86896D620C6159600EB34EF /* OriginalTabCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OriginalTabCell.xib; sourceTree = "<group>"; };
+		E86896D920C6F03E00EB34EF /* TabBarControllerHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerHome.swift; sourceTree = "<group>"; };
+		E86896DE20C6F78600EB34EF /* MessengerPopover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessengerPopover.swift; sourceTree = "<group>"; };
+		E86896E020C700F900EB34EF /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		E86AB0A920C32D0200657311 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E86AB0AB20C3322A00657311 /* Messenger.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Messenger.entitlements; sourceTree = "<group>"; };
 		E86AB0AC20C3323500657311 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -310,6 +316,7 @@
 		E868969520C5095A00EB34EF /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				E86896DD20C6F77900EB34EF /* Popover */,
 				E86896BF20C5892300EB34EF /* OriginalTab */,
 				E86896AE20C512FD00EB34EF /* Component */,
 				E868969620C5096A00EB34EF /* CollectionViewCellLoading.swift */,
@@ -317,6 +324,7 @@
 				E86896AA20C5122300EB34EF /* LoadingStateView.swift */,
 				E86896AC20C512C900EB34EF /* ErrorStateView.swift */,
 				E86896B120C513DF00EB34EF /* RxRefreshControl.swift */,
+				E86896E020C700F900EB34EF /* UIHelper.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -364,6 +372,22 @@
 				E86896C220C5898300EB34EF /* OriginalTabInfo.swift */,
 			);
 			path = OriginalTab;
+			sourceTree = "<group>";
+		};
+		E86896D820C6F02500EB34EF /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E86896D920C6F03E00EB34EF /* TabBarControllerHome.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E86896DD20C6F77900EB34EF /* Popover */ = {
+			isa = PBXGroup;
+			children = (
+				E86896DE20C6F78600EB34EF /* MessengerPopover.swift */,
+			);
+			path = Popover;
 			sourceTree = "<group>";
 		};
 		E86AB0DF20C335D900657311 /* Backend */ = {
@@ -463,6 +487,7 @@
 		E86AB0ED20C3388400657311 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				E86896D820C6F02500EB34EF /* Home */,
 				E868969C20C50B9B00EB34EF /* Users */,
 				E868969520C5095A00EB34EF /* Common */,
 			);
@@ -820,6 +845,7 @@
 				E868968920C4FB3200EB34EF /* NetworkError.swift in Sources */,
 				E868969420C508B100EB34EF /* SectionControllerLoading.swift in Sources */,
 				E86AB12A20C342F600657311 /* MovableNavBar.swift in Sources */,
+				E86896DF20C6F78600EB34EF /* MessengerPopover.swift in Sources */,
 				E868968B20C4FC0D00EB34EF /* Service.swift in Sources */,
 				E86AB0F220C338CD00657311 /* DeviceConst.swift in Sources */,
 				E86896B620C51DE500EB34EF /* NotificationCenter+Extension.swift in Sources */,
@@ -837,11 +863,13 @@
 				E86AB11620C3401F00657311 /* UIImageView+Extension.swift in Sources */,
 				E86896B020C5130900EB34EF /* MessengerButton.swift in Sources */,
 				E86AB10F20C3401F00657311 /* UIActivityIndicatorView+Extension.swift in Sources */,
+				E86896E120C700F900EB34EF /* UIHelper.swift in Sources */,
 				E868968120C4EF0700EB34EF /* RealmUser.swift in Sources */,
 				E86896AB20C5122300EB34EF /* LoadingStateView.swift in Sources */,
 				E86AB11220C3401F00657311 /* Collection+Extension.swift in Sources */,
 				E86AB10E20C3401F00657311 /* UIView+Extension.swift in Sources */,
 				E86AB10C20C3401F00657311 /* NSObject+propertyNames.swift in Sources */,
+				E86896DA20C6F03E00EB34EF /* TabBarControllerHome.swift in Sources */,
 				E86896CD20C60A1500EB34EF /* OriginalTabPageViewControllerDelegate.swift in Sources */,
 				E86896A320C50C4E00EB34EF /* ViewModelUsers.swift in Sources */,
 				E868968F20C5080400EB34EF /* CollectionViewScrollDelegate.swift in Sources */,

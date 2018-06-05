@@ -39,13 +39,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow()
         window?.makeKeyAndVisible()
-//        window?.rootViewController = ViewController()
-        let homeViewController = UINavigationController.init(rootViewController: ViewControllerUsers.instantiate())
-        homeViewController.tabBarItem.title = "Home"
-        homeViewController.tabBarItem.image = UIImage.init(named: "home")
-        let tabBarController = UITabBarController.init()
-        tabBarController.viewControllers = [homeViewController]
-        window?.rootViewController = tabBarController
+        
+        let usersViewController = UINavigationController.init(rootViewController: ViewControllerUsers.instantiate())
+        usersViewController.tabBarItem.image = UIImage.init(named: "home")
+        usersViewController.tabBarItem.imageInsets = .init(top: 4, left: 0, bottom: -4, right: 0)
+        
+        let vc1 = UIViewController()
+        vc1.view.backgroundColor = .white
+        let chatsViewController = UINavigationController.init(rootViewController: vc1)
+        chatsViewController.tabBarItem.image = UIImage.init(named: "home")
+        chatsViewController.tabBarItem.imageInsets = .init(top: 4, left: 0, bottom: -4, right: 0)
+        
+        let vc2 = UIViewController()
+        vc2.view.backgroundColor = .white
+        let settingsViewController = UINavigationController.init(rootViewController: vc2)
+        settingsViewController.tabBarItem.image = UIImage.init(named: "home")
+        settingsViewController.tabBarItem.imageInsets = .init(top: 4, left: 0, bottom: -4, right: 0)
+        
+        
+        let homeController = TabBarControllerHome()
+        homeController.viewControllers = [usersViewController, chatsViewController, settingsViewController]
+        homeController.tabTitles = ["Home", "Chats", "Settings"]
+        
+        window?.rootViewController = homeController
         
         return true
     }
