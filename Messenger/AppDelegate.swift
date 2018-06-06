@@ -44,8 +44,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         usersViewController.tabBarItem.image = UIImage.init(named: "home")
         usersViewController.tabBarItem.imageInsets = .init(top: 4, left: 0, bottom: -4, right: 0)
         
-        let vc1 = UIViewController()
-        vc1.view.backgroundColor = .white
+        let vc1 = ViewControllerFaceDetection()
         let chatsViewController = UINavigationController.init(rootViewController: vc1)
         chatsViewController.tabBarItem.image = UIImage.init(named: "home")
         chatsViewController.tabBarItem.imageInsets = .init(top: 4, left: 0, bottom: -4, right: 0)

@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		0DBF0C0F5A9765397B50A0AF /* Pods_Messenger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FBEA1C7472AD8614637218E /* Pods_Messenger.framework */; };
+		E828141220C7C807002D4621 /* ViewControllerFaceDetection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E828141120C7C807002D4621 /* ViewControllerFaceDetection.swift */; };
+		E828141420C7C836002D4621 /* Samples.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E828141320C7C836002D4621 /* Samples.xcassets */; };
+		E828141920C7C952002D4621 /* CaucasianFemaleClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = E828141620C7C952002D4621 /* CaucasianFemaleClassifier.mlmodel */; };
+		E828141A20C7C952002D4621 /* AsianFemaleClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = E828141720C7C952002D4621 /* AsianFemaleClassifier.mlmodel */; };
+		E828141B20C7C952002D4621 /* AsianMaleClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = E828141820C7C952002D4621 /* AsianMaleClassifier.mlmodel */; };
+		E828141D20C7C9CA002D4621 /* SqueezeNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = E828141C20C7C9CA002D4621 /* SqueezeNet.mlmodel */; };
 		E868968120C4EF0700EB34EF /* RealmUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E868968020C4EF0700EB34EF /* RealmUser.swift */; };
 		E868968320C4F54200EB34EF /* MessengerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E868968220C4F54200EB34EF /* MessengerAPI.swift */; };
 		E868968520C4F93400EB34EF /* UsersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E868968420C4F93400EB34EF /* UsersService.swift */; };
@@ -113,6 +119,12 @@
 		00F71240E251B259B73D2796 /* Pods-Messenger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messenger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Messenger/Pods-Messenger.debug.xcconfig"; sourceTree = "<group>"; };
 		8FBEA1C7472AD8614637218E /* Pods_Messenger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Messenger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9D8EA1B6381A51FAE593D05 /* Pods-Messenger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messenger.release.xcconfig"; path = "Pods/Target Support Files/Pods-Messenger/Pods-Messenger.release.xcconfig"; sourceTree = "<group>"; };
+		E828141120C7C807002D4621 /* ViewControllerFaceDetection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFaceDetection.swift; sourceTree = "<group>"; };
+		E828141320C7C836002D4621 /* Samples.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Samples.xcassets; sourceTree = "<group>"; };
+		E828141620C7C952002D4621 /* CaucasianFemaleClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = CaucasianFemaleClassifier.mlmodel; sourceTree = "<group>"; };
+		E828141720C7C952002D4621 /* AsianFemaleClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AsianFemaleClassifier.mlmodel; sourceTree = "<group>"; };
+		E828141820C7C952002D4621 /* AsianMaleClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AsianMaleClassifier.mlmodel; sourceTree = "<group>"; };
+		E828141C20C7C9CA002D4621 /* SqueezeNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SqueezeNet.mlmodel; sourceTree = "<group>"; };
 		E868968020C4EF0700EB34EF /* RealmUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmUser.swift; sourceTree = "<group>"; };
 		E868968220C4F54200EB34EF /* MessengerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerAPI.swift; sourceTree = "<group>"; };
 		E868968420C4F93400EB34EF /* UsersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersService.swift; sourceTree = "<group>"; };
@@ -296,6 +308,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E828141020C7C7E8002D4621 /* FaceDetection */ = {
+			isa = PBXGroup;
+			children = (
+				E828141120C7C807002D4621 /* ViewControllerFaceDetection.swift */,
+				E828141320C7C836002D4621 /* Samples.xcassets */,
+			);
+			path = FaceDetection;
+			sourceTree = "<group>";
+		};
+		E828141520C7C943002D4621 /* MLModels */ = {
+			isa = PBXGroup;
+			children = (
+				E828141C20C7C9CA002D4621 /* SqueezeNet.mlmodel */,
+				E828141720C7C952002D4621 /* AsianFemaleClassifier.mlmodel */,
+				E828141820C7C952002D4621 /* AsianMaleClassifier.mlmodel */,
+				E828141620C7C952002D4621 /* CaucasianFemaleClassifier.mlmodel */,
+			);
+			path = MLModels;
+			sourceTree = "<group>";
+		};
 		E868967F20C4EEEC00EB34EF /* Realm */ = {
 			isa = PBXGroup;
 			children = (
@@ -411,6 +443,7 @@
 		E86AB0E520C3381A00657311 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				E828141520C7C943002D4621 /* MLModels */,
 				E86896A120C50C4200EB34EF /* ViewModels */,
 				E868968620C4F9BF00EB34EF /* Result.swift */,
 				E86896B320C51BAD00EB34EF /* Connection.swift */,
@@ -487,6 +520,7 @@
 		E86AB0ED20C3388400657311 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				E828141020C7C7E8002D4621 /* FaceDetection */,
 				E86896D820C6F02500EB34EF /* Home */,
 				E868969C20C50B9B00EB34EF /* Users */,
 				E868969520C5095A00EB34EF /* Common */,
@@ -660,6 +694,7 @@
 				E86896A920C5105100EB34EF /* ViewControllerUsers.storyboard in Resources */,
 				E86896D720C6159600EB34EF /* OriginalTabCell.xib in Resources */,
 				E86AB0AA20C32D0200657311 /* GoogleService-Info.plist in Resources */,
+				E828141420C7C836002D4621 /* Samples.xcassets in Resources */,
 				E88D6ED820C31B8800F83BDE /* Assets.xcassets in Resources */,
 				E86896D320C6157D00EB34EF /* OriginalTabView.xib in Resources */,
 				E86896BA20C5228000EB34EF /* Colors.xcassets in Resources */,
@@ -846,6 +881,8 @@
 				E868969420C508B100EB34EF /* SectionControllerLoading.swift in Sources */,
 				E86AB12A20C342F600657311 /* MovableNavBar.swift in Sources */,
 				E86896DF20C6F78600EB34EF /* MessengerPopover.swift in Sources */,
+				E828141D20C7C9CA002D4621 /* SqueezeNet.mlmodel in Sources */,
+				E828141920C7C952002D4621 /* CaucasianFemaleClassifier.mlmodel in Sources */,
 				E868968B20C4FC0D00EB34EF /* Service.swift in Sources */,
 				E86AB0F220C338CD00657311 /* DeviceConst.swift in Sources */,
 				E86896B620C51DE500EB34EF /* NotificationCenter+Extension.swift in Sources */,
@@ -874,10 +911,13 @@
 				E86896A320C50C4E00EB34EF /* ViewModelUsers.swift in Sources */,
 				E868968F20C5080400EB34EF /* CollectionViewScrollDelegate.swift in Sources */,
 				E86896A720C50CF800EB34EF /* LoadingState.swift in Sources */,
+				E828141A20C7C952002D4621 /* AsianFemaleClassifier.mlmodel in Sources */,
 				E86AB10920C3401F00657311 /* ListCollectionContext+Extension.swift in Sources */,
 				E86896AD20C512C900EB34EF /* ErrorStateView.swift in Sources */,
 				E86AB12F20C342F600657311 /* StatusBarStyleable.swift in Sources */,
+				E828141B20C7C952002D4621 /* AsianMaleClassifier.mlmodel in Sources */,
 				E86AB13120C342F600657311 /* NibLoadable.swift in Sources */,
+				E828141220C7C807002D4621 /* ViewControllerFaceDetection.swift in Sources */,
 				E86896C520C598CF00EB34EF /* OriginalTabView.swift in Sources */,
 				E86AB10B20C3401F00657311 /* UIFont+Extension.swift in Sources */,
 				E868969120C5083B00EB34EF /* DataSourceUsers.swift in Sources */,
