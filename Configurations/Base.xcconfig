@@ -1,0 +1,9 @@
+//
+//  Base.xcconfig
+//  Messenger
+//
+//  Created by Sergei Meza on 2018/06/13.
+//  Copyright © 2018 Sergei Meza. All rights reserved.
+//
+SDKROOT = iphoneos
+IPHONEOS_DEPLOYMENT_TARGET = 11.0

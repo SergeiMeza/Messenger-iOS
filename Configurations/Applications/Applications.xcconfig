@@ -1,0 +1,15 @@
+//
+//  Applications.xcconfig
+//  Messenger
+//
+//  Created by Sergei Meza on 2018/06/13.
+//  Copyright © 2018 Sergei Meza. All rights reserved.
+//
+
+#include "../Base.xconfig"
+
+PRODUCT_NAME = MESSENGER
+BUNDLE_DISPLAY_NAME = MESSENGER
+
+// Packaging
+INFOPLIST_PREPROCESS = YES

@@ -12,6 +12,8 @@ import SwiftyJSON
 import RealmSwift
 import GameKit
 
+let log = "LOG:"
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -20,7 +22,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        print(NSHomeDirectory())
+        #if DEBUG
+        print(log, NSHomeDirectory())
+        #else
+        print(log, "RELEASE")
+        #endif
         
         FirebaseApp.configure()
         
@@ -40,6 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow()
         window?.makeKeyAndVisible()
         
+        
         let usersViewController = UINavigationController.init(rootViewController: ViewControllerUsers.instantiate())
         usersViewController.tabBarItem.image = UIImage.init(named: "home")
         usersViewController.tabBarItem.imageInsets = .init(top: 4, left: 0, bottom: -4, right: 0)
@@ -58,7 +65,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let homeController = TabBarControllerHome()
         homeController.viewControllers = [usersViewController, chatsViewController, settingsViewController]
-        homeController.tabTitles = ["Home", "Chats", "Settings"]
+        homeController.tabTitles = ["Home", "Face Detection", "Settings"]
         
         window?.rootViewController = homeController
         
