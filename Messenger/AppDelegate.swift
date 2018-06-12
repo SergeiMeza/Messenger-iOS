@@ -22,30 +22,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        #if DEBUG
-        print(log, NSHomeDirectory())
-        #else
-        print(log, "RELEASE")
-        #endif
-        
         FirebaseApp.configure()
-        
-//        generateRandomUsersWithFirebaseDatabase()
-//        generateRandomUsersWithFirebaseFirestore()
         
         //  Realm objects initialization
         let config = Realm.Configuration(schemaVersion: 0, migrationBlock: { (migration, oldSchemaVersion) in
-            
         })
         Realm.Configuration.defaultConfiguration = config
         _ = try! Realm()
         
-//        getUsersFromFirebaseDatabaseAndSaveInRealm()
-//        getUsersFromFirebaseFirestoreAndSaveInRealm()
+        #if DEBUG
+        print(log, NSHomeDirectory())
+        
+        //        generateRandomUsersWithFirebaseDatabase()
+        //        generateRandomUsersWithFirebaseFirestore()
+        //        getUsersFromFirebaseDatabaseAndSaveInRealm()
+        //        getUsersFromFirebaseFirestoreAndSaveInRealm()
+        
+        #else
+        print(log, "RELEASE")
+        #endif
         
         window = UIWindow()
         window?.makeKeyAndVisible()
-        
         
         let usersViewController = UINavigationController.init(rootViewController: ViewControllerUsers.instantiate())
         usersViewController.tabBarItem.image = UIImage.init(named: "home")

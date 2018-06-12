@@ -22,7 +22,7 @@ class ViewControllerFaceDetection: UIViewController {
         view.addSubview(imageView)
         imageView.fillSuperview()
         
-        DispatchQueue(label: "FaceDetection", qos: .background).asyncAfter(deadline: .now() + 0.5) { [weak self] in
+        DispatchQueue(label: "FaceDetection", qos: .userInteractive).asyncAfter(deadline: .now() + 0.05) { [weak self] in
             guard let strongSelf = self else { return }
             strongSelf.setupVisionRequest(image: image, imageView: imageView)
         }
@@ -59,7 +59,9 @@ class ViewControllerFaceDetection: UIViewController {
         DispatchQueue.main.async {
             
             // to draw a box on the screen use the following:
-            /*
+            let view = UIView()
+            imageView.addSubview(view)
+            view.backgroundColor = .red
             let scaledHeight = imageView.frame.width / image.size.width * image.size.height
 
             let translationY = imageView.center.y - scaledHeight / 2
@@ -70,22 +72,25 @@ class ViewControllerFaceDetection: UIViewController {
             let x = boundingBox.origin.x * imageView.frame.width - width * 0.2
             let y = (1 - boundingBox.origin.y) * scaledHeight - height + translationY
 
-            let boundingBox = CGRect(x: x, y: y, width: width, height: height)
-             */
+            let faceBoundingRect = CGRect(x: x, y: y, width: width, height: height)
+            view.frame = faceBoundingRect
+
             
-            
+            // to crop the image use the following:
+            /*
             let width = boundingBox.width * image.size.width * 1.4
             let height = boundingBox.height * image.size.height * 1.4
-            
+
             let x = boundingBox.origin.x * image.size.width - width * 0.2
             let y = (1 - boundingBox.origin.y) * image.size.height - height
-            
+
             let croppingRect = CGRect(x: x, y: y, width: width, height: height)
 
             if let croppedCGImage = image.cgImage?.cropping(to: croppingRect) {
                 let croppedImage = UIImage(cgImage: croppedCGImage)
                 imageView.image = croppedImage
             }
+            */
         }
     }
 }
