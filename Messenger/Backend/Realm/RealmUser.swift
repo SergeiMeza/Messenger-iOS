@@ -22,6 +22,9 @@ import IGListKit
     dynamic var favoriteColor = ""
     dynamic var isWizard = false
     
+    dynamic var index = 0
+    dynamic var reverseIndex = 0
+    
     enum GenderType: Int {
         case undefined = 0
         case male = 1
@@ -40,6 +43,8 @@ import IGListKit
         self.gender <- map["gender"]
         self.favoriteColor <- map["favorite_color"]
         self.isWizard <- map["is_wizard"]
+        self.index <- map["index"]
+        self.reverseIndex <- map["reverse_index"]
     }
     
     override static func primaryKey() -> String? {

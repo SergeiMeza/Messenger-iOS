@@ -14,10 +14,12 @@ class CollectionViewCellUser: UICollectionViewCell, NibLoadable, Reusable {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var detailsLabel: UILabel!
-
+    @IBOutlet weak var timeLabel: UILabel!
+    
     func bindData(item: RealmUser) {
         let generator = GKRandomDistribution.init(lowestValue: 0, highestValue: 100)
         nameLabel.text = "\(item.name), \(item.age)"
+        timeLabel.text = "\(item.index)"
         detailsLabel.text = "favorite color: \(item.favoriteColor), isWizard: \(item.isWizard)"
         contentView.backgroundColor = .white
         imageView.layer.cornerRadius = imageView.frame.height / 2

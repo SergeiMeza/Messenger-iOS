@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         
         //  Realm objects initialization
-        let config = Realm.Configuration(schemaVersion: 0, migrationBlock: { (migration, oldSchemaVersion) in
+        let config = Realm.Configuration(schemaVersion: 3, migrationBlock: { (migration, oldSchemaVersion) in
         })
         Realm.Configuration.defaultConfiguration = config
         _ = try! Realm()
@@ -33,10 +33,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         #if DEBUG
         print(log, NSHomeDirectory())
         
-        //        generateRandomUsersWithFirebaseDatabase()
-        //        generateRandomUsersWithFirebaseFirestore()
-        //        getUsersFromFirebaseDatabaseAndSaveInRealm()
-        //        getUsersFromFirebaseFirestoreAndSaveInRealm()
+//        generateRandomUsersWithFirebaseDatabase()
+//        generateRandomUsersWithFirebaseFirestore()
+//        getUsersFromFirebaseDatabaseAndSaveInRealm()
+//        getUsersFromFirebaseFirestoreAndSaveInRealm()
         
         #else
         print(log, "RELEASE")
@@ -72,9 +72,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func generateRandomUsersWithFirebaseDatabase() {
             let randomGenerator = GKRandomDistribution.init(lowestValue: 0, highestValue: 4)
-            for _ in 1...100 {
+            for index in 1...100 {
                 let user = FirebaseObject.init(path: "USER")
                 user[DeviceConst.object_id] = FirebaseObject.autoId()
+                user["index"] = index
+                user["reverse_index"] = -index
                 user["name"] = ["David", "Rose", "Mary", "John", "Paul"][randomGenerator.nextInt()]
                 user["age"] = [13, 10, 18, 22, 24][randomGenerator.nextInt()]
                 user["gender"] = [0 , 1, 2, 3][randomGenerator.nextInt() % 4]
@@ -86,31 +88,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func generateRandomUsersWithFirebaseFirestore() {
         let database = Firestore.firestore()
-        var reference: DocumentReference!
         let randomGenerator = GKRandomDistribution.init(lowestValue: 0, highestValue: 4)
-        for _ in 1...100 {
-            reference = database.collection(DeviceConst.firebaseDatabaseRootURL.appendingPathComponent("USERS/active_users/").absoluteString).addDocument(data: [
+        for index in 1...100 {
+            let user = database.document(DeviceConst.firebaseDatabaseRootURL.appendingPathComponent("USERS/active_users/\(index)").absoluteString)
+            user.setData([
                 "name":["David", "Rose", "Mary", "John", "Paul"][randomGenerator.nextInt()],
-                 "age": [13, 10, 18, 22, 24][randomGenerator.nextInt()],
-                 "gender": [0 , 1, 2, 3][randomGenerator.nextInt() % 4],
-                 "favorite_color": ["red", "blue", "orange", "pink", "yellow"][min(randomGenerator.nextInt(), 3)],
-                 "is_wizard": [true, false][randomGenerator.nextInt() % 2]
-            ]) { err in
-                if let err = err {
-                    print("Error adding document: \(err)")
+                "age": [13, 10, 18, 22, 24][randomGenerator.nextInt()],
+                "gender": [0 , 1, 2, 3][randomGenerator.nextInt() % 4],
+                "favorite_color": ["red", "blue", "orange", "pink", "yellow"][min(randomGenerator.nextInt(), 3)],
+                "is_wizard": [true, false][randomGenerator.nextInt() % 2]
+            ], options: .merge()) { (error) in
+                if let error = error {
+                    print("Error adding document: \(error)")
                 } else {
-                    print("Document added with ID: \(reference.documentID)")
+                    print("Document added with ID: \(user.documentID)")
                 }
             }
         }
     }
     
     func getUsersFromFirebaseDatabaseAndSaveInRealm() {
-        Service.users.getUsersFromFirebase { result in
+        Service.users.getUsers(paginate: false) { result in
             switch result {
             case .error(let error):
                 print(error)
-            case .success(let users):
+            case .success(let users, _):
                 DispatchQueue.init(label: "background", qos: DispatchQoS.background).async {
                     autoreleasepool {
                         let realm = try! Realm()
@@ -125,6 +127,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
+    /**
     func getUsersFromFirebaseFirestoreAndSaveInRealm() {
         Service.users.getUsersFromFirestore(paginate: false) { result in
             switch result {
@@ -144,6 +147,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+   */
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

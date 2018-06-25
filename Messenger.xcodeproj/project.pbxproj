@@ -38,7 +38,6 @@
 		E86896B620C51DE500EB34EF /* NotificationCenter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86896B520C51DE500EB34EF /* NotificationCenter+Extension.swift */; };
 		E86896B820C51FE300EB34EF /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86896B720C51FE300EB34EF /* UserDefaults+Extension.swift */; };
 		E86896BA20C5228000EB34EF /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E86896B920C5228000EB34EF /* Colors.xcassets */; };
-		E86896BC20C52F2A00EB34EF /* FirestoreObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86896BB20C52F2A00EB34EF /* FirestoreObject.swift */; };
 		E86896BE20C587AE00EB34EF /* FirebaseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86896BD20C587AE00EB34EF /* FirebaseObject.swift */; };
 		E86896C120C5895A00EB34EF /* OriginalTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86896C020C5895A00EB34EF /* OriginalTabViewController.swift */; };
 		E86896C320C5898300EB34EF /* OriginalTabInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86896C220C5898300EB34EF /* OriginalTabInfo.swift */; };
@@ -106,7 +105,6 @@
 		E86AB12F20C342F600657311 /* StatusBarStyleable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86AB12420C342F500657311 /* StatusBarStyleable.swift */; };
 		E86AB13120C342F600657311 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86AB12620C342F600657311 /* NibLoadable.swift */; };
 		E88D6ED120C31B8800F83BDE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88D6ED020C31B8800F83BDE /* AppDelegate.swift */; };
-		E88D6ED320C31B8800F83BDE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E88D6ED220C31B8800F83BDE /* ViewController.swift */; };
 		E88D6ED620C31B8800F83BDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E88D6ED420C31B8800F83BDE /* Main.storyboard */; };
 		E88D6ED820C31B8800F83BDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E88D6ED720C31B8800F83BDE /* Assets.xcassets */; };
 		E88D6EDB20C31B8800F83BDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E88D6ED920C31B8800F83BDE /* LaunchScreen.storyboard */; };
@@ -147,7 +145,6 @@
 		E86896B520C51DE500EB34EF /* NotificationCenter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+Extension.swift"; sourceTree = "<group>"; };
 		E86896B720C51FE300EB34EF /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
 		E86896B920C5228000EB34EF /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		E86896BB20C52F2A00EB34EF /* FirestoreObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreObject.swift; sourceTree = "<group>"; };
 		E86896BD20C587AE00EB34EF /* FirebaseObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseObject.swift; sourceTree = "<group>"; };
 		E86896C020C5895A00EB34EF /* OriginalTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginalTabViewController.swift; sourceTree = "<group>"; };
 		E86896C220C5898300EB34EF /* OriginalTabInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OriginalTabInfo.swift; sourceTree = "<group>"; };
@@ -218,7 +215,6 @@
 		E86AB12620C342F600657311 /* NibLoadable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		E88D6ECD20C31B8800F83BDE /* Messenger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Messenger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E88D6ED020C31B8800F83BDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E88D6ED220C31B8800F83BDE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E88D6ED520C31B8800F83BDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E88D6ED720C31B8800F83BDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E88D6EDA20C31B8800F83BDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -432,7 +428,6 @@
 			isa = PBXGroup;
 			children = (
 				E86896BD20C587AE00EB34EF /* FirebaseObject.swift */,
-				E86896BB20C52F2A00EB34EF /* FirestoreObject.swift */,
 			);
 			path = Firebase;
 			sourceTree = "<group>";
@@ -605,7 +600,6 @@
 				E86AB0AB20C3322A00657311 /* Messenger.entitlements */,
 				E86AB0A920C32D0200657311 /* GoogleService-Info.plist */,
 				E88D6ED020C31B8800F83BDE /* AppDelegate.swift */,
-				E88D6ED220C31B8800F83BDE /* ViewController.swift */,
 				E88D6ED420C31B8800F83BDE /* Main.storyboard */,
 				E88D6ED720C31B8800F83BDE /* Assets.xcassets */,
 				E88D6ED920C31B8800F83BDE /* LaunchScreen.storyboard */,
@@ -920,9 +914,7 @@
 				E86896B620C51DE500EB34EF /* NotificationCenter+Extension.swift in Sources */,
 				E86896C920C5994300EB34EF /* OriginalTabPageViewController.swift in Sources */,
 				E868969720C5096A00EB34EF /* CollectionViewCellLoading.swift in Sources */,
-				E88D6ED320C31B8800F83BDE /* ViewController.swift in Sources */,
 				E88D6ED120C31B8800F83BDE /* AppDelegate.swift in Sources */,
-				E86896BC20C52F2A00EB34EF /* FirestoreObject.swift in Sources */,
 				E86896B420C51BAD00EB34EF /* Connection.swift in Sources */,
 				E86AB12D20C342F600657311 /* ListBindableViewModel.swift in Sources */,
 				E868968D20C504E000EB34EF /* ViewControllerUsers.swift in Sources */,

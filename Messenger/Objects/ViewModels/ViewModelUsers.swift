@@ -17,7 +17,8 @@ class ViewModelUsers: RefreshableModel {
     private let refreshing = BehaviorRelay<Bool>(value: false)
     private let items = BehaviorRelay<[ListDiffable]>(value: [])
     
-    private var lastDocument: DocumentSnapshot?
+//    private var lastDocument: DocumentSnapshot?
+    private var lastValue: Any?
     
     private var currentPage = 0
     private var busy = false
@@ -70,6 +71,24 @@ class ViewModelUsers: RefreshableModel {
         currentPage += 1
         busy = true
         
+        Service.users.getUsers(paginate: true, lastValue: lastValue) { [weak self] result in
+            switch result {
+            case .success( let users, let lastValue):
+                if users.isEmpty { self?.isCompleted = true }
+                self?.state.accept(.success)
+                self?.users.append(contentsOf: users)
+                self?.lastValue = lastValue
+                self?.setItems()
+                self?.refreshing.accept(false)
+                self?.busy = false
+            case .error:
+                self?.state.accept(.failure)
+                self?.refreshing.accept(false)
+                self?.busy = false
+            }
+        }
+        
+        /**
         Service.users.getUsersFromFirestore(paginate: true, lastDocument: lastDocument) { [weak self] result in
             switch result {
             case .success( let users, let lastDocument):
@@ -86,5 +105,6 @@ class ViewModelUsers: RefreshableModel {
                 self?.busy = false
             }
         }
+        */
     }
 }
