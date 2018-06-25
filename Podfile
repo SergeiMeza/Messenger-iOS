@@ -45,4 +45,6 @@ target 'Messenger' do
     
     pod 'Reachability'
 
+    pod 'RNCryptor-objc'
+
 end

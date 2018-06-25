@@ -145,6 +145,7 @@ PODS:
   - pop (1.0.10)
   - Protobuf (3.5.0)
   - Reachability (3.2)
+  - RNCryptor-objc (3.0.6)
   - SDWebImage (4.3.3):
     - SDWebImage/Core (= 4.3.3)
   - SDWebImage/Core (4.3.3)
@@ -172,6 +173,7 @@ DEPENDENCIES:
   - OneSignal (< 3.0, >= 2.6.2)
   - pop (~> 1.0)
   - Reachability
+  - RNCryptor-objc
   - SinchRTC
   - SinchVerification
   - SnapKit (~> 4.0.0)
@@ -211,6 +213,7 @@ SPEC REPOS:
     - pop
     - Protobuf
     - Reachability
+    - RNCryptor-objc
     - SDWebImage
     - SinchRTC
     - SinchVerification
@@ -250,6 +253,7 @@ SPEC CHECKSUMS:
   pop: 82ca6b068ce9278fd350fd9dd09482a0ce9492e6
   Protobuf: 8a9838fba8dae3389230e1b7f8c104aa32389c03
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  RNCryptor-objc: d1b228f9c02e2173df063f0617684c134aed890e
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
   SinchRTC: c19ff673b25292d247a868b077582f2d11d9dfc6
   SinchVerification: 3bf62ff2d57eb10ecc27796ce9736c786644fe23
@@ -257,6 +261,6 @@ SPEC CHECKSUMS:
   TwitterCore: 644d59e75abccb26cf0a9050d2c4dea0e5412241
   TwitterKit: a2e60ddcedbf54091eac6f27685ca7a87681e1d7
 
-PODFILE CHECKSUM: 5fbef600a1db58ab8e2b6e24f4e0d97f77d53822
+PODFILE CHECKSUM: ec87c460496be37148442db06c1334c954d4f93c
 
 COCOAPODS: 1.5.2

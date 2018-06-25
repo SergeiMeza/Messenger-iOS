@@ -118,6 +118,15 @@
 		E8F4653220E1458000066173 /* CollectionViewCellChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F4653120E1458000066173 /* CollectionViewCellChat.swift */; };
 		E8F4653420E145A000066173 /* CollectionViewCellChat.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8F4653320E145A000066173 /* CollectionViewCellChat.xib */; };
 		E8F4653620E14A0500066173 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F4653520E14A0500066173 /* NavigationController.swift */; };
+		E8F4653920E14E3600066173 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F4653820E14E3600066173 /* CacheManager.swift */; };
+		E8F4653B20E14F7C00066173 /* Dir.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F4653A20E14F7C00066173 /* Dir.swift */; };
+		E8F4653D20E1541300066173 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F4653C20E1541300066173 /* File.swift */; };
+		E8F4653F20E15B7D00066173 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F4653E20E15B7D00066173 /* DownloadManager.swift */; };
+		E8F4654120E162D300066173 /* Checksum.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F4654020E162D300066173 /* Checksum.swift */; };
+		E8F4654820E1648B00066173 /* HMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F4654420E1648B00066173 /* HMAC.swift */; };
+		E8F4654920E1648B00066173 /* String+Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F4654520E1648B00066173 /* String+Crypto.swift */; };
+		E8F4654A20E1648B00066173 /* Digest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F4654620E1648B00066173 /* Digest.swift */; };
+		E8F4654B20E1648B00066173 /* Data+Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F4654720E1648B00066173 /* Data+Crypto.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -243,6 +252,16 @@
 		E8F4653120E1458000066173 /* CollectionViewCellChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellChat.swift; sourceTree = "<group>"; };
 		E8F4653320E145A000066173 /* CollectionViewCellChat.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCellChat.xib; sourceTree = "<group>"; };
 		E8F4653520E14A0500066173 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		E8F4653820E14E3600066173 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
+		E8F4653A20E14F7C00066173 /* Dir.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dir.swift; sourceTree = "<group>"; };
+		E8F4653C20E1541300066173 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		E8F4653E20E15B7D00066173 /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
+		E8F4654020E162D300066173 /* Checksum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checksum.swift; sourceTree = "<group>"; };
+		E8F4654220E163B500066173 /* Messenger-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Messenger-Bridging-Header.h"; sourceTree = "<group>"; };
+		E8F4654420E1648B00066173 /* HMAC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HMAC.swift; sourceTree = "<group>"; };
+		E8F4654520E1648B00066173 /* String+Crypto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Crypto.swift"; sourceTree = "<group>"; };
+		E8F4654620E1648B00066173 /* Digest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Digest.swift; sourceTree = "<group>"; };
+		E8F4654720E1648B00066173 /* Data+Crypto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Crypto.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -470,6 +489,7 @@
 		E86AB0E520C3381A00657311 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				E8F4653720E14E1500066173 /* Managers */,
 				E828141520C7C943002D4621 /* MLModels */,
 				E86896A120C50C4200EB34EF /* ViewModels */,
 				E868968620C4F9BF00EB34EF /* Result.swift */,
@@ -579,7 +599,11 @@
 		E86AB0F020C338BB00657311 /* lib */ = {
 			isa = PBXGroup;
 			children = (
+				E8F4654320E1647000066173 /* Encryption */,
 				E86AB0F120C338CD00657311 /* DeviceConst.swift */,
+				E8F4653A20E14F7C00066173 /* Dir.swift */,
+				E8F4653C20E1541300066173 /* File.swift */,
+				E8F4654020E162D300066173 /* Checksum.swift */,
 			);
 			path = lib;
 			sourceTree = "<group>";
@@ -642,6 +666,7 @@
 				E88D6ED720C31B8800F83BDE /* Assets.xcassets */,
 				E88D6ED920C31B8800F83BDE /* LaunchScreen.storyboard */,
 				E88D6EDC20C31B8800F83BDE /* Info.plist */,
+				E8F4654220E163B500066173 /* Messenger-Bridging-Header.h */,
 			);
 			path = Messenger;
 			sourceTree = "<group>";
@@ -679,6 +704,26 @@
 				E8CA77E020D0689B0094F8BF /* Release.xcconfig */,
 			);
 			path = Release;
+			sourceTree = "<group>";
+		};
+		E8F4653720E14E1500066173 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				E8F4653820E14E3600066173 /* CacheManager.swift */,
+				E8F4653E20E15B7D00066173 /* DownloadManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		E8F4654320E1647000066173 /* Encryption */ = {
+			isa = PBXGroup;
+			children = (
+				E8F4654420E1648B00066173 /* HMAC.swift */,
+				E8F4654620E1648B00066173 /* Digest.swift */,
+				E8F4654520E1648B00066173 /* String+Crypto.swift */,
+				E8F4654720E1648B00066173 /* Data+Crypto.swift */,
+			);
+			path = Encryption;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -840,6 +885,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/RNCryptor-objc/RNCryptor_objc.framework",
 				"${BUILT_PRODUCTS_DIR}/Reachability/Reachability.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
@@ -864,6 +910,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RNCryptor_objc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
@@ -933,6 +980,7 @@
 				E86896A520C50C8C00EB34EF /* RefreshableModel.swift in Sources */,
 				E86896D120C6149600EB34EF /* OriginalTabViewInfinity.swift in Sources */,
 				E8F4652C20E13BF900066173 /* ViewModelChats.swift in Sources */,
+				E8F4653B20E14F7C00066173 /* Dir.swift in Sources */,
 				E86896B820C51FE300EB34EF /* UserDefaults+Extension.swift in Sources */,
 				E8F4652A20E13B5500066173 /* SectionControllerChat.swift in Sources */,
 				E86AB10D20C3401F00657311 /* UILabel+Extension.swift in Sources */,
@@ -947,14 +995,18 @@
 				E86AB11420C3401F00657311 /* UIApplication+Extension.swift in Sources */,
 				E86AB11820C3401F00657311 /* ListCollectionView+Extension.swift in Sources */,
 				E86896B220C513E000EB34EF /* RxRefreshControl.swift in Sources */,
+				E8F4654920E1648B00066173 /* String+Crypto.swift in Sources */,
+				E8F4654120E162D300066173 /* Checksum.swift in Sources */,
 				E82202AD20E1390B00152C8F /* ViewControllerChats.swift in Sources */,
 				E868968920C4FB3200EB34EF /* NetworkError.swift in Sources */,
 				E8F4653220E1458000066173 /* CollectionViewCellChat.swift in Sources */,
+				E8F4653D20E1541300066173 /* File.swift in Sources */,
 				E868969420C508B100EB34EF /* SectionControllerLoading.swift in Sources */,
 				E86AB12A20C342F600657311 /* MovableNavBar.swift in Sources */,
 				E86896DF20C6F78600EB34EF /* MessengerPopover.swift in Sources */,
 				E828141D20C7C9CA002D4621 /* SqueezeNet.mlmodel in Sources */,
 				E868968B20C4FC0D00EB34EF /* Service.swift in Sources */,
+				E8F4654820E1648B00066173 /* HMAC.swift in Sources */,
 				E86AB0F220C338CD00657311 /* DeviceConst.swift in Sources */,
 				E86896B620C51DE500EB34EF /* NotificationCenter+Extension.swift in Sources */,
 				E86896C920C5994300EB34EF /* OriginalTabPageViewController.swift in Sources */,
@@ -980,6 +1032,7 @@
 				E86896DA20C6F03E00EB34EF /* TabBarControllerHome.swift in Sources */,
 				E86896CD20C60A1500EB34EF /* OriginalTabPageViewControllerDelegate.swift in Sources */,
 				E86896A320C50C4E00EB34EF /* ViewModelUsers.swift in Sources */,
+				E8F4654B20E1648B00066173 /* Data+Crypto.swift in Sources */,
 				E868968F20C5080400EB34EF /* CollectionViewScrollDelegate.swift in Sources */,
 				E86896A720C50CF800EB34EF /* LoadingState.swift in Sources */,
 				E86AB10920C3401F00657311 /* ListCollectionContext+Extension.swift in Sources */,
@@ -992,10 +1045,13 @@
 				E868969120C5083B00EB34EF /* DataSourceUsers.swift in Sources */,
 				E86896C120C5895A00EB34EF /* OriginalTabViewController.swift in Sources */,
 				E86AB11520C3401F00657311 /* UIImage+Extension.swift in Sources */,
+				E8F4654A20E1648B00066173 /* Digest.swift in Sources */,
 				E86AB0F420C3397C00657311 /* String+Extension.swift in Sources */,
 				E86AB12E20C342F600657311 /* Reusable.swift in Sources */,
 				E86AB12920C342F600657311 /* StoryboardInstantiable.swift in Sources */,
+				E8F4653F20E15B7D00066173 /* DownloadManager.swift in Sources */,
 				E8F4652E20E13DBA00066173 /* ChatsService.swift in Sources */,
+				E8F4653920E14E3600066173 /* CacheManager.swift in Sources */,
 				E86AB10A20C3401F00657311 /* UIColor+Extension.swift in Sources */,
 				E868969E20C50BAC00EB34EF /* CollectionViewCellUser.swift in Sources */,
 			);
@@ -1163,6 +1219,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = PremiumApps.Messenger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Messenger/Messenger-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1190,6 +1247,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = PremiumApps.Messenger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Messenger/Messenger-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -20,6 +20,15 @@ private extension Formatter {
 }
 
 public extension Date {
+    public var timestamp: Double {
+        return timeIntervalSinceReferenceDate * 1000
+    }
+    
+    static func dateWithTimestamp(timestamp: Double) -> Date {
+        return Date.init(timeIntervalSinceReferenceDate: timestamp / 1000)
+    }
+    
+    
     public var timestamp_iso8601: String {
         return Formatter.iso8601.string(from: self)
     }
