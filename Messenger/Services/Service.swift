@@ -14,6 +14,7 @@ import Moya
 
 struct Service {
     static let users = UsersService()
+    static let chats = ChatsService()
     
     static func queryDatabase<Value>(path: URL, paginate: Bool, child: String, lastValue: Value? = nil, completion: @escaping ((Result<DataSnapshot?>)->Void)) {
         if Connection.isReachable {

@@ -8,8 +8,16 @@
 
 import UIKit
 
+typealias Timestamp = Double
+
 struct DeviceConst {
-    static let firebaseDatabaseRootURL = "v0".url!
+    static let firebaseDatabaseRootURL: URL = {
+        #if DEBUG
+        return "test-v0".url!
+        #else
+        return "v0".url!
+        #endif
+    }()
     static let firebaseFirestoreRootCollection = "v0"
     
     static let defaultFont = "CourierNew"

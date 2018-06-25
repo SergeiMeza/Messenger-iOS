@@ -1,8 +1,8 @@
 //
-//  ViewControllerUsers.swift
+//  ViewControllerChats.swift
 //  Messenger
 //
-//  Created by Sergei Meza on 2018/06/04.
+//  Created by Sergei Meza on 2018/06/25.
 //  Copyright © 2018 Sergei Meza. All rights reserved.
 //
 
@@ -11,39 +11,38 @@ import RxCocoa
 import RxSwift
 import IGListKit
 
-class ViewControllerUsers: UIViewController {
+class ViewControllerChats: UIViewController {
     
     @IBOutlet weak var loadingView: LoadingStateView!
     @IBOutlet weak var errorView: ErrorStateView!
     @IBOutlet weak var successView: UIView!
-    @IBOutlet weak var collectionViewUsers: ListCollectionView!
+    @IBOutlet weak var collectionViewChats: ListCollectionView!
     
     private var stateViews: [UIView] {
         return [loadingView, successView, errorView]
     }
     
     private lazy var adapter: ListAdapter = ListAdapter.init(updater: ListAdapterUpdater(), viewController: self)
-    
     private lazy var refreshControl: RxRefreshControl = RxRefreshControl(viewModel)
     
     private let delegate = CollectionViewScrollDelegate()
-    private let dataSource = DataSourceUsers()
-    private let viewModel = ViewModelUsers()
+    private let datasource = DataSourceChats()
+    private let viewModel = ViewModelChats()
     private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupSubviews()
+        setupViews()
         setupListener()
         viewModel.viewDidLoad()
     }
     
-    private func setupSubviews() {
-        navigationItem.title = "Home"
-        collectionViewUsers.backgroundColor = .backgroundColor
-        collectionViewUsers.addSubview(refreshControl)
-        adapter.collectionView = collectionViewUsers
-        adapter.dataSource = dataSource
+    private func setupViews() {
+        navigationItem.title = "Chats"
+        collectionViewChats.backgroundColor = .backgroundColor
+        collectionViewChats.addSubview(refreshControl)
+        adapter.collectionView = collectionViewChats
+        adapter.dataSource = datasource
     }
     
     private func setupListener() {
@@ -59,12 +58,12 @@ class ViewControllerUsers: UIViewController {
         viewModel.currentItems
             .drive(onNext: { [weak self] items in
                 guard let strongSelf = self else { return }
-                strongSelf.dataSource.items = items
+                strongSelf.datasource.items = items
                 strongSelf.adapter.performUpdates(animated: true)
-                }).disposed(by: disposeBag)
+            }).disposed(by: disposeBag)
         
-        collectionViewUsers.createEndScrollingObservable()
-            .subscribe(onNext: { [weak self] _, _ in
+        collectionViewChats.createEndScrollingObservable()
+            .subscribe(onNext: { [weak self] _,_ in
                 self?.viewModel.loadMore()
             }).disposed(by: disposeBag)
     }

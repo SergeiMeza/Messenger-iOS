@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0DBF0C0F5A9765397B50A0AF /* Pods_Messenger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FBEA1C7472AD8614637218E /* Pods_Messenger.framework */; };
+		E82202AD20E1390B00152C8F /* ViewControllerChats.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82202AC20E1390B00152C8F /* ViewControllerChats.swift */; };
+		E82202AF20E1394B00152C8F /* ViewControllerChats.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E82202AE20E1394B00152C8F /* ViewControllerChats.storyboard */; };
 		E828141220C7C807002D4621 /* ViewControllerFaceDetection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E828141120C7C807002D4621 /* ViewControllerFaceDetection.swift */; };
 		E828141420C7C836002D4621 /* Samples.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E828141320C7C836002D4621 /* Samples.xcassets */; };
 		E828141D20C7C9CA002D4621 /* SqueezeNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = E828141C20C7C9CA002D4621 /* SqueezeNet.mlmodel */; };
@@ -108,6 +110,14 @@
 		E88D6ED620C31B8800F83BDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E88D6ED420C31B8800F83BDE /* Main.storyboard */; };
 		E88D6ED820C31B8800F83BDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E88D6ED720C31B8800F83BDE /* Assets.xcassets */; };
 		E88D6EDB20C31B8800F83BDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E88D6ED920C31B8800F83BDE /* LaunchScreen.storyboard */; };
+		E8F4652820E13ABF00066173 /* DataSourceChats.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F4652720E13ABF00066173 /* DataSourceChats.swift */; };
+		E8F4652A20E13B5500066173 /* SectionControllerChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F4652920E13B5500066173 /* SectionControllerChat.swift */; };
+		E8F4652C20E13BF900066173 /* ViewModelChats.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F4652B20E13BF900066173 /* ViewModelChats.swift */; };
+		E8F4652E20E13DBA00066173 /* ChatsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F4652D20E13DBA00066173 /* ChatsService.swift */; };
+		E8F4653020E13F7E00066173 /* RealmChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F4652F20E13F7E00066173 /* RealmChat.swift */; };
+		E8F4653220E1458000066173 /* CollectionViewCellChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F4653120E1458000066173 /* CollectionViewCellChat.swift */; };
+		E8F4653420E145A000066173 /* CollectionViewCellChat.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8F4653320E145A000066173 /* CollectionViewCellChat.xib */; };
+		E8F4653620E14A0500066173 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8F4653520E14A0500066173 /* NavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -115,6 +125,8 @@
 		1062514544AC04E3BE005C3E /* Pods-Messenger.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messenger.staging.xcconfig"; path = "Pods/Target Support Files/Pods-Messenger/Pods-Messenger.staging.xcconfig"; sourceTree = "<group>"; };
 		8FBEA1C7472AD8614637218E /* Pods_Messenger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Messenger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9D8EA1B6381A51FAE593D05 /* Pods-Messenger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messenger.release.xcconfig"; path = "Pods/Target Support Files/Pods-Messenger/Pods-Messenger.release.xcconfig"; sourceTree = "<group>"; };
+		E82202AC20E1390B00152C8F /* ViewControllerChats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerChats.swift; sourceTree = "<group>"; };
+		E82202AE20E1394B00152C8F /* ViewControllerChats.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ViewControllerChats.storyboard; sourceTree = "<group>"; };
 		E828141120C7C807002D4621 /* ViewControllerFaceDetection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFaceDetection.swift; sourceTree = "<group>"; };
 		E828141320C7C836002D4621 /* Samples.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Samples.xcassets; sourceTree = "<group>"; };
 		E828141C20C7C9CA002D4621 /* SqueezeNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SqueezeNet.mlmodel; sourceTree = "<group>"; };
@@ -223,6 +235,14 @@
 		E8CA77DE20D067C60094F8BF /* Applications.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Applications.xcconfig; sourceTree = "<group>"; };
 		E8CA77DF20D068280094F8BF /* Debug-Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Debug-Staging.xcconfig"; sourceTree = "<group>"; };
 		E8CA77E020D0689B0094F8BF /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		E8F4652720E13ABF00066173 /* DataSourceChats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceChats.swift; sourceTree = "<group>"; };
+		E8F4652920E13B5500066173 /* SectionControllerChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionControllerChat.swift; sourceTree = "<group>"; };
+		E8F4652B20E13BF900066173 /* ViewModelChats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelChats.swift; sourceTree = "<group>"; };
+		E8F4652D20E13DBA00066173 /* ChatsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsService.swift; sourceTree = "<group>"; };
+		E8F4652F20E13F7E00066173 /* RealmChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmChat.swift; sourceTree = "<group>"; };
+		E8F4653120E1458000066173 /* CollectionViewCellChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellChat.swift; sourceTree = "<group>"; };
+		E8F4653320E145A000066173 /* CollectionViewCellChat.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCellChat.xib; sourceTree = "<group>"; };
+		E8F4653520E14A0500066173 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -304,6 +324,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E82202AB20E138F700152C8F /* Chats */ = {
+			isa = PBXGroup;
+			children = (
+				E82202AC20E1390B00152C8F /* ViewControllerChats.swift */,
+				E82202AE20E1394B00152C8F /* ViewControllerChats.storyboard */,
+				E8F4653120E1458000066173 /* CollectionViewCellChat.swift */,
+				E8F4653320E145A000066173 /* CollectionViewCellChat.xib */,
+			);
+			path = Chats;
+			sourceTree = "<group>";
+		};
 		E828141020C7C7E8002D4621 /* FaceDetection */ = {
 			isa = PBXGroup;
 			children = (
@@ -325,6 +356,7 @@
 			isa = PBXGroup;
 			children = (
 				E868968020C4EF0700EB34EF /* RealmUser.swift */,
+				E8F4652F20E13F7E00066173 /* RealmChat.swift */,
 			);
 			path = Realm;
 			sourceTree = "<group>";
@@ -334,6 +366,7 @@
 			children = (
 				E868969320C508B100EB34EF /* SectionControllerLoading.swift */,
 				E868969A20C50A5100EB34EF /* SectionControllerUser.swift */,
+				E8F4652920E13B5500066173 /* SectionControllerChat.swift */,
 			);
 			path = SectionControllers;
 			sourceTree = "<group>";
@@ -350,6 +383,7 @@
 				E86896AC20C512C900EB34EF /* ErrorStateView.swift */,
 				E86896B120C513DF00EB34EF /* RxRefreshControl.swift */,
 				E86896E020C700F900EB34EF /* UIHelper.swift */,
+				E8F4653520E14A0500066173 /* NavigationController.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -369,6 +403,7 @@
 			isa = PBXGroup;
 			children = (
 				E86896A220C50C4E00EB34EF /* ViewModelUsers.swift */,
+				E8F4652B20E13BF900066173 /* ViewModelChats.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -470,6 +505,7 @@
 			isa = PBXGroup;
 			children = (
 				E868969020C5083B00EB34EF /* DataSourceUsers.swift */,
+				E8F4652720E13ABF00066173 /* DataSourceChats.swift */,
 			);
 			path = DataSources;
 			sourceTree = "<group>";
@@ -512,6 +548,7 @@
 		E86AB0ED20C3388400657311 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				E82202AB20E138F700152C8F /* Chats */,
 				E828141020C7C7E8002D4621 /* FaceDetection */,
 				E86896D820C6F02500EB34EF /* Home */,
 				E868969C20C50B9B00EB34EF /* Users */,
@@ -525,6 +562,7 @@
 			children = (
 				E868968A20C4FC0D00EB34EF /* Service.swift */,
 				E868968420C4F93400EB34EF /* UsersService.swift */,
+				E8F4652D20E13DBA00066173 /* ChatsService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -716,6 +754,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8F4653420E145A000066173 /* CollectionViewCellChat.xib in Resources */,
 				E88D6EDB20C31B8800F83BDE /* LaunchScreen.storyboard in Resources */,
 				E86896A020C50BB300EB34EF /* CollectionViewCellUser.xib in Resources */,
 				E86896A920C5105100EB34EF /* ViewControllerUsers.storyboard in Resources */,
@@ -725,6 +764,7 @@
 				E88D6ED820C31B8800F83BDE /* Assets.xcassets in Resources */,
 				E86896D320C6157D00EB34EF /* OriginalTabView.xib in Resources */,
 				E86896BA20C5228000EB34EF /* Colors.xcassets in Resources */,
+				E82202AF20E1394B00152C8F /* ViewControllerChats.storyboard in Resources */,
 				E86896CF20C60DC800EB34EF /* OriginalTabPageViewController.storyboard in Resources */,
 				E868969920C509B800EB34EF /* CollectionViewCellLoading.xib in Resources */,
 				E88D6ED620C31B8800F83BDE /* Main.storyboard in Resources */,
@@ -892,7 +932,9 @@
 				E86AB11A20C3401F00657311 /* UICollectionView+Extension.swift in Sources */,
 				E86896A520C50C8C00EB34EF /* RefreshableModel.swift in Sources */,
 				E86896D120C6149600EB34EF /* OriginalTabViewInfinity.swift in Sources */,
+				E8F4652C20E13BF900066173 /* ViewModelChats.swift in Sources */,
 				E86896B820C51FE300EB34EF /* UserDefaults+Extension.swift in Sources */,
+				E8F4652A20E13B5500066173 /* SectionControllerChat.swift in Sources */,
 				E86AB10D20C3401F00657311 /* UILabel+Extension.swift in Sources */,
 				E86896CB20C59AC600EB34EF /* CALayer.swift in Sources */,
 				E86AB11720C3401F00657311 /* UITableView+Extension.swift in Sources */,
@@ -900,11 +942,14 @@
 				E86AB11320C3401F00657311 /* UIViewController+TransitionType.swift in Sources */,
 				E86896C320C5898300EB34EF /* OriginalTabInfo.swift in Sources */,
 				E868969B20C50A5100EB34EF /* SectionControllerUser.swift in Sources */,
+				E8F4652820E13ABF00066173 /* DataSourceChats.swift in Sources */,
 				E868968720C4F9BF00EB34EF /* Result.swift in Sources */,
 				E86AB11420C3401F00657311 /* UIApplication+Extension.swift in Sources */,
 				E86AB11820C3401F00657311 /* ListCollectionView+Extension.swift in Sources */,
 				E86896B220C513E000EB34EF /* RxRefreshControl.swift in Sources */,
+				E82202AD20E1390B00152C8F /* ViewControllerChats.swift in Sources */,
 				E868968920C4FB3200EB34EF /* NetworkError.swift in Sources */,
+				E8F4653220E1458000066173 /* CollectionViewCellChat.swift in Sources */,
 				E868969420C508B100EB34EF /* SectionControllerLoading.swift in Sources */,
 				E86AB12A20C342F600657311 /* MovableNavBar.swift in Sources */,
 				E86896DF20C6F78600EB34EF /* MessengerPopover.swift in Sources */,
@@ -921,6 +966,7 @@
 				E86896D520C6158D00EB34EF /* OriginalTabCell.swift in Sources */,
 				E86AB0F620C33C6F00657311 /* Date+Extension.swift in Sources */,
 				E86AB12C20C342F600657311 /* Searchable.swift in Sources */,
+				E8F4653020E13F7E00066173 /* RealmChat.swift in Sources */,
 				E86AB11620C3401F00657311 /* UIImageView+Extension.swift in Sources */,
 				E86896B020C5130900EB34EF /* MessengerButton.swift in Sources */,
 				E86AB10F20C3401F00657311 /* UIActivityIndicatorView+Extension.swift in Sources */,
@@ -929,6 +975,7 @@
 				E86896AB20C5122300EB34EF /* LoadingStateView.swift in Sources */,
 				E86AB11220C3401F00657311 /* Collection+Extension.swift in Sources */,
 				E86AB10E20C3401F00657311 /* UIView+Extension.swift in Sources */,
+				E8F4653620E14A0500066173 /* NavigationController.swift in Sources */,
 				E86AB10C20C3401F00657311 /* NSObject+propertyNames.swift in Sources */,
 				E86896DA20C6F03E00EB34EF /* TabBarControllerHome.swift in Sources */,
 				E86896CD20C60A1500EB34EF /* OriginalTabPageViewControllerDelegate.swift in Sources */,
@@ -948,6 +995,7 @@
 				E86AB0F420C3397C00657311 /* String+Extension.swift in Sources */,
 				E86AB12E20C342F600657311 /* Reusable.swift in Sources */,
 				E86AB12920C342F600657311 /* StoryboardInstantiable.swift in Sources */,
+				E8F4652E20E13DBA00066173 /* ChatsService.swift in Sources */,
 				E86AB10A20C3401F00657311 /* UIColor+Extension.swift in Sources */,
 				E868969E20C50BAC00EB34EF /* CollectionViewCellUser.swift in Sources */,
 			);

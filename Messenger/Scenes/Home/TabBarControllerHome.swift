@@ -29,6 +29,8 @@ class TabBarControllerHome: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tabBar.tintColor = .themeColor
+        tabBar.isTranslucent = false
+        tabBar.backgroundColor = .white
     }
     
     override func viewDidAppear(_ animated: Bool) {

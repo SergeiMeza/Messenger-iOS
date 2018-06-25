@@ -11,10 +11,17 @@ import Firebase
 import ObjectMapper
 import SwiftyJSON
 import Moya
+import GameKit
+import RealmSwift
 
 struct UsersService {
     
     func getUsers(paginate: Bool, lastValue: Any? = nil, completion: @escaping ((Result<(users: [RealmUser], lastValue: Any?)>)->Void)) {
+        
+        #if DEBUG
+//        generateRandomUsersWithFirebaseDatabase()
+        #endif
+        
         let path = DeviceConst.firebaseDatabaseRootURL.appendingPathComponent("USER")
         Service.queryDatabase(path: path, paginate: paginate, child: "index", lastValue: lastValue) { result in
             switch result {
@@ -28,6 +35,43 @@ struct UsersService {
                 completion(Result.success((users, users.last?.index)))
             case .error(let error):
                 completion(Result.error(error))
+            }
+        }
+    }
+    
+    func generateRandomUsersWithFirebaseDatabase() {
+        let randomGenerator = GKRandomDistribution.init(lowestValue: 0, highestValue: 4)
+        for index in 1...100 {
+            let user = FirebaseObject.init(path: "USER")
+            user[DeviceConst.object_id] = FirebaseObject.autoId()
+            user["index"] = index
+            user["reverse_index"] = -index
+            user["name"] = ["David", "Rose", "Mary", "John", "Paul"][randomGenerator.nextInt()]
+            user["age"] = [13, 10, 18, 22, 24][randomGenerator.nextInt()]
+            user["gender"] = [0 , 1, 2, 3][randomGenerator.nextInt() % 4]
+            user["favorite_color"] = ["red", "blue", "orange", "pink", "yellow"][min(randomGenerator.nextInt(), 3)]
+            user["is_wizard"] = [true, false][randomGenerator.nextInt() % 2]
+            user.saveInBackground()
+        }
+    }
+    
+    
+    func getUsersFromFirebaseDatabaseAndSaveInRealm() {
+        Service.users.getUsers(paginate: false) { result in
+            switch result {
+            case .error(let error):
+                print(error)
+            case .success(let users, _):
+                DispatchQueue.init(label: "background", qos: DispatchQoS.background).async {
+                    autoreleasepool {
+                        let realm = try! Realm()
+                        try! realm.write {
+                            users.forEach {
+                                realm.add($0, update: true)
+                            }
+                        }
+                    }
+                }
             }
         }
     }

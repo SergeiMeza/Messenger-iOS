@@ -1,16 +1,16 @@
 //
-//  SectionControllerUser.swift
+//  SectionControllerChat.swift
 //  Messenger
 //
-//  Created by Sergei Meza on 2018/06/04.
+//  Created by Sergei Meza on 2018/06/26.
 //  Copyright © 2018 Sergei Meza. All rights reserved.
 //
 
 import IGListKit
 
-class SectionControllerUser: ListSectionController {
+class SectionControllerChat: ListSectionController {
     
-    private var user: RealmUser?
+    private var chat: RealmChat?
     
     override func sizeForItem(at index: Int) -> CGSize {
         guard let width = collectionContext?.containerSize.width else {
@@ -20,21 +20,21 @@ class SectionControllerUser: ListSectionController {
     }
     
     override func cellForItem(at index: Int) -> UICollectionViewCell {
-        guard let item = user, let context = collectionContext else {
-            fatalError("user or context is nil")
+        guard let item = chat, let context = collectionContext else {
+            fatalError("chat or context is nil")
         }
-        let cell: CollectionViewCellUser = context.dequeueReusableCell(self, forIndex: index)
+        let cell: CollectionViewCellChat = context.dequeueReusableCell(self, forIndex: index)
         cell.bindData(item: item)
         return cell
     }
     
     override func didUpdate(to object: Any) {
-        user = object as? RealmUser
+        chat = object as? RealmChat
     }
     
     override func didSelectItem(at index: Int) {
-        guard let item = user else { return }
-        let alertController = UIAlertController.init(title: "User selected", message: "you selected \(item.name)", preferredStyle: .alert)
+        guard let item = chat else { return }
+        let alertController = UIAlertController.init(title: "Chat selected", message: "you selected \(item.name)", preferredStyle: .alert)
         
         alertController.addAction(UIAlertAction.init(title: "OK", style: .cancel))
         
