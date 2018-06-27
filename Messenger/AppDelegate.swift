@@ -44,19 +44,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow()
         window?.makeKeyAndVisible()
         
-        let usersViewController = NavigationController.init(rootViewController: ViewControllerUsers.instantiate())
-        usersViewController.tabBarItem.image = UIImage.init(named: "home")
-        usersViewController.tabBarItem.imageInsets = .init(top: 4, left: 0, bottom: -4, right: 0)
+        let homeViewController = NavigationController.init(rootViewController: ViewControllerHome.instantiate())
+        homeViewController.tabBarItem.image = UIImage.init(named: "home")
+        homeViewController.tabBarItem.imageInsets = .init(top: 4, left: 0, bottom: -4, right: 0)
         
         let chatsViewController = NavigationController.init(rootViewController: ViewControllerChats.instantiate())
         chatsViewController.tabBarItem.image = UIImage.init(named: "home")
         chatsViewController.tabBarItem.imageInsets = .init(top: 4, left: 0, bottom: -4, right: 0)
         
-        let homeController = TabBarControllerHome()
-        homeController.viewControllers = [usersViewController, chatsViewController]
-        homeController.tabTitles = ["Home", "Chats"]
+        let tabBarControllerMain = TabBarControllerMain()
+        tabBarControllerMain.viewControllers = [homeViewController, chatsViewController]
+        tabBarControllerMain.tabTitles = ["Home", "Chats"]
         
-        window?.rootViewController = homeController
+        window?.rootViewController = tabBarControllerMain
         
         return true
     }

@@ -19,7 +19,7 @@ struct DownloadManager {
     //   MARK: - Public Methods
     
     static func image(_ link: String?, md5: String? = nil, completion: DownloadHandler? = nil) {
-        guard let link = link else {
+        guard let link = link, !link.isEmpty else {
             completion?(nil, NetworkError(statusCode: 103), false)
             return
         }

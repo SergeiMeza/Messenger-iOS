@@ -8,11 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		0DBF0C0F5A9765397B50A0AF /* Pods_Messenger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FBEA1C7472AD8614637218E /* Pods_Messenger.framework */; };
+		E81B891A20E36D3C00C81A8B /* ViewControllerHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81B891920E36D3C00C81A8B /* ViewControllerHome.swift */; };
+		E81B891D20E36E7600C81A8B /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81B891C20E36E7600C81A8B /* Tab.swift */; };
+		E81B891F20E36EAA00C81A8B /* TabBannerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81B891E20E36EAA00C81A8B /* TabBannerType.swift */; };
+		E81B892220E370C600C81A8B /* LoadingStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81B892120E370C600C81A8B /* LoadingStore.swift */; };
+		E81B892420E3737B00C81A8B /* ViewControllerHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E81B892320E3737B00C81A8B /* ViewControllerHome.storyboard */; };
 		E82202AD20E1390B00152C8F /* ViewControllerChats.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82202AC20E1390B00152C8F /* ViewControllerChats.swift */; };
 		E82202AF20E1394B00152C8F /* ViewControllerChats.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E82202AE20E1394B00152C8F /* ViewControllerChats.storyboard */; };
 		E828141220C7C807002D4621 /* ViewControllerFaceDetection.swift in Sources */ = {isa = PBXBuildFile; fileRef = E828141120C7C807002D4621 /* ViewControllerFaceDetection.swift */; };
 		E828141420C7C836002D4621 /* Samples.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E828141320C7C836002D4621 /* Samples.xcassets */; };
 		E828141D20C7C9CA002D4621 /* SqueezeNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = E828141C20C7C9CA002D4621 /* SqueezeNet.mlmodel */; };
+		E854494720E365C90013D864 /* CollectionViewCellChat-pad.xib in Resources */ = {isa = PBXBuildFile; fileRef = E854494620E365C90013D864 /* CollectionViewCellChat-pad.xib */; };
+		E854494920E365FC0013D864 /* CollectionViewCellUser-pad.xib in Resources */ = {isa = PBXBuildFile; fileRef = E854494820E365FC0013D864 /* CollectionViewCellUser-pad.xib */; };
 		E868968120C4EF0700EB34EF /* RealmUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E868968020C4EF0700EB34EF /* RealmUser.swift */; };
 		E868968320C4F54200EB34EF /* MessengerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E868968220C4F54200EB34EF /* MessengerAPI.swift */; };
 		E868968520C4F93400EB34EF /* UsersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E868968420C4F93400EB34EF /* UsersService.swift */; };
@@ -53,7 +60,7 @@
 		E86896D320C6157D00EB34EF /* OriginalTabView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E86896D220C6157D00EB34EF /* OriginalTabView.xib */; };
 		E86896D520C6158D00EB34EF /* OriginalTabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86896D420C6158C00EB34EF /* OriginalTabCell.swift */; };
 		E86896D720C6159600EB34EF /* OriginalTabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E86896D620C6159600EB34EF /* OriginalTabCell.xib */; };
-		E86896DA20C6F03E00EB34EF /* TabBarControllerHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86896D920C6F03E00EB34EF /* TabBarControllerHome.swift */; };
+		E86896DA20C6F03E00EB34EF /* TabBarControllerMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86896D920C6F03E00EB34EF /* TabBarControllerMain.swift */; };
 		E86896DF20C6F78600EB34EF /* MessengerPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86896DE20C6F78600EB34EF /* MessengerPopover.swift */; };
 		E86896E120C700F900EB34EF /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86896E020C700F900EB34EF /* UIHelper.swift */; };
 		E86AB0AA20C32D0200657311 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E86AB0A920C32D0200657311 /* GoogleService-Info.plist */; };
@@ -134,11 +141,18 @@
 		1062514544AC04E3BE005C3E /* Pods-Messenger.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messenger.staging.xcconfig"; path = "Pods/Target Support Files/Pods-Messenger/Pods-Messenger.staging.xcconfig"; sourceTree = "<group>"; };
 		8FBEA1C7472AD8614637218E /* Pods_Messenger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Messenger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9D8EA1B6381A51FAE593D05 /* Pods-Messenger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messenger.release.xcconfig"; path = "Pods/Target Support Files/Pods-Messenger/Pods-Messenger.release.xcconfig"; sourceTree = "<group>"; };
+		E81B891920E36D3C00C81A8B /* ViewControllerHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerHome.swift; sourceTree = "<group>"; };
+		E81B891C20E36E7600C81A8B /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
+		E81B891E20E36EAA00C81A8B /* TabBannerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBannerType.swift; sourceTree = "<group>"; };
+		E81B892120E370C600C81A8B /* LoadingStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingStore.swift; sourceTree = "<group>"; };
+		E81B892320E3737B00C81A8B /* ViewControllerHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ViewControllerHome.storyboard; sourceTree = "<group>"; };
 		E82202AC20E1390B00152C8F /* ViewControllerChats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerChats.swift; sourceTree = "<group>"; };
 		E82202AE20E1394B00152C8F /* ViewControllerChats.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ViewControllerChats.storyboard; sourceTree = "<group>"; };
 		E828141120C7C807002D4621 /* ViewControllerFaceDetection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFaceDetection.swift; sourceTree = "<group>"; };
 		E828141320C7C836002D4621 /* Samples.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Samples.xcassets; sourceTree = "<group>"; };
 		E828141C20C7C9CA002D4621 /* SqueezeNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = SqueezeNet.mlmodel; sourceTree = "<group>"; };
+		E854494620E365C90013D864 /* CollectionViewCellChat-pad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "CollectionViewCellChat-pad.xib"; sourceTree = "<group>"; };
+		E854494820E365FC0013D864 /* CollectionViewCellUser-pad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "CollectionViewCellUser-pad.xib"; sourceTree = "<group>"; };
 		E868968020C4EF0700EB34EF /* RealmUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmUser.swift; sourceTree = "<group>"; };
 		E868968220C4F54200EB34EF /* MessengerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerAPI.swift; sourceTree = "<group>"; };
 		E868968420C4F93400EB34EF /* UsersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersService.swift; sourceTree = "<group>"; };
@@ -179,7 +193,7 @@
 		E86896D220C6157D00EB34EF /* OriginalTabView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OriginalTabView.xib; sourceTree = "<group>"; };
 		E86896D420C6158C00EB34EF /* OriginalTabCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OriginalTabCell.swift; sourceTree = "<group>"; };
 		E86896D620C6159600EB34EF /* OriginalTabCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OriginalTabCell.xib; sourceTree = "<group>"; };
-		E86896D920C6F03E00EB34EF /* TabBarControllerHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerHome.swift; sourceTree = "<group>"; };
+		E86896D920C6F03E00EB34EF /* TabBarControllerMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarControllerMain.swift; sourceTree = "<group>"; };
 		E86896DE20C6F78600EB34EF /* MessengerPopover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessengerPopover.swift; sourceTree = "<group>"; };
 		E86896E020C700F900EB34EF /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		E86AB0A920C32D0200657311 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -343,6 +357,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E81B891820E36D1B00C81A8B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E81B891920E36D3C00C81A8B /* ViewControllerHome.swift */,
+				E81B892320E3737B00C81A8B /* ViewControllerHome.storyboard */,
+			);
+			name = Home;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		E81B892020E370BA00C81A8B /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+				E81B892120E370C600C81A8B /* LoadingStore.swift */,
+			);
+			path = Stores;
+			sourceTree = "<group>";
+		};
 		E82202AB20E138F700152C8F /* Chats */ = {
 			isa = PBXGroup;
 			children = (
@@ -350,6 +382,7 @@
 				E82202AE20E1394B00152C8F /* ViewControllerChats.storyboard */,
 				E8F4653120E1458000066173 /* CollectionViewCellChat.swift */,
 				E8F4653320E145A000066173 /* CollectionViewCellChat.xib */,
+				E854494620E365C90013D864 /* CollectionViewCellChat-pad.xib */,
 			);
 			path = Chats;
 			sourceTree = "<group>";
@@ -414,6 +447,7 @@
 				E86896A820C5105100EB34EF /* ViewControllerUsers.storyboard */,
 				E868969D20C50BAC00EB34EF /* CollectionViewCellUser.swift */,
 				E868969F20C50BB300EB34EF /* CollectionViewCellUser.xib */,
+				E854494820E365FC0013D864 /* CollectionViewCellUser-pad.xib */,
 			);
 			path = Users;
 			sourceTree = "<group>";
@@ -453,12 +487,12 @@
 			path = OriginalTab;
 			sourceTree = "<group>";
 		};
-		E86896D820C6F02500EB34EF /* Home */ = {
+		E86896D820C6F02500EB34EF /* TabBarMain */ = {
 			isa = PBXGroup;
 			children = (
-				E86896D920C6F03E00EB34EF /* TabBarControllerHome.swift */,
+				E86896D920C6F03E00EB34EF /* TabBarControllerMain.swift */,
 			);
-			path = Home;
+			path = TabBarMain;
 			sourceTree = "<group>";
 		};
 		E86896DD20C6F77900EB34EF /* Popover */ = {
@@ -494,6 +528,7 @@
 				E86896A120C50C4200EB34EF /* ViewModels */,
 				E868968620C4F9BF00EB34EF /* Result.swift */,
 				E86896B320C51BAD00EB34EF /* Connection.swift */,
+				E81B891C20E36E7600C81A8B /* Tab.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -561,6 +596,7 @@
 			isa = PBXGroup;
 			children = (
 				E86896A620C50CF800EB34EF /* LoadingState.swift */,
+				E81B891E20E36EAA00C81A8B /* TabBannerType.swift */,
 			);
 			path = enums;
 			sourceTree = "<group>";
@@ -568,9 +604,10 @@
 		E86AB0ED20C3388400657311 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				E81B891820E36D1B00C81A8B /* Home */,
 				E82202AB20E138F700152C8F /* Chats */,
 				E828141020C7C7E8002D4621 /* FaceDetection */,
-				E86896D820C6F02500EB34EF /* Home */,
+				E86896D820C6F02500EB34EF /* TabBarMain */,
 				E868969C20C50B9B00EB34EF /* Users */,
 				E868969520C5095A00EB34EF /* Common */,
 			);
@@ -645,6 +682,7 @@
 		E88D6ECF20C31B8800F83BDE /* Messenger */ = {
 			isa = PBXGroup;
 			children = (
+				E81B892020E370BA00C81A8B /* Stores */,
 				E86AB0E620C3382200657311 /* Resources */,
 				E868969220C508A200EB34EF /* SectionControllers */,
 				E86AB0EF20C3389500657311 /* Networking */,
@@ -800,14 +838,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8F4653420E145A000066173 /* CollectionViewCellChat.xib in Resources */,
+				E81B892420E3737B00C81A8B /* ViewControllerHome.storyboard in Resources */,
 				E88D6EDB20C31B8800F83BDE /* LaunchScreen.storyboard in Resources */,
 				E86896A020C50BB300EB34EF /* CollectionViewCellUser.xib in Resources */,
 				E86896A920C5105100EB34EF /* ViewControllerUsers.storyboard in Resources */,
 				E86896D720C6159600EB34EF /* OriginalTabCell.xib in Resources */,
 				E86AB0AA20C32D0200657311 /* GoogleService-Info.plist in Resources */,
 				E828141420C7C836002D4621 /* Samples.xcassets in Resources */,
+				E854494920E365FC0013D864 /* CollectionViewCellUser-pad.xib in Resources */,
 				E88D6ED820C31B8800F83BDE /* Assets.xcassets in Resources */,
 				E86896D320C6157D00EB34EF /* OriginalTabView.xib in Resources */,
+				E854494720E365C90013D864 /* CollectionViewCellChat-pad.xib in Resources */,
 				E86896BA20C5228000EB34EF /* Colors.xcassets in Resources */,
 				E82202AF20E1394B00152C8F /* ViewControllerChats.storyboard in Resources */,
 				E86896CF20C60DC800EB34EF /* OriginalTabPageViewController.storyboard in Resources */,
@@ -995,6 +1036,7 @@
 				E86AB11420C3401F00657311 /* UIApplication+Extension.swift in Sources */,
 				E86AB11820C3401F00657311 /* ListCollectionView+Extension.swift in Sources */,
 				E86896B220C513E000EB34EF /* RxRefreshControl.swift in Sources */,
+				E81B892220E370C600C81A8B /* LoadingStore.swift in Sources */,
 				E8F4654920E1648B00066173 /* String+Crypto.swift in Sources */,
 				E8F4654120E162D300066173 /* Checksum.swift in Sources */,
 				E82202AD20E1390B00152C8F /* ViewControllerChats.swift in Sources */,
@@ -1022,6 +1064,7 @@
 				E86AB11620C3401F00657311 /* UIImageView+Extension.swift in Sources */,
 				E86896B020C5130900EB34EF /* MessengerButton.swift in Sources */,
 				E86AB10F20C3401F00657311 /* UIActivityIndicatorView+Extension.swift in Sources */,
+				E81B891A20E36D3C00C81A8B /* ViewControllerHome.swift in Sources */,
 				E86896E120C700F900EB34EF /* UIHelper.swift in Sources */,
 				E868968120C4EF0700EB34EF /* RealmUser.swift in Sources */,
 				E86896AB20C5122300EB34EF /* LoadingStateView.swift in Sources */,
@@ -1029,7 +1072,7 @@
 				E86AB10E20C3401F00657311 /* UIView+Extension.swift in Sources */,
 				E8F4653620E14A0500066173 /* NavigationController.swift in Sources */,
 				E86AB10C20C3401F00657311 /* NSObject+propertyNames.swift in Sources */,
-				E86896DA20C6F03E00EB34EF /* TabBarControllerHome.swift in Sources */,
+				E86896DA20C6F03E00EB34EF /* TabBarControllerMain.swift in Sources */,
 				E86896CD20C60A1500EB34EF /* OriginalTabPageViewControllerDelegate.swift in Sources */,
 				E86896A320C50C4E00EB34EF /* ViewModelUsers.swift in Sources */,
 				E8F4654B20E1648B00066173 /* Data+Crypto.swift in Sources */,
@@ -1041,7 +1084,9 @@
 				E86AB13120C342F600657311 /* NibLoadable.swift in Sources */,
 				E828141220C7C807002D4621 /* ViewControllerFaceDetection.swift in Sources */,
 				E86896C520C598CF00EB34EF /* OriginalTabView.swift in Sources */,
+				E81B891F20E36EAA00C81A8B /* TabBannerType.swift in Sources */,
 				E86AB10B20C3401F00657311 /* UIFont+Extension.swift in Sources */,
+				E81B891D20E36E7600C81A8B /* Tab.swift in Sources */,
 				E868969120C5083B00EB34EF /* DataSourceUsers.swift in Sources */,
 				E86896C120C5895A00EB34EF /* OriginalTabViewController.swift in Sources */,
 				E86AB11520C3401F00657311 /* UIImage+Extension.swift in Sources */,

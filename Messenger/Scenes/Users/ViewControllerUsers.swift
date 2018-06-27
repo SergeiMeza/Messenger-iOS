@@ -11,7 +11,9 @@ import RxCocoa
 import RxSwift
 import IGListKit
 
-class ViewControllerUsers: UIViewController {
+class ViewControllerUsers: UIViewController, OriginalTabInfo {
+    
+    var tab = Tab()
     
     @IBOutlet weak var loadingView: LoadingStateView!
     @IBOutlet weak var errorView: ErrorStateView!
@@ -44,6 +46,10 @@ class ViewControllerUsers: UIViewController {
         collectionViewUsers.addSubview(refreshControl)
         adapter.collectionView = collectionViewUsers
         adapter.dataSource = dataSource
+    }
+    
+    func originalTabInfoTitle() -> String {
+        return tab.title
     }
     
     private func setupListener() {

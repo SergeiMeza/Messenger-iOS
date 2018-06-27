@@ -19,9 +19,8 @@ class ViewModelUsers: RefreshableModel {
     
 //    private var lastDocument: DocumentSnapshot?
     private var lastValue: Any?
-    
     private var busy = false
-    
+    private var tab: Tab?
     private var users = [RealmUser]()
     private var isCompleted = false
     
@@ -36,6 +35,10 @@ class ViewModelUsers: RefreshableModel {
     var refreshingState: Driver<Bool> {
         return refreshing.asDriver().filter { !$0 }
     }
+    
+    lazy var tabName: String = {
+        return tab?.title ?? "TAB"
+    }()
     
     func viewDidLoad() {
         state.accept(.loading)

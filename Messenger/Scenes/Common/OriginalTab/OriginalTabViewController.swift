@@ -95,7 +95,7 @@ extension OriginalTabViewController {
         var isInfinityScroll: Bool = true
         var tabSelectionHeight: CGFloat = 30
         var tabSelectionColor = UIColor.themeColor
-        var tabHeight: CGFloat = 43
+        var tabHeight: CGFloat = 44
         var tabInterval: CGFloat = 6
         var tabBackgroundColor: UIColor = .white
         var tabTextColor: UIColor = .dark50
@@ -103,7 +103,7 @@ extension OriginalTabViewController {
         var onTabSelectedListener: ((Int, Int) -> Void)?
         var onPageChangedListener: ((Int, Int) -> Void)?
         var onPageScrollRateListener: ((Int, Int, CGFloat) -> Void)?
-        var tabBottomInset: CGFloat = 7
+        var tabBottomInset: CGFloat = 8
     }
 }
 

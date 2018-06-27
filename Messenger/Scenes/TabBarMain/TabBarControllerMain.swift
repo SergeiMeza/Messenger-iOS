@@ -1,5 +1,5 @@
 //
-//  TabBarControllerHome.swift
+//  TabBarControllerMain.swift
 //  Messenger
 //
 //  Created by Sergei Meza on 2018/06/06.
@@ -14,7 +14,7 @@ extension DefaultsKeys {
 }
 
 
-class TabBarControllerHome: UITabBarController {
+class TabBarControllerMain: UITabBarController {
     
     var tabTitles: [String] = []
     

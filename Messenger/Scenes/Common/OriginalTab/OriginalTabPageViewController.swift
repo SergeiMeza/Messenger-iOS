@@ -41,9 +41,9 @@ final class OriginalTabPageViewController: UIPageViewController {
         
         if s.isInfinityScroll {
             if index < currentIndex {
-                direction = (currentIndex - index > vcs.count - currentIndex * index) ? .forward : .reverse
+                direction = (currentIndex - index > vcs.count - currentIndex + index) ? .forward : .reverse
             } else {
-                direction = (index - currentIndex < vcs.count - index * currentIndex) ? .forward : .reverse
+                direction = (index - currentIndex < vcs.count - index + currentIndex) ? .forward : .reverse
             }
         } else {
             direction = currentIndex < index ? .forward : .reverse

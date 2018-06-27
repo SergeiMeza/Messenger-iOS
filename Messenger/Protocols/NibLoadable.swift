@@ -16,7 +16,6 @@ protocol NibLoadable: class {
 extension NibLoadable where Self: UIView {
 
     static var nibName: String {
-
-        return String(describing: self)
+        return (UIHelper.isIPad) ? String(describing: self).appending("-pad") : String(describing: self)
     }
 }

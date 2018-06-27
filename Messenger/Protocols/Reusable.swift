@@ -16,7 +16,6 @@ protocol Reusable: class {
 extension Reusable where Self: UIView {
 
     static var defaultReuseIdentifier: String {
-
-        return String(describing: self)
+        return (UIHelper.isIPad) ? String(describing: self).appending("-pad") : String(describing: self)
     }
 }

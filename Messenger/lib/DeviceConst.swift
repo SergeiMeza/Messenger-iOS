@@ -33,4 +33,6 @@ struct DeviceConst {
     static let giga = mega * kilo
     
     static let tabBarOffset: CGFloat = 8
+    
+    static let homeStatusBarBgViewTag = 200
 }

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.12" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2NF-gW-ail">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller Home-->
+        <scene sceneID="xS3-mT-TOL">
+            <objects>
+                <viewController storyboardIdentifier="home" id="2NF-gW-ail" customClass="ViewControllerHome" customModule="Messenger" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="35r-gr-6pF"/>
+                        <viewControllerLayoutGuide type="bottom" id="qsA-Af-8Cl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sdI-R6-tIE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="Ui2-SM-3Td"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="pho-Rm-dgq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dr0-NX-Yc6" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2000.8" y="-1076.311844077961"/>
+        </scene>
+    </scenes>
+</document>
