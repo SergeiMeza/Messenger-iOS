@@ -11,26 +11,26 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="GbX-dB-Vz1" customClass="CollectionViewCellLoading" customModule="Messenger" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="7n7-g9-AqW" customClass="CollectionViewCellLoading" customModule="Messenger" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="211" height="81"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                 <rect key="frame" x="0.0" y="0.0" width="211" height="81"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="sFs-x0-LPg">
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="RUC-4r-5vg">
                         <rect key="frame" x="95" y="30" width="20" height="20"/>
                     </activityIndicatorView>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="sFs-x0-LPg" firstAttribute="centerY" secondItem="34c-xS-rY8" secondAttribute="centerY" id="Ykg-2g-e6A"/>
-                <constraint firstItem="sFs-x0-LPg" firstAttribute="centerX" secondItem="34c-xS-rY8" secondAttribute="centerX" id="cTj-mC-tSG"/>
+                <constraint firstItem="RUC-4r-5vg" firstAttribute="centerX" secondItem="bmz-fW-4gJ" secondAttribute="centerX" id="hTm-zd-w1m"/>
+                <constraint firstItem="RUC-4r-5vg" firstAttribute="centerY" secondItem="bmz-fW-4gJ" secondAttribute="centerY" id="kZz-If-abC"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="34c-xS-rY8"/>
+            <viewLayoutGuide key="safeArea" id="bmz-fW-4gJ"/>
             <size key="customSize" width="211" height="81"/>
             <connections>
-                <outlet property="activityIndicatorView" destination="sFs-x0-LPg" id="pyW-TI-a7a"/>
+                <outlet property="activityIndicatorView" destination="RUC-4r-5vg" id="aDE-Jj-hhS"/>
             </connections>
             <point key="canvasLocation" x="-5.5" y="-179.5"/>
         </collectionViewCell>

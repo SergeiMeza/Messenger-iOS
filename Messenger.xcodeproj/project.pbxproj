@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0DBF0C0F5A9765397B50A0AF /* Pods_Messenger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FBEA1C7472AD8614637218E /* Pods_Messenger.framework */; };
+		E80AB4C220E38DFD0056089F /* RealmUserWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E80AB4C120E38DFD0056089F /* RealmUserWrapper.swift */; };
+		E80AB4C420E3909E0056089F /* CollectionViewCellLoading-pad.xib in Resources */ = {isa = PBXBuildFile; fileRef = E80AB4C320E3909E0056089F /* CollectionViewCellLoading-pad.xib */; };
 		E81B891A20E36D3C00C81A8B /* ViewControllerHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81B891920E36D3C00C81A8B /* ViewControllerHome.swift */; };
 		E81B891D20E36E7600C81A8B /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81B891C20E36E7600C81A8B /* Tab.swift */; };
 		E81B891F20E36EAA00C81A8B /* TabBannerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81B891E20E36EAA00C81A8B /* TabBannerType.swift */; };
@@ -141,6 +143,8 @@
 		1062514544AC04E3BE005C3E /* Pods-Messenger.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messenger.staging.xcconfig"; path = "Pods/Target Support Files/Pods-Messenger/Pods-Messenger.staging.xcconfig"; sourceTree = "<group>"; };
 		8FBEA1C7472AD8614637218E /* Pods_Messenger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Messenger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9D8EA1B6381A51FAE593D05 /* Pods-Messenger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messenger.release.xcconfig"; path = "Pods/Target Support Files/Pods-Messenger/Pods-Messenger.release.xcconfig"; sourceTree = "<group>"; };
+		E80AB4C120E38DFD0056089F /* RealmUserWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmUserWrapper.swift; sourceTree = "<group>"; };
+		E80AB4C320E3909E0056089F /* CollectionViewCellLoading-pad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "CollectionViewCellLoading-pad.xib"; sourceTree = "<group>"; };
 		E81B891920E36D3C00C81A8B /* ViewControllerHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerHome.swift; sourceTree = "<group>"; };
 		E81B891C20E36E7600C81A8B /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
 		E81B891E20E36EAA00C81A8B /* TabBannerType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBannerType.swift; sourceTree = "<group>"; };
@@ -357,6 +361,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E80AB4C020E38DE90056089F /* Wrapper */ = {
+			isa = PBXGroup;
+			children = (
+				E80AB4C120E38DFD0056089F /* RealmUserWrapper.swift */,
+			);
+			path = Wrapper;
+			sourceTree = "<group>";
+		};
 		E81B891820E36D1B00C81A8B /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -431,6 +443,7 @@
 				E86896AE20C512FD00EB34EF /* Component */,
 				E868969620C5096A00EB34EF /* CollectionViewCellLoading.swift */,
 				E868969820C509B800EB34EF /* CollectionViewCellLoading.xib */,
+				E80AB4C320E3909E0056089F /* CollectionViewCellLoading-pad.xib */,
 				E86896AA20C5122300EB34EF /* LoadingStateView.swift */,
 				E86896AC20C512C900EB34EF /* ErrorStateView.swift */,
 				E86896B120C513DF00EB34EF /* RxRefreshControl.swift */,
@@ -523,6 +536,7 @@
 		E86AB0E520C3381A00657311 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				E80AB4C020E38DE90056089F /* Wrapper */,
 				E8F4653720E14E1500066173 /* Managers */,
 				E828141520C7C943002D4621 /* MLModels */,
 				E86896A120C50C4200EB34EF /* ViewModels */,
@@ -842,6 +856,7 @@
 				E88D6EDB20C31B8800F83BDE /* LaunchScreen.storyboard in Resources */,
 				E86896A020C50BB300EB34EF /* CollectionViewCellUser.xib in Resources */,
 				E86896A920C5105100EB34EF /* ViewControllerUsers.storyboard in Resources */,
+				E80AB4C420E3909E0056089F /* CollectionViewCellLoading-pad.xib in Resources */,
 				E86896D720C6159600EB34EF /* OriginalTabCell.xib in Resources */,
 				E86AB0AA20C32D0200657311 /* GoogleService-Info.plist in Resources */,
 				E828141420C7C836002D4621 /* Samples.xcassets in Resources */,
@@ -1080,6 +1095,7 @@
 				E86896A720C50CF800EB34EF /* LoadingState.swift in Sources */,
 				E86AB10920C3401F00657311 /* ListCollectionContext+Extension.swift in Sources */,
 				E86896AD20C512C900EB34EF /* ErrorStateView.swift in Sources */,
+				E80AB4C220E38DFD0056089F /* RealmUserWrapper.swift in Sources */,
 				E86AB12F20C342F600657311 /* StatusBarStyleable.swift in Sources */,
 				E86AB13120C342F600657311 /* NibLoadable.swift in Sources */,
 				E828141220C7C807002D4621 /* ViewControllerFaceDetection.swift in Sources */,

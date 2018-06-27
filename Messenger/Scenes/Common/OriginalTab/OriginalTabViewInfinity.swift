@@ -65,7 +65,7 @@ final class OriginalTabViewInfinity: OriginalTabView {
 extension OriginalTabViewInfinity {
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return titles.count * 3
+        return (UIHelper.isIPad) ? titles.count * 5 : titles.count * 3
     }
 }
 

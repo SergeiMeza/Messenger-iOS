@@ -22,9 +22,7 @@ class CollectionViewCellUser: UICollectionViewCell, NibLoadable, Reusable {
         timeLabel.text = "\(item.index)"
         detailsLabel.text = "favorite color: \(item.favoriteColor), isWizard: \(item.isWizard)"
         contentView.backgroundColor = .white
-        imageView.layer.cornerRadius = imageView.frame.height / 2
-        imageView.layer.borderColor = UIColor.themeColor.cgColor
-        imageView.layer.borderWidth = 2
+        imageView.layer.cornerRadius = 8
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true
         imageView.image = UIImage.init(named: "profile_\(generator.nextInt() % 9)")

@@ -88,6 +88,12 @@ class OriginalTabViewController: UIViewController {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.layer.hiddenShadow()
     }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        tabView.collectionView.collectionViewLayout.invalidateLayout()
+        tabView.collectionView.setNeedsLayout()
+    }
 }
 
 extension OriginalTabViewController {

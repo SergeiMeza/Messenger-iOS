@@ -40,9 +40,15 @@ class ViewControllerUsers: UIViewController, OriginalTabInfo {
         viewModel.viewDidLoad()
     }
     
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        collectionViewUsers.collectionViewLayout.invalidateLayout()
+        collectionViewUsers.setNeedsLayout()
+    }
+    
     private func setupSubviews() {
         navigationItem.title = "Home"
-        collectionViewUsers.backgroundColor = .backgroundColor
+        collectionViewUsers.backgroundColor = .white
         collectionViewUsers.addSubview(refreshControl)
         adapter.collectionView = collectionViewUsers
         adapter.dataSource = dataSource

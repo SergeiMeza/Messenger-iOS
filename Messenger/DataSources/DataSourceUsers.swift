@@ -18,8 +18,8 @@ class DataSourceUsers: NSObject, ListAdapterDataSource {
     
     func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
         switch object {
-        case is RealmUser:
-            return SectionControllerUser()
+        case is UserArray:
+            return SectionControllerUsers()
         default:
             return SectionControllerLoading()
         }

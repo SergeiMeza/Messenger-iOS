@@ -47,6 +47,7 @@ class ViewModelUsers: RefreshableModel {
     
     func reconnect() {
         lastValue = nil
+        users.removeAll()
         state.accept(.loading)
         fetch()
     }
@@ -65,7 +66,8 @@ class ViewModelUsers: RefreshableModel {
     }
     
     private func setItems() {
-        let diffalable = (users as [ListDiffable]) + ([isCompleted] as[ListDiffable])
+        let userArray = UserArray.init(users: users)
+        let diffalable = ([userArray] as [ListDiffable]) + ([isCompleted] as[ListDiffable])
         items.accept(diffalable)
     }
     
