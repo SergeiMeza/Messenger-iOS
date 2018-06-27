@@ -22,7 +22,7 @@ class OriginalTabView: UIView {
         
         cell.setTextColor(s.tabSelectedTextColor, duration: isAnimated ? 0.3 : 0)
         collectionView.visibleCells.map { $0 as! OriginalTabCell }.filter { $0 != cell }.forEach { otherCell in
-            otherCell.setTextColor(s.tabTextColor, duration: isAnimated ? 0.3: 0)
+            otherCell.setTextColor(s.tabTextColor, duration: isAnimated ? 0.3 : 0)
         }
     }
     
@@ -39,7 +39,7 @@ class OriginalTabView: UIView {
     
     func reload() {
         collectionView.reloadData()
-        to(index: viewController.index, isAnimated: true)
+        to(index: viewController.index, isAnimated: false)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
             self.scrollViewDidScroll(self.collectionView) // for text color

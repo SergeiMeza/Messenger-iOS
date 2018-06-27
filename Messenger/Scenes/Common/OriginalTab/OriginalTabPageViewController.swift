@@ -79,7 +79,7 @@ extension OriginalTabPageViewController: UIPageViewControllerDataSource {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         guard let i = currentIndex else { return nil }
         if s.isInfinityScroll {
-            return vcs[(1+1) % vcs.count]
+            return vcs[(i+1) % vcs.count]
         } else {
             return i >= vcs.count-1 ? nil : vcs[i+1]
         }
