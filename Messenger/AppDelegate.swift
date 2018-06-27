@@ -48,12 +48,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         homeViewController.tabBarItem.image = UIImage.init(named: "home")
         homeViewController.tabBarItem.imageInsets = .init(top: 4, left: 0, bottom: -4, right: 0)
         
+        let chatsRootViewController = SplitViewControllerChat.instantiate()
+        chatsRootViewController.tabBarItem.image = UIImage.init(named: "home")
+        chatsRootViewController.tabBarItem.imageInsets = .init(top: 4, left: 0, bottom: -4, right: 0)
         let chatsViewController = NavigationController.init(rootViewController: ViewControllerChats.instantiate())
-        chatsViewController.tabBarItem.image = UIImage.init(named: "home")
-        chatsViewController.tabBarItem.imageInsets = .init(top: 4, left: 0, bottom: -4, right: 0)
+        let vc = UIViewController()
+        vc.view.backgroundColor = .red
+        chatsRootViewController.viewControllers = [chatsViewController, vc]
         
         let tabBarControllerMain = TabBarControllerMain()
-        tabBarControllerMain.viewControllers = [homeViewController, chatsViewController]
+        tabBarControllerMain.viewControllers = [homeViewController, chatsRootViewController]
         tabBarControllerMain.tabTitles = ["Home", "Chats"]
         
         window?.rootViewController = tabBarControllerMain
