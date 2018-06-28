@@ -28,11 +28,16 @@ struct DeviceConst {
     
     static let maxVideoDuration: Double = 60.0
     
+    static let hashtagPattern: String = "[#＃][Ａ-Ｚａ-ｚA-Za-z一-鿆0-9０-９ぁ-ヶｦ-ﾟー]+"
+    static let hashtagSearchPattern: String = "[#＃][Ａ-Ｚａ-ｚA-Za-z一-鿆0-9０-９ぁ-ヶｦ-ﾟー]*$"
+    static let userMentionPattern: String = "[@][A-Za-z0-9-_]+"
+    static let urlPattern: String = "https?://([-\\w\\.]+)+(:\\d+)?(/([\\w/_\\.]*(\\?\\S+)?)?)?"
+    static let emailadressPattern: String = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}"
+    
     static let kilo = 1000
     static let mega = kilo * kilo
     static let giga = mega * kilo
-    
     static let tabBarOffset: CGFloat = 8
-    
     static let homeStatusBarBgViewTag = 200
+    static let cellRadius: CGFloat = 8
 }

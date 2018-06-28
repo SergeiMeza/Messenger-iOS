@@ -61,7 +61,7 @@ import UIKit
 //    }
 //    
 //    func showSearchView() -> Bool {
-//        let vc = SearchSuggestionViewController.instantiate()
+//        let vc = ViewControllerSearchSuggestion.instantiate()
 //        self.navigationController?.pushViewController(vc, animated: false)
 //        return false
 //    }

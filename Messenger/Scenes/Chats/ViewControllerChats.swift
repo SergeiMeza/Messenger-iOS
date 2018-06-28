@@ -37,6 +37,14 @@ class ViewControllerChats: UIViewController {
         viewModel.viewDidLoad()
     }
     
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        coordinator.animate(alongsideTransition: nil) { _ in
+            self.collectionViewChats?.collectionViewLayout.invalidateLayout()
+            self.collectionViewChats?.setNeedsLayout()
+        }
+    }
+    
     private func setupViews() {
         navigationItem.title = "Chats"
         collectionViewChats.backgroundColor = .backgroundColor

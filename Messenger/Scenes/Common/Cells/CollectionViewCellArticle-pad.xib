@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="J52-Iu-Oll" customClass="CollectionViewCellArticle" customModule="Messenger" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="128"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="128"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_5" translatesAutoresizingMaskIntoConstraints="NO" id="fCB-MS-klc">
+                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="fCB-MS-klc" secondAttribute="height" multiplier="1:1" id="XMM-h6-1jp"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dl4-fv-ofW">
+                        <rect key="frame" x="136" y="8" width="176" height="32"/>
+                        <attributedString key="attributedText">
+                            <fragment content="Content">
+                                <attributes>
+                                    <font key="NSFont" metaFont="system"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="10" lineHeightMultiple="1.3999999999999999" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sZX-lu-1m4">
+                        <rect key="frame" x="136" y="104" width="176" height="16"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="T0W-kb-NQQ">
+                                <rect key="frame" x="0.0" y="0.0" width="123.5" height="16"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2eY-Dm-9fI">
+                                        <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="16" id="iJc-B3-lXX"/>
+                                            <constraint firstAttribute="width" constant="16" id="yqI-nI-gXK"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tuA-CH-qdn">
+                                        <rect key="frame" x="20" y="0.0" width="103.5" height="16"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Author">
+                                                <attributes>
+                                                    <font key="NSFont" metaFont="system" size="10"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="0oN-1S-Pbz"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jaN-27-UxW">
+                                <rect key="frame" x="123.5" y="0.0" width="52.5" height="16"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="ViewCount">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="10"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wgy-iJ-xh8"/>
+                    </stackView>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="sZX-lu-1m4" firstAttribute="leading" secondItem="fCB-MS-klc" secondAttribute="trailing" constant="8" id="4wi-bh-Msm"/>
+                <constraint firstItem="fCB-MS-klc" firstAttribute="leading" secondItem="J52-Iu-Oll" secondAttribute="leading" id="5pv-Mb-wiW"/>
+                <constraint firstAttribute="trailing" secondItem="sZX-lu-1m4" secondAttribute="trailing" constant="8" id="BQW-Vk-g9L"/>
+                <constraint firstItem="dl4-fv-ofW" firstAttribute="top" secondItem="J52-Iu-Oll" secondAttribute="top" constant="8" id="TL1-Ei-6z6"/>
+                <constraint firstAttribute="trailing" secondItem="dl4-fv-ofW" secondAttribute="trailing" constant="8" id="Z0w-bT-gAF"/>
+                <constraint firstAttribute="bottom" secondItem="sZX-lu-1m4" secondAttribute="bottom" constant="8" id="Zn8-lM-KHG"/>
+                <constraint firstItem="fCB-MS-klc" firstAttribute="top" secondItem="J52-Iu-Oll" secondAttribute="top" id="eqI-ph-P8q"/>
+                <constraint firstItem="dl4-fv-ofW" firstAttribute="leading" secondItem="fCB-MS-klc" secondAttribute="trailing" constant="8" id="gjv-Ol-f83"/>
+                <constraint firstAttribute="bottom" secondItem="fCB-MS-klc" secondAttribute="bottom" id="xP6-S3-Zmc"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="OUZ-ad-GT7"/>
+            <size key="customSize" width="514" height="166.5"/>
+            <connections>
+                <outlet property="authorImageView" destination="2eY-Dm-9fI" id="EYX-2X-6qb"/>
+                <outlet property="authorNameLabel" destination="tuA-CH-qdn" id="hH6-Ff-vtt"/>
+                <outlet property="contentLabel" destination="dl4-fv-ofW" id="cto-KY-fwm"/>
+                <outlet property="mainImageView" destination="fCB-MS-klc" id="p48-Im-4uO"/>
+                <outlet property="viewCountLabel" destination="jaN-27-UxW" id="zth-7m-BOt"/>
+            </connections>
+            <point key="canvasLocation" x="-248" y="-181"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="profile_5" width="1497" height="1445"/>
+    </resources>
+</document>

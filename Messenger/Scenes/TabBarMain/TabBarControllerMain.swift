@@ -104,11 +104,13 @@ class TabBarControllerMain: UITabBarController {
         
         let newTabBarHeight = defaultTabBarHeight - DeviceConst.tabBarOffset
         
-        var newFrame = tabBar.frame
-        newFrame.size.height = newTabBarHeight
-        newFrame.origin.y = view.frame.size.height - newTabBarHeight
-        
-        tabBar.frame = newFrame
+        if tabBar.frame.size.height > tabBar.frame.size.width {
+            var newFrame = tabBar.frame
+            newFrame.size.height = newTabBarHeight
+            newFrame.origin.y = view.frame.size.height - newTabBarHeight
+            
+            tabBar.frame = newFrame
+        }
     }
     
     func initializePopoverView(title: String) -> UIView {

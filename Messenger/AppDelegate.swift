@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         
         //  Realm objects initialization
-        let config = Realm.Configuration(schemaVersion: 4, migrationBlock: { (migration, oldSchemaVersion) in
+        let config = Realm.Configuration(schemaVersion: 5, migrationBlock: { (migration, oldSchemaVersion) in
         })
         Realm.Configuration.defaultConfiguration = config
         _ = try! Realm()
@@ -45,6 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         
         let homeViewController = NavigationController.init(rootViewController: ViewControllerHome.instantiate())
+        homeViewController.view.backgroundColor = .backgroundColor
         homeViewController.tabBarItem.image = UIImage.init(named: "home")
         homeViewController.tabBarItem.imageInsets = .init(top: 4, left: 0, bottom: -4, right: 0)
         
@@ -53,7 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         chatsRootViewController.tabBarItem.imageInsets = .init(top: 4, left: 0, bottom: -4, right: 0)
         let chatsViewController = NavigationController.init(rootViewController: ViewControllerChats.instantiate())
         let vc = UIViewController()
-        vc.view.backgroundColor = .red
+        vc.view.backgroundColor = .backgroundColor
         chatsRootViewController.viewControllers = [chatsViewController, vc]
         
         let tabBarControllerMain = TabBarControllerMain()
@@ -65,9 +66,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-   
-    
-
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

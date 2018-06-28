@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Umm-0B-i9b">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller Show Article-->
+        <scene sceneID="Dvx-AO-5XG">
+            <objects>
+                <viewController id="Umm-0B-i9b" customClass="ViewControllerShowArticle" customModule="Messenger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iXB-lQ-CJw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CAH-hd-9Fd" customClass="LoadingStateView" customModule="Messenger" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <viewLayoutGuide key="safeArea" id="3Aa-8g-qvw"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ocr-oL-Qpu" customClass="ErrorStateView" customModule="Messenger" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <viewLayoutGuide key="safeArea" id="NLy-Vw-h0l"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="34X-ci-W0N" userLabel="SuccessView">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="4C9-1Q-hX8">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <viewLayoutGuide key="safeArea" id="mhp-vZ-TAM"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hSZ-83-ZpD" firstAttribute="trailing" secondItem="CAH-hd-9Fd" secondAttribute="trailing" id="3we-iW-fwb"/>
+                            <constraint firstItem="CAH-hd-9Fd" firstAttribute="leading" secondItem="hSZ-83-ZpD" secondAttribute="leading" id="4eL-Zh-u0V"/>
+                            <constraint firstItem="hSZ-83-ZpD" firstAttribute="top" secondItem="Ocr-oL-Qpu" secondAttribute="top" id="AUS-JB-bra"/>
+                            <constraint firstItem="hSZ-83-ZpD" firstAttribute="bottom" secondItem="34X-ci-W0N" secondAttribute="bottom" id="Iwr-oS-Utd"/>
+                            <constraint firstItem="4C9-1Q-hX8" firstAttribute="top" secondItem="hSZ-83-ZpD" secondAttribute="top" id="Ixc-wq-jz2"/>
+                            <constraint firstItem="Ocr-oL-Qpu" firstAttribute="leading" secondItem="hSZ-83-ZpD" secondAttribute="leading" id="LFN-p9-5tt"/>
+                            <constraint firstItem="hSZ-83-ZpD" firstAttribute="top" secondItem="CAH-hd-9Fd" secondAttribute="top" id="Nhp-s2-79a"/>
+                            <constraint firstItem="4C9-1Q-hX8" firstAttribute="leading" secondItem="hSZ-83-ZpD" secondAttribute="leading" id="Qq6-5s-emn"/>
+                            <constraint firstItem="hSZ-83-ZpD" firstAttribute="bottom" secondItem="CAH-hd-9Fd" secondAttribute="bottom" id="amh-hH-ygr"/>
+                            <constraint firstItem="hSZ-83-ZpD" firstAttribute="bottom" secondItem="4C9-1Q-hX8" secondAttribute="bottom" id="b2j-03-nuu"/>
+                            <constraint firstItem="hSZ-83-ZpD" firstAttribute="trailing" secondItem="34X-ci-W0N" secondAttribute="trailing" id="bcb-2s-Igs"/>
+                            <constraint firstItem="34X-ci-W0N" firstAttribute="leading" secondItem="hSZ-83-ZpD" secondAttribute="leading" id="cti-S0-GAm"/>
+                            <constraint firstItem="hSZ-83-ZpD" firstAttribute="bottom" secondItem="Ocr-oL-Qpu" secondAttribute="bottom" id="hpz-Lj-7Dd"/>
+                            <constraint firstItem="hSZ-83-ZpD" firstAttribute="top" secondItem="34X-ci-W0N" secondAttribute="top" id="mB7-Aw-7yX"/>
+                            <constraint firstItem="hSZ-83-ZpD" firstAttribute="trailing" secondItem="Ocr-oL-Qpu" secondAttribute="trailing" id="oF7-ZG-yVP"/>
+                            <constraint firstItem="hSZ-83-ZpD" firstAttribute="trailing" secondItem="4C9-1Q-hX8" secondAttribute="trailing" id="tVp-44-S2x"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hSZ-83-ZpD"/>
+                    </view>
+                    <connections>
+                        <outlet property="errorStateView" destination="Ocr-oL-Qpu" id="226-xh-42U"/>
+                        <outlet property="loadingStateView" destination="CAH-hd-9Fd" id="mVT-e3-h1g"/>
+                        <outlet property="successView" destination="34X-ci-W0N" id="Hbd-Ty-m0G"/>
+                        <outlet property="tableView" destination="4C9-1Q-hX8" id="usL-zj-ejd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sym-EA-uJg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

@@ -1,10 +1,3 @@
-//
-//  ViewControllerUsers.swift
-//  Messenger
-//
-//  Created by Sergei Meza on 2018/06/04.
-//  Copyright © 2018 Sergei Meza. All rights reserved.
-//
 
 import UIKit
 import RxCocoa
@@ -42,14 +35,17 @@ class ViewControllerUsers: UIViewController, OriginalTabInfo {
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
-        collectionViewUsers.collectionViewLayout.invalidateLayout()
-        collectionViewUsers.setNeedsLayout()
+        coordinator.animate(alongsideTransition: nil) { _ in
+            self.collectionViewUsers?.collectionViewLayout.invalidateLayout()
+            self.collectionViewUsers?.setNeedsLayout()
+        }   
     }
     
     private func setupSubviews() {
         navigationItem.title = "Home"
-        collectionViewUsers.backgroundColor = .white
+        collectionViewUsers.backgroundColor = .backgroundColor
         collectionViewUsers.addSubview(refreshControl)
+        collectionViewUsers.showsVerticalScrollIndicator = false
         adapter.collectionView = collectionViewUsers
         adapter.dataSource = dataSource
     }

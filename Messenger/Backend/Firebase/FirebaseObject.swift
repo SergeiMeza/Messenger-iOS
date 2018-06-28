@@ -69,6 +69,12 @@ class FirebaseObject {
         get {
             return self[DeviceConst.object_id] as? String
         }
+        set {
+            guard let newValue = newValue, !newValue.isEmpty else {
+                fatalError("objectId is empty")
+            }
+            self[DeviceConst.object_id] = newValue
+        }
     }
     
     func initObjectId() -> String {

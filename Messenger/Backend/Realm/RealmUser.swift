@@ -13,6 +13,7 @@ import IGListKit
 
 @objcMembers class RealmUser: Object, Mappable, ListDiffable {
     
+    dynamic var id: Int = 0
     dynamic var objectId = ""
     dynamic var name = ""
     
@@ -37,6 +38,7 @@ import IGListKit
     }
     
     func mapping(map: Map) {
+        self.id <- map["id"]
         self.objectId <- map["object_id"]
         self.name <- map["name"]
         self.age <- map["age"]

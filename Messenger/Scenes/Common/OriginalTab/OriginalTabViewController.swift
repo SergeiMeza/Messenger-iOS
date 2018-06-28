@@ -56,18 +56,16 @@ class OriginalTabViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         viewControllers = viewControllers(for: self)
         
         // tab
         tabView = settings.isInfinityScroll ? OriginalTabViewInfinity(parent: self) : OriginalTabView(parent: self)
         tabView.delegate = self
         view.addSubview(tabView)
-        tabView.translatesAutoresizingMaskIntoConstraints = false
-        view.topAnchor.constraint(equalTo: tabView.topAnchor).isActive = true
-        view.leadingAnchor.constraint(equalTo: tabView.leadingAnchor).isActive = true
-        view.trailingAnchor.constraint(equalTo: tabView.trailingAnchor).isActive = true
-        tabView.heightAnchor.constraint(equalToConstant: settings.tabHeight).isActive = true
+        tabView.anchor(top: view.topAnchor,
+                       right: view.rightAnchor,
+                       left: view.leftAnchor,
+                       size: .init(width: 0, height: settings.tabHeight))
         
         // pageView
         addChildViewController(pageViewController)
@@ -75,11 +73,11 @@ class OriginalTabViewController: UIViewController {
         pageViewController.didMove(toParentViewController: self)
         
         pageViewController.pageDelegate = self
-        pageViewController.view.translatesAutoresizingMaskIntoConstraints = false
-        view.leadingAnchor.constraint(equalTo: pageViewController.view.leadingAnchor).isActive = true
-        view.trailingAnchor.constraint(equalTo: pageViewController.view.trailingAnchor).isActive = true
-        view.bottomAnchor.constraint(equalTo: pageViewController.view.bottomAnchor).isActive = true
-        tabView.bottomAnchor.constraint(equalTo: pageViewController.view.topAnchor).isActive = true
+        pageViewController.view.anchor(
+            top: tabView.bottomAnchor,
+            right: view.rightAnchor,
+            bottom: view.bottomAnchor,
+            left: view.leftAnchor)
         view.bringSubview(toFront: tabView)
         tabView.layer.applyNavBarShadow()
     }
@@ -91,8 +89,13 @@ class OriginalTabViewController: UIViewController {
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
-        tabView.collectionView.collectionViewLayout.invalidateLayout()
-        tabView.collectionView.setNeedsLayout()
+        coordinator.animate(alongsideTransition: { _ in
+            self.tabView?.to(index: self.index)
+        }) { _ in
+            self.tabView?.collectionView?.collectionViewLayout.invalidateLayout()
+            self.tabView?.setNeedsLayout()
+            self.tabView?.to(index: self.index)
+        }
     }
 }
 

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCellShowArticleImage" id="kCM-sW-yMV" customClass="TableViewCellShowArticleImage" customModule="Messenger" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="373" height="212"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kCM-sW-yMV" id="BTa-oq-lJC">
+                <rect key="frame" x="0.0" y="0.0" width="373" height="211.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="v1S-fM-NMD">
+                        <rect key="frame" x="15" y="10" width="343" height="191.5"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="v1S-fM-NMD" firstAttribute="top" secondItem="BTa-oq-lJC" secondAttribute="top" constant="10" id="HXV-h6-Q6y"/>
+                    <constraint firstItem="v1S-fM-NMD" firstAttribute="leading" secondItem="BTa-oq-lJC" secondAttribute="leading" constant="15" id="ZxP-I1-J3i"/>
+                    <constraint firstAttribute="bottom" secondItem="v1S-fM-NMD" secondAttribute="bottom" constant="10" id="jd2-x2-t4s"/>
+                    <constraint firstAttribute="trailing" secondItem="v1S-fM-NMD" secondAttribute="trailing" constant="15" id="qGN-My-rDf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="articleImageView" destination="v1S-fM-NMD" id="sDb-5q-iIA"/>
+            </connections>
+            <point key="canvasLocation" x="-580" y="-220"/>
+        </tableViewCell>
+    </objects>
+</document>

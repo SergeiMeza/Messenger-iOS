@@ -32,7 +32,6 @@ class ViewControllerHome: OriginalTabViewController, MovableNavBar {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         view.backgroundColor = UIColor.backgroundColor
         setupLogo()
         setupProfileButton()
@@ -48,11 +47,9 @@ class ViewControllerHome: OriginalTabViewController, MovableNavBar {
         UITabBarItem.appearance().setTitleTextAttributes(attributesNormal, for: .normal)
         view.bringSubview(toFront: tabView)
         
-        // movablenavbarが下を通るようにするため、statusBarStyleableでは駄目
-        let statusBarBgView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: UIScreen.main.bounds.size.width, height: UIApplication.shared.statusBarFrame.size.height))
-        statusBarBgView.backgroundColor = UIColor.light100
-        statusBarBgView.tag = DeviceConst.homeStatusBarBgViewTag
-        UIApplication.shared.keyWindow?.addSubview(statusBarBgView)
+        navigationItem.leftBarButtonItem = UIBarButtonItem.init(title: "Amigo!")
+        navigationBar.tintColor = .red
+        
         NotificationCenter.default.addObserver(self, selector: #selector(updateTabIfNeeded), name: Notification.Name.homeTabSelected, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(moveToTimeLine), name: Notification.Name.userPosted, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(scrollToTop), name: .homeTabScrollToTop, object: nil)
@@ -97,9 +94,9 @@ class ViewControllerHome: OriginalTabViewController, MovableNavBar {
                 controllers.append(users)
                 
             case .article:
-                let users = ViewControllerUsers.instantiate()
-                users.tab = tab
-                controllers.append(users)
+                let articles = ViewControllerArticles.instantiate()
+                articles.tab = tab
+                controllers.append(articles)
                 
             default:
                 let users = ViewControllerUsers.instantiate()
@@ -128,21 +125,6 @@ class ViewControllerHome: OriginalTabViewController, MovableNavBar {
     func setupProfileButton() {
 //        let profileImgString = MeStore.shared.me?.profileImgUrl ?? DeviceConst.userDefaultProfileImgUrl
 //        guard let profileImgUrl = URL(string: profileImgString) else { return }
-        
-        let profileImgDiameter: CGFloat = 34.5
-        let profileButton = UIButton(frame: CGRect(x: 0, y: 0, width: profileImgDiameter, height: profileImgDiameter))
-        profileButton.layer.cornerRadius = profileImgDiameter / 2
-        profileButton.clipsToBounds = true
-//        profileButton.af_setImage(for: .normal, url: profileImgUrl)
-        profileButton.addTarget(self, action: #selector(moveToProfile), for: .touchUpInside)
-        if #available(iOS 11.0, *) {
-            profileButton.snp.makeConstraints {
-                $0.width.height.equalTo(profileImgDiameter)
-            }
-        }
-        
-        let profileButtonItem = UIBarButtonItem(customView: profileButton)
-        navigationItem.rightBarButtonItem = profileButtonItem
     }
     
     @objc func moveToProfile() {

@@ -53,4 +53,6 @@ extension UIColor {
     static let light100 = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0)
     static let gradationBottom = UIColor(red: 0, green: 0, blue: 0, alpha: 1.0)
     static let gradationTop = UIColor(red: 0, green: 0, blue: 0, alpha: 0.0)
+    
+    static let aquaHaze = UIColor(red: 240/255, green: 246/255, blue: 246/255, alpha: 1.0)
 }

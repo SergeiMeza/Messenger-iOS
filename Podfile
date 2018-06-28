@@ -46,5 +46,7 @@ target 'Messenger' do
     pod 'Reachability'
 
     pod 'RNCryptor-objc'
+    
+    pod 'TTTAttributedLabel'
 
 end

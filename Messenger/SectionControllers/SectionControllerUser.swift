@@ -1,11 +1,3 @@
-//
-//  SectionControllerUser.swift
-//  Messenger
-//
-//  Created by Sergei Meza on 2018/06/04.
-//  Copyright © 2018 Sergei Meza. All rights reserved.
-//
-
 import IGListKit
 
 class SectionControllerUsers: ListSectionController {
@@ -14,8 +6,8 @@ class SectionControllerUsers: ListSectionController {
     
     override init() {
         super.init()
-        minimumLineSpacing = 8
-        minimumInteritemSpacing = 8
+        minimumLineSpacing = 12
+        minimumInteritemSpacing = 12
         inset = .init(top: 8, left: 8, bottom: 0, right: 8)
     }
     
@@ -31,14 +23,14 @@ class SectionControllerUsers: ListSectionController {
         let numberOfCells = floor((containerWidth - inset.left - inset.right) / 250)
         let aspectRatio: CGFloat = (UIHelper.isIPad) ? 150/250 : 120/250
         let width = (containerWidth - inset.left - inset.right - (numberOfCells-1) * minimumInteritemSpacing) / numberOfCells
-        return (UIHelper.isIPad) ? CGSize(width: width, height: width * aspectRatio) : CGSize(width: width, height: width * aspectRatio)
+        return CGSize(width: width, height: width * aspectRatio)
     }
     
     override func cellForItem(at index: Int) -> UICollectionViewCell {
         guard let users = users, let context = collectionContext else {
             fatalError("users or context is nil")
         }
-        let cell: CollectionViewCellUser = context.dequeueReusableCell(self, forIndex: index)
+        let cell: CollectionViewCellItem = context.dequeueReusableCell(self, forIndex: index)
         cell.bindData(item: users[index])
         return cell
     }

@@ -10,7 +10,7 @@ import UIKit
 
 extension CALayer {
     func applyCardShadow() {
-        applyShadow(x: 0, y: 0.5, blur: 2, spread: 0)
+        applyShadow(x: 0, y: 0.5, blur: 4, spread: 0, opacity: 0.5)
     }
     
     func applyNavBarShadow() {
@@ -25,10 +25,10 @@ extension CALayer {
         masksToBounds = true
     }
     
-    private func applyShadow(x: CGFloat, y: CGFloat, blur: CGFloat, spread: CGFloat) {
+    private func applyShadow(x: CGFloat, y: CGFloat, blur: CGFloat, spread: CGFloat, color: UIColor = UIColor.dark50, opacity: Float = 0.5) {
         masksToBounds = false
-        shadowColor = UIColor.dark50.cgColor
-        shadowOpacity = 0.5
+        shadowColor = color.cgColor
+        shadowOpacity = opacity
         shadowOffset = CGSize(width: x, height: y)
         shadowRadius = blur / 2.0
         if spread == 0 {

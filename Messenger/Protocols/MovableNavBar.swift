@@ -27,16 +27,6 @@ extension MovableNavBar where Self: UIViewController {
            let nc = navigationController {
             isBarHidden = false
             nc.setNavigationBarHidden(false, animated: animated)
-            
-//            let screenSize = UIScreen.main.bounds.size
-//            if DeviceConst.is_iPhoneX {
-//                UIView.animate(withDuration: 0.1) { () -> Void in
-//                    self.view.frame = CGRect(x: 0, y: self.statusBarHeight + self.navigationBarHeight, width: screenSize.width, height: screenSize.height)
-//                    nc.navigationBar.frame.origin.y = self.statusBarHeight
-//                }
-//            } else {
-//                nc.setNavigationBarHidden(false, animated: animated)
-//            }
         }
     }
     
@@ -45,16 +35,6 @@ extension MovableNavBar where Self: UIViewController {
            let nc = navigationController {
             isBarHidden = true
             nc.setNavigationBarHidden(true, animated: animated)
-            
-//            let screenSize = UIScreen.main.bounds.size
-//            if DeviceConst.is_iPhoneX {
-//                UIView.animate(withDuration: 0.1) { () -> Void in
-//                    self.view.frame = CGRect(x: 0, y: self.statusBarHeight, width: screenSize.width, height: screenSize.height)
-//                    nc.navigationBar.frame.origin.y = -self.navigationBarHeight
-//                }
-//            } else {
-//                nc.setNavigationBarHidden(true, animated: animated)
-//            }
         }
     }
 }

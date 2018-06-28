@@ -152,6 +152,7 @@ PODS:
   - SinchRTC (3.12.5)
   - SinchVerification (2.0.6)
   - SnapKit (4.0.0)
+  - TTTAttributedLabel (2.0.0)
   - TwitterCore (3.1.0)
   - TwitterKit (3.3.0):
     - TwitterCore (>= 3.1.0)
@@ -177,6 +178,7 @@ DEPENDENCIES:
   - SinchRTC
   - SinchVerification
   - SnapKit (~> 4.0.0)
+  - TTTAttributedLabel
   - TwitterCore
   - TwitterKit
 
@@ -218,6 +220,7 @@ SPEC REPOS:
     - SinchRTC
     - SinchVerification
     - SnapKit
+    - TTTAttributedLabel
     - TwitterCore
     - TwitterKit
 
@@ -258,9 +261,10 @@ SPEC CHECKSUMS:
   SinchRTC: c19ff673b25292d247a868b077582f2d11d9dfc6
   SinchVerification: 3bf62ff2d57eb10ecc27796ce9736c786644fe23
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  TTTAttributedLabel: 8cffe8e127e4e82ff3af1e5386d4cd0ad000b656
   TwitterCore: 644d59e75abccb26cf0a9050d2c4dea0e5412241
   TwitterKit: a2e60ddcedbf54091eac6f27685ca7a87681e1d7
 
-PODFILE CHECKSUM: ec87c460496be37148442db06c1334c954d4f93c
+PODFILE CHECKSUM: e432733e5c1b022b3d32a1f892b17d6db63fab03
 
 COCOAPODS: 1.5.2
