@@ -1,7 +1,8 @@
 import UIKit
+import IGListKit
 import ObjectMapper
 
-struct ArticleItem: Mappable {
+class ArticleItem: NSObject, Mappable, ListDiffable {
     var itemId: Int = 0
     private var typeString: String = ""
     var image: ArticleImage?
@@ -28,9 +29,11 @@ struct ArticleItem: Mappable {
         case undefined = ""
     }
     
-    init?(map: Map) { }
+    required convenience init?(map: Map) {
+        self.init()
+    }
     
-    mutating func mapping(map: Map) {
+    func mapping(map: Map) {
         self.itemId <- map["id"]
         self.typeString <- map["code"]
         switch self.typeString {
@@ -49,6 +52,24 @@ struct ArticleItem: Mappable {
         default:
             return
         }
+    }
+    
+    var id: String {
+        return "itemId-\(type.rawValue)"
+    }
+    
+    func diffIdentifier() -> NSObjectProtocol {
+        return id as NSObjectProtocol
+    }
+    
+    func isEqual(toDiffableObject object: ListDiffable?) -> Bool {
+        guard let object = object as? ArticleItem else { return false }
+        if object === self {
+            return true
+        } else if object.id == self.id {
+            return true
+        }
+        return false
     }
     
     struct ArticleSubTitle: Mappable {

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Otf-fg-4UO" customClass="CollectionViewCellShowArticleQuotation" customModule="Messenger" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="601" height="264"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="601" height="264"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="bQF-h9-dJB">
+                        <rect key="frame" x="16" y="-8" width="569" height="264"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="aaaaaaa" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36h-DN-bCh" userLabel="quotationText" customClass="LinkableTextField" customModule="Messenger" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="569" height="236"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="lineHeightMultiple">
+                                        <real key="value" value="1.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hogehoge" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fav-0C-1Ax" userLabel="quotationLink">
+                                <rect key="frame" x="0.0" y="246" width="569" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="fav-0C-1Ax" firstAttribute="top" secondItem="36h-DN-bCh" secondAttribute="bottom" constant="10" id="8gM-qg-9Ia"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="BfP-HZ-Q5a" firstAttribute="top" secondItem="bQF-h9-dJB" secondAttribute="top" constant="8" id="B5o-1A-Cvg"/>
+                <constraint firstItem="bQF-h9-dJB" firstAttribute="leading" secondItem="BfP-HZ-Q5a" secondAttribute="leading" constant="16" id="Nfz-8T-e76"/>
+                <constraint firstItem="BfP-HZ-Q5a" firstAttribute="trailing" secondItem="bQF-h9-dJB" secondAttribute="trailing" constant="16" id="RtD-RJ-6sG"/>
+                <constraint firstItem="BfP-HZ-Q5a" firstAttribute="bottom" secondItem="bQF-h9-dJB" secondAttribute="bottom" constant="8" id="k7j-y7-yeC"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="BfP-HZ-Q5a"/>
+            <size key="customSize" width="601" height="264"/>
+            <connections>
+                <outlet property="quotationLink" destination="fav-0C-1Ax" id="qPa-ZY-gza"/>
+                <outlet property="quotationText" destination="36h-DN-bCh" id="9PE-qD-0QH"/>
+            </connections>
+            <point key="canvasLocation" x="138.5" y="736"/>
+        </collectionViewCell>
+    </objects>
+</document>

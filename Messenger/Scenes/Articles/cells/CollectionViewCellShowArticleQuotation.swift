@@ -1,9 +1,8 @@
-import AlamofireImage
 import UIKit
 import RxCocoa
 import RxSwift
 
-class TableViewCellShowArticleQuotation: UITableViewCell, Reusable, NibLoadable {
+class CollectionViewCellShowArticleQuotation: UICollectionViewCell, Reusable, NibLoadable {
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -16,7 +15,6 @@ class TableViewCellShowArticleQuotation: UITableViewCell, Reusable, NibLoadable 
     
     var linkUrl: String?
     let tapGesture = UITapGestureRecognizer()
-    
     
     func setQuotation(item: ArticleItem) {
         quotationLink.isUserInteractionEnabled = true

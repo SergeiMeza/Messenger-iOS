@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="DID-gZ-9mo" customClass="CollectionViewCellShowArticleSubtitle" customModule="Messenger" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="464" height="61"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="464" height="61"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EOj-Ed-SYi" userLabel="underLine">
+                        <rect key="frame" x="15" y="5" width="3" height="50.5"/>
+                        <color key="backgroundColor" red="1" green="0.26274509800000001" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="1" green="0.26274509800000001" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="3" id="GYT-jg-baP"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="subSubTitleLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDY-7i-aMk">
+                        <rect key="frame" x="28" y="10" width="421" height="40.5"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="EOj-Ed-SYi" firstAttribute="leading" secondItem="7PD-R7-YSe" secondAttribute="leading" constant="15" id="8au-m4-aAT"/>
+                <constraint firstItem="EOj-Ed-SYi" firstAttribute="top" secondItem="7PD-R7-YSe" secondAttribute="top" constant="5" id="9ev-C7-QNR"/>
+                <constraint firstItem="7PD-R7-YSe" firstAttribute="bottom" secondItem="EOj-Ed-SYi" secondAttribute="bottom" constant="5" id="GpV-8U-KbQ"/>
+                <constraint firstItem="7PD-R7-YSe" firstAttribute="trailing" secondItem="eDY-7i-aMk" secondAttribute="trailing" constant="15" id="P2e-9y-wgR"/>
+                <constraint firstItem="eDY-7i-aMk" firstAttribute="top" secondItem="7PD-R7-YSe" secondAttribute="top" constant="10" id="WQR-sR-SoK"/>
+                <constraint firstItem="7PD-R7-YSe" firstAttribute="bottom" secondItem="eDY-7i-aMk" secondAttribute="bottom" constant="10" id="ZOL-gf-o8H"/>
+                <constraint firstItem="eDY-7i-aMk" firstAttribute="leading" secondItem="EOj-Ed-SYi" secondAttribute="trailing" constant="10" id="dvV-mp-5PF"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="7PD-R7-YSe"/>
+            <size key="customSize" width="464" height="61"/>
+            <connections>
+                <outlet property="subSubTitleLabel" destination="eDY-7i-aMk" id="lss-tz-Fsw"/>
+                <outlet property="viewLine" destination="EOj-Ed-SYi" id="ETi-CA-Y3a"/>
+            </connections>
+            <point key="canvasLocation" x="-402" y="473.5"/>
+        </collectionViewCell>
+    </objects>
+</document>

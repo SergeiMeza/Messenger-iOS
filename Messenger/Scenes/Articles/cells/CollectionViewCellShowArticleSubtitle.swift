@@ -1,6 +1,6 @@
 import UIKit
 
-class TableViewCellShowArticleSubtitle: UITableViewCell, Reusable, NibLoadable {
+class CollectionViewCellShowArticleSubtitle: UICollectionViewCell, Reusable, NibLoadable {
     
     @IBOutlet weak var subSubTitleLabel: UILabel!
     @IBOutlet weak var viewLine: UIView!

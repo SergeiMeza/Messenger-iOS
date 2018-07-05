@@ -1,6 +1,6 @@
 import IGListKit
 
-class DataSourceUsers: NSObject, ListAdapterDataSource {
+class DataSourceShowArticle: NSObject, ListAdapterDataSource {
     
     var items = [ListDiffable]()
     
@@ -10,8 +10,8 @@ class DataSourceUsers: NSObject, ListAdapterDataSource {
     
     func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
         switch object {
-        case is UserArray:
-            return SectionControllerUsers()
+        case is ArticleItem:
+            return SectionControllerArticleItem()
         default:
             return SectionControllerLoading()
         }

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="0Ap-da-OUf" customClass="CollectionViewCellShowArticleSubtitle" customModule="Messenger" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="464" height="61"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="464" height="61"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gin-we-cbQ" userLabel="underLine">
+                        <rect key="frame" x="15" y="5" width="3" height="50.5"/>
+                        <color key="backgroundColor" red="1" green="0.26274509800000001" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="1" green="0.26274509800000001" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="3" id="EeO-El-0oE"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="subSubTitleLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BlH-IZ-Mwj">
+                        <rect key="frame" x="28" y="10" width="421" height="40.5"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="gDJ-7l-9aS" firstAttribute="bottom" secondItem="BlH-IZ-Mwj" secondAttribute="bottom" constant="10" id="6EM-Ks-fot"/>
+                <constraint firstItem="gin-we-cbQ" firstAttribute="leading" secondItem="gDJ-7l-9aS" secondAttribute="leading" constant="15" id="Tm8-VG-ohn"/>
+                <constraint firstItem="BlH-IZ-Mwj" firstAttribute="top" secondItem="gDJ-7l-9aS" secondAttribute="top" constant="10" id="aDS-nT-6LL"/>
+                <constraint firstItem="BlH-IZ-Mwj" firstAttribute="leading" secondItem="gin-we-cbQ" secondAttribute="trailing" constant="10" id="cKP-ED-gx8"/>
+                <constraint firstItem="gDJ-7l-9aS" firstAttribute="bottom" secondItem="gin-we-cbQ" secondAttribute="bottom" constant="5" id="cxk-r3-ukM"/>
+                <constraint firstItem="gDJ-7l-9aS" firstAttribute="trailing" secondItem="BlH-IZ-Mwj" secondAttribute="trailing" constant="15" id="neR-cg-0U0"/>
+                <constraint firstItem="gin-we-cbQ" firstAttribute="top" secondItem="gDJ-7l-9aS" secondAttribute="top" constant="5" id="zvu-Ko-Eqa"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="gDJ-7l-9aS"/>
+            <size key="customSize" width="464" height="61"/>
+            <connections>
+                <outlet property="subSubTitleLabel" destination="BlH-IZ-Mwj" id="a1H-oI-Yej"/>
+                <outlet property="viewLine" destination="gin-we-cbQ" id="bg6-FY-pFn"/>
+            </connections>
+            <point key="canvasLocation" x="-402" y="473.5"/>
+        </collectionViewCell>
+    </objects>
+</document>

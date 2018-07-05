@@ -7,7 +7,8 @@ import RxSwift
 class ViewControllerShowArticle: UIViewController, MovableNavBar {
     
     var articleId: String = ""
-    var article: Article?
+    
+    var isBarHidden: Bool = false
     
     @IBOutlet weak var loadingStateView: LoadingStateView!
     @IBOutlet weak var errorStateView: ErrorStateView!
@@ -15,61 +16,15 @@ class ViewControllerShowArticle: UIViewController, MovableNavBar {
     @IBOutlet weak var collectionViewArticle: ListCollectionView!
     
     private var stateViews: [UIView] {
-        return [loadingView, successView, errorView]
+        return [loadingStateView, successView, errorStateView]
     }
     
     private lazy var adapter: ListAdapter = ListAdapter.init(updater: ListAdapterUpdater(), viewController: self)
     
     private lazy var refreshControl: RxRefreshControl = RxRefreshControl(viewModel)
-    
-    private let delegate = CollectionViewScrollDelegate()
-    
-    private let dataSource = DataSourceUsers()
-    private let viewModel = ViewModelUsers()
+    private lazy var viewModel = ViewModelShowArticle(articleId: self.articleId)
+    private let dataSource = DataSourceShowArticle()
     private let disposeBag = DisposeBag()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        fetchArticle()
-        extendedLayoutIncludesOpaqueBars = true
-        successView.addSubview(backButton)
-        successView.addSubview(shareButton)
-        navigationController?.interactivePopGestureRecognizer?.delegate = (self as? UIGestureRecognizerDelegate)
-        shareButton.anchor(top: backButton.topAnchor, right: successView.rightAnchor, inset: UIEdgeInsets(top: 1, left: 0, bottom: 0, right: 8))
-        shareButton.heightAnchor.constraint(equalToConstant: 41).isActive = true
-        shareButton.widthAnchor.constraint(equalToConstant: 41).isActive = true
-        
-        errorStateView.setupButtonClickListener(handler: { [weak self] in
-            self?.fetchArticle()
-        })
-    }
-    
-    private func setupSubviews() {
-    
-    }
-    
-    
-    @IBOutlet weak var tableView: UITableView! {
-        didSet {
-            tableView.register(TableViewCellShowArticleImage.self)
-            tableView.register(TableViewCellShowArticleTitle.self)
-            tableView.register(TableViewCellShowArticleText.self)
-            tableView.register(TableViewCellShowArticleTopItems.self)
-            tableView.register(TableViewCellShowArticleQuotation.self)
-            tableView.register(TableViewCellShowArticleLinkImage.self)
-            tableView.register(TableViewCellShowArticleSubtitle.self)
-            
-            tableView.delegate = self
-            tableView.dataSource = self
-            tableView.allowsSelection = false
-            tableView.backgroundColor = .white
-            tableView.separatorColor = .white
-            tableView.estimatedRowHeight = 30
-            tableView.rowHeight = UITableViewAutomaticDimension
-            tableView.sectionHeaderHeight = UITableViewAutomaticDimension
-            tableView.estimatedSectionHeaderHeight = 80
-        }
-    }
     
     private lazy var backButton: UIButton = {
         let backButton = UIButton()
@@ -96,29 +51,118 @@ class ViewControllerShowArticle: UIViewController, MovableNavBar {
         return shareButton
     }()
     
-    private var state: LoadingState = .loading {
-        didSet {
-            DispatchQueue.main.async {
-                self.view.bringSubview(toFront: self.stateViews[self.state.rawValue])
-            }
-        }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupSubviews()
+        setupListener()
+        viewModel.viewDidLoad()
     }
-
-    
-    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         hideNavBar(animated: true)
-        setupListener()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         removeListener()
-        tabBarController?.tabBar.isHidden = false
         appearNavBar(animated: true)
         super.viewWillDisappear(animated)
     }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        coordinator.animate(alongsideTransition: nil) { _ in
+            self.collectionViewArticle?.collectionViewLayout.invalidateLayout()
+            self.collectionViewArticle?.setNeedsLayout()
+        }
+    }
+    
+    private func setupSubviews() {
+        extendedLayoutIncludesOpaqueBars = true
+        collectionViewArticle.backgroundColor = .white
+        collectionViewArticle.addSubview(refreshControl)
+        collectionViewArticle.showsVerticalScrollIndicator = false
+        adapter.collectionView = collectionViewArticle
+        adapter.dataSource = dataSource
+        
+        successView.addSubview(backButton)
+        successView.addSubview(shareButton)
+        navigationController?.interactivePopGestureRecognizer?.delegate = (self as? UIGestureRecognizerDelegate)
+        shareButton.anchor(top: backButton.topAnchor, right: successView.rightAnchor, inset: UIEdgeInsets(top: 1, left: 0, bottom: 0, right: 8))
+        shareButton.heightAnchor.constraint(equalToConstant: 41).isActive = true
+        shareButton.widthAnchor.constraint(equalToConstant: 41).isActive = true
+    }
+    
+    private func setupListener() {
+        errorStateView.setupButtonClickListener { [weak self] in self?.viewModel.reconnect() }
+        refreshControl.setupEndRefresingListener()
+        
+        viewModel.loadingState
+            .drive(onNext: { [weak self] state in
+                guard let strongSelf = self else { return }
+                strongSelf.view.bringSubview(toFront: strongSelf.stateViews[state.rawValue])
+            }).disposed(by: disposeBag)
+        
+        viewModel.currentItems
+            .drive(onNext: { [weak self] items in
+                guard let strongSelf = self else { return }
+                strongSelf.dataSource.items = items
+                strongSelf.adapter.performUpdates(animated: true)
+            }).disposed(by: disposeBag)
+        
+        //        RxBus.shared.asObservable(event: ProductTapEvent.self)
+        //            .subscribe { [weak self] event in
+        //                guard let event = event.element else { return }
+        //                let vc = ProductShowViewController.instantiate()
+        //                vc.product = event.product
+        //                LipsAnalytics.logEvent(.articleToProductShow, parameters: ["productId": event.product.id, "articleId": self?.articleId ?? 0])
+        //                self?.navigationController?.pushViewController(vc, animated: true)
+        //            }.disposed(by: disposeBag)
+        
+        //        RxBus.shared.asObservable(event: PostTapEvent.self)
+        //            .subscribe { [weak self] event in
+        //                guard let event = event.element else { return }
+        //                let vc = PostShowViewController.instantiate()
+        //                vc.post = event.post
+        //                vc.postId = event.post.id
+        //                LipsAnalytics.logEvent(.articleToPostShow, parameters: ["postId": event.post.id, "articleId": self?.articleId ?? 0])
+        //                self?.navigationController?.pushViewController(vc, animated: true)
+        //            }.disposed(by: disposeBag)
+        
+        //        RxBus.shared.asObservable(event: ProfileTapEvent.self)
+        //            .subscribe { [weak self] event in
+        //                guard let event = event.element else { return }
+        //                let vc = ProfileViewController.instantiate()
+        //                vc.user = event.user
+        //                LipsAnalytics.logEvent(.articleToUserShow, parameters: ["userId": event.user.id, "articleId": self?.articleId ?? 0])
+        //                self?.navigationController?.pushViewController(vc, animated: true)
+        //            }.disposed(by: disposeBag)
+        
+        //        RxBus.shared.asObservable(event: HashTagTapEvent.self)
+        //            .subscribe { [weak self] event in
+        //                guard let event = event.element else { return }
+        //                let vc = PostsViewController.instantiate(type: .byTagName(text: event.hashTag), params: ["text": event.hashTag])
+        //                LipsAnalytics.logEvent(.articleToHashTag, parameters: ["tagName": event.hashTag, "articleId": self?.articleId ?? 0])
+        //                self?.navigationController?.pushViewController(vc, animated: true)
+        //            }.disposed(by: disposeBag)
+        
+        //        RxBus.shared.asObservable(event: UrlLinkTapEvent.self)
+        //            .subscribe { [weak self] event in
+        //                guard let event = event.element else { return }
+        //                let vc = SiteWebViewController(url: event.url, title: nil)
+        //                LipsAnalytics.logEvent(.articleToWebView, parameters: ["url": "\(event.url)", "articleId": self?.articleId ?? 0])
+        //                self?.present(MyNavigationController(rootViewController: vc), animated: true)
+        //            }.disposed(by: disposeBag)
+    }
+    
+    private func removeListener() {
+        //        RxBus.shared.remove(event: HashTagTapEvent.self)
+        //        RxBus.shared.remove(event: UrlLinkTapEvent.self)
+        //        RxBus.shared.remove(event: ProductTapEvent.self)
+        //        RxBus.shared.remove(event: PostTapEvent.self)
+        //        RxBus.shared.remove(event: ProfileTapEvent.self)
+    }
+    
     
     @objc func shareArticle() {
 //        let urlString = "https://lipscosme.com/levre/articles/\(article!.id)"
@@ -149,153 +193,38 @@ class ViewControllerShowArticle: UIViewController, MovableNavBar {
     @objc func popSelf() {
         navigationController?.popViewController(animated: true)
     }
-    
-    private func setupListener() {
-//        RxBus.shared.asObservable(event: ProductTapEvent.self)
-//            .subscribe { [weak self] event in
-//                guard let event = event.element else { return }
-//                let vc = ProductShowViewController.instantiate()
-//                vc.product = event.product
-//                LipsAnalytics.logEvent(.articleToProductShow, parameters: ["productId": event.product.id, "articleId": self?.articleId ?? 0])
-//                self?.navigationController?.pushViewController(vc, animated: true)
-//            }.disposed(by: disposeBag)
-        
-//        RxBus.shared.asObservable(event: PostTapEvent.self)
-//            .subscribe { [weak self] event in
-//                guard let event = event.element else { return }
-//                let vc = PostShowViewController.instantiate()
-//                vc.post = event.post
-//                vc.postId = event.post.id
-//                LipsAnalytics.logEvent(.articleToPostShow, parameters: ["postId": event.post.id, "articleId": self?.articleId ?? 0])
-//                self?.navigationController?.pushViewController(vc, animated: true)
-//            }.disposed(by: disposeBag)
-        
-//        RxBus.shared.asObservable(event: ProfileTapEvent.self)
-//            .subscribe { [weak self] event in
-//                guard let event = event.element else { return }
-//                let vc = ProfileViewController.instantiate()
-//                vc.user = event.user
-//                LipsAnalytics.logEvent(.articleToUserShow, parameters: ["userId": event.user.id, "articleId": self?.articleId ?? 0])
-//                self?.navigationController?.pushViewController(vc, animated: true)
-//            }.disposed(by: disposeBag)
-        
-//        RxBus.shared.asObservable(event: HashTagTapEvent.self)
-//            .subscribe { [weak self] event in
-//                guard let event = event.element else { return }
-//                let vc = PostsViewController.instantiate(type: .byTagName(text: event.hashTag), params: ["text": event.hashTag])
-//                LipsAnalytics.logEvent(.articleToHashTag, parameters: ["tagName": event.hashTag, "articleId": self?.articleId ?? 0])
-//                self?.navigationController?.pushViewController(vc, animated: true)
-//            }.disposed(by: disposeBag)
-        
-//        RxBus.shared.asObservable(event: UrlLinkTapEvent.self)
-//            .subscribe { [weak self] event in
-//                guard let event = event.element else { return }
-//                let vc = SiteWebViewController(url: event.url, title: nil)
-//                LipsAnalytics.logEvent(.articleToWebView, parameters: ["url": "\(event.url)", "articleId": self?.articleId ?? 0])
-//                self?.present(MyNavigationController(rootViewController: vc), animated: true)
-//            }.disposed(by: disposeBag)
-    }
-    
-    private func removeListener() {
-//        RxBus.shared.remove(event: HashTagTapEvent.self)
-//        RxBus.shared.remove(event: UrlLinkTapEvent.self)
-//        RxBus.shared.remove(event: ProductTapEvent.self)
-//        RxBus.shared.remove(event: PostTapEvent.self)
-//        RxBus.shared.remove(event: ProfileTapEvent.self)
-    }
-    
-    
-    private func fetchArticle() {
-        state = .loading
-        Service.articles.show(objectId: articleId, completion: { [weak self] result in
-            switch result {
-            case .success(let article):
-                self?.state = .success
-                self?.article = article
-                DispatchQueue.main.async {
-                    self?.title = article.title
-                    self?.tableView.reloadData()
-                }
-            case .error:
-                self?.state = .failure
-            }
-        })
-    }
 }
 
-extension ViewControllerShowArticle: UITableViewDataSource, UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return article?.articleItems.count ?? 0
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard section == 0 else { return UIView()}
-        let headerCell: TableViewCellShowArticleTopItems = tableView.dequeueReusableCell(forIndexPath: IndexPath())
-        guard article != nil else { return UIView()}
-        headerCell.setTopItems(article: article!)
-        headerCell.backgroundColor = UIColor.white
-        return headerCell
-    }
-    
-    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        guard section == 0 else { return UIView()}
-        let footerCell = UIView()
-        footerCell.backgroundColor = UIColor.white
-        return footerCell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let item: ArticleItem = article!.articleItems[indexPath.row]
-        let isLast = indexPath.row == article!.articleItems.count - 1
-        
-        if isLast {
+//extension ViewControllerShowArticle: UITableViewDataSource, UITableViewDelegate {
+
+//
+//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        guard section == 0 else { return UIView()}
+//        let headerCell: TableViewCellShowArticleTopItems = tableView.dequeueReusableCell(forIndexPath: IndexPath())
+//        guard article != nil else { return UIView()}
+//        headerCell.setTopItems(article: article!)
+//        headerCell.backgroundColor = UIColor.white
+//        return headerCell
+//    }
+
+//    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+//        guard section == 0 else { return UIView()}
+//        let footerCell = UIView()
+//        footerCell.backgroundColor = UIColor.white
+//        return footerCell
+//    }
+
+//    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+//        return 1
+//    }
+
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+//        let item: ArticleItem = article!.articleItems[indexPath.row]
+//        let isLast = indexPath.row == article!.articleItems.count - 1
+//
+//        if isLast {
 //            LipsAnalytics.logEvent(.articleFinishedReading, parameters: ["id": articleId])
-        }
-        
-        switch item.type {
-        case .image:
-            let cell: TableViewCellShowArticleImage = tableView.dequeueReusableCell(forIndexPath: indexPath)
-            cell.setImage(item: item)
-            return cell
-            
-        case .text:
-            let cell: TableViewCellShowArticleText = tableView.dequeueReusableCell(forIndexPath: indexPath)
-            cell.setText(item: item)
-            return cell
-            
-        case .subTitle:
-            let cell: TableViewCellShowArticleTitle = tableView.dequeueReusableCell(forIndexPath: indexPath)
-            cell.setSubTitle(item: item)
-            return cell
-            
-        case .quotation:
-            let cell: TableViewCellShowArticleQuotation = tableView.dequeueReusableCell(forIndexPath: indexPath)
-            cell.setQuotation(item: item)
-            return cell
-            
-        case .linkImage:
-            let cell: TableViewCellShowArticleLinkImage = tableView.dequeueReusableCell(forIndexPath: indexPath)
-            cell.setup(item: item)
-            return cell
-            
-        case .subSubTitle:
-            let cell: TableViewCellShowArticleSubtitle = tableView.dequeueReusableCell(forIndexPath: indexPath)
-            cell.setupTitle(item: item)
-            return cell
-            
-        default:
-            let cell: TableViewCellShowArticleText = tableView.dequeueReusableCell(forIndexPath: indexPath)
-            return cell
-        }
-    }
-}
+//        }
+
+//}

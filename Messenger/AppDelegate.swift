@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         
         //  Realm objects initialization
-        let config = Realm.Configuration(schemaVersion: 5, migrationBlock: { (migration, oldSchemaVersion) in
+        let config = Realm.Configuration(schemaVersion: 6, migrationBlock: { (migration, oldSchemaVersion) in
         })
         Realm.Configuration.defaultConfiguration = config
         _ = try! Realm()

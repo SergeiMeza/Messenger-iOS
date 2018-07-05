@@ -1,9 +1,8 @@
-import Foundation
 import UIKit
 import RxCocoa
 import RxSwift
 
-class TableViewCellShowArticleLinkImage: UITableViewCell, Reusable, NibLoadable {
+class CollectionViewCellShowArticleLinkImage: UICollectionViewCell, Reusable, NibLoadable {
     
     @IBOutlet weak var linkImageView: UIImageView!
     

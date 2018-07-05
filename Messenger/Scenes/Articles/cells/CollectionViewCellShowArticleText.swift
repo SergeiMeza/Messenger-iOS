@@ -1,7 +1,6 @@
-import AlamofireImage
 import UIKit
 
-class TableViewCellShowArticleText: UITableViewCell, Reusable, NibLoadable {
+class CollectionViewCellShowArticleText: UICollectionViewCell, Reusable, NibLoadable {
     
     @IBOutlet weak var articleTextLabel: LinkableTextField!
     

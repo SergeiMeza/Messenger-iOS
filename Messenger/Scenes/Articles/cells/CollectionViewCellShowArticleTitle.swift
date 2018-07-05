@@ -1,7 +1,6 @@
-import AlamofireImage
 import UIKit
 
-class TableViewCellShowArticleTitle: UITableViewCell, Reusable, NibLoadable {
+class CollectionViewCellShowArticleTitle: UICollectionViewCell, Reusable, NibLoadable {
     @IBOutlet weak var subTitleLabel: UILabel!
     @IBOutlet weak var viewUnderLine: UIView!
     

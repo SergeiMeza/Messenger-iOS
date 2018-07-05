@@ -1,11 +1,3 @@
-//
-//  DataSourceChats.swift
-//  Messenger
-//
-//  Created by Sergei Meza on 2018/06/25.
-//  Copyright © 2018 Sergei Meza. All rights reserved.
-//
-
 import IGListKit
 
 class DataSourceChats: NSObject, ListAdapterDataSource {

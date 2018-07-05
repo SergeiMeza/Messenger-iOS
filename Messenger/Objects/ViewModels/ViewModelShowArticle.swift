@@ -4,19 +4,24 @@ import RxCocoa
 import RxSwift
 import Firebase
 
-class ViewModelUsers: RefreshableModel {
+class ViewModelShowArticle: RefreshableModel {
     private let state = BehaviorRelay<LoadingState>(value: .loading)
     private let refreshing = BehaviorRelay<Bool>(value: false)
     private let items = BehaviorRelay<[ListDiffable]>(value: [])
-    private var lastValue: Any?
     private var busy = false
-    private var users = [RealmUser]()
     private var isCompleted = false
+    
+    private var articleId: String
+    private var article: Article?
+    private var articleItems = [ListDiffable]()
+    
+    init (articleId: String) {
+        self.articleId = articleId
+    }
     
     var currentItems: Driver<[ListDiffable]> {
         return items.asDriver()
     }
-    
     var loadingState: Driver<LoadingState> {
         return state.asDriver()
     }
@@ -31,16 +36,14 @@ class ViewModelUsers: RefreshableModel {
     }
     
     func reconnect() {
-        lastValue = nil
-        users.removeAll()
+        articleItems.removeAll()
         state.accept(.loading)
         fetch()
     }
     
     func refresh() {
-        lastValue = nil
         isCompleted = false
-        users.removeAll()
+        articleItems.removeAll()
         refreshing.accept(true)
         fetch()
     }
@@ -51,21 +54,22 @@ class ViewModelUsers: RefreshableModel {
     }
     
     private func setItems() {
-        let userArray = UserArray(users: users)
-        let diffalable = ([userArray] as [ListDiffable]) + ([isCompleted] as[ListDiffable])
-        items.accept(diffalable)
+        guard let article = article else {
+            state.accept(.failure)
+            return
+        }
+        articleItems.append(contentsOf: article.articleItems)
+        items.accept(articleItems)
     }
     
     private func fetch() {
         busy = true
         
-        Service.users.getUsers(paginate: true, lastValue: lastValue) { [weak self] result in
+        Service.articles.show(objectId: articleId, completion: { [weak self] result in
             switch result {
-            case .success( let users, let lastValue):
-                if users.isEmpty { self?.isCompleted = true }
+            case .success(let article):
                 self?.state.accept(.success)
-                self?.users.append(contentsOf: users)
-                self?.lastValue = lastValue
+                self?.article = article
                 self?.setItems()
                 self?.refreshing.accept(false)
                 self?.busy = false
@@ -74,6 +78,6 @@ class ViewModelUsers: RefreshableModel {
                 self?.refreshing.accept(false)
                 self?.busy = false
             }
-        }
+        })
     }
 }

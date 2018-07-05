@@ -3,18 +3,18 @@ import IGListKit
 import ObjectMapper
 import RealmSwift
 
-@objcMembers class Article: Object, Mappable, ListDiffable {
-    dynamic var id: Int = 0
-    dynamic var objectId = ""
-    dynamic var title: String = ""
-    dynamic var abstract: String = ""
-    dynamic var updatedAt: String = ""
-    dynamic var viewCount: Int = 0
-    dynamic var thumbUrl: String = ""
-    dynamic var authorName: String = ""
-    dynamic var authorImage: String = ""
-    dynamic var timestamp = 0.0
-    dynamic var reverseTimestamp = 0.0
+class Article: NSObject, Mappable, ListDiffable {
+    var id: Int = 0
+    var objectId = ""
+    var title: String = ""
+    var abstract: String = ""
+    var updatedAt: String = ""
+    var viewCount: Int = 0
+    var thumbUrl: String = ""
+    var authorName: String = ""
+    var authorImage: String = ""
+    var timestamp = 0.0
+    var reverseTimestamp = 0.0
     
     var articleItems: [ArticleItem] = []
     
@@ -23,7 +23,6 @@ import RealmSwift
     }
     
     func mapping(map: Map) {
-//        print(log, map.JSON)
         self.id <- map["id"]
         self.objectId <- map["object_id"]
         self.title <- map["title"]
@@ -36,10 +35,6 @@ import RealmSwift
         self.articleItems <- map["content"]
         self.timestamp <- map["timestamp"]
         self.reverseTimestamp <- map["reverse_timestamp"]
-    }
-    
-    override static func primaryKey() -> String? {
-        return "objectId"
     }
     
     func diffIdentifier() -> NSObjectProtocol {

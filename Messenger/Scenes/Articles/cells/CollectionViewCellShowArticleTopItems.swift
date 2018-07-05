@@ -1,8 +1,8 @@
-import AlamofireImage
 import UIKit
 import BonMot
+import AlamofireImage
 
-class TableViewCellShowArticleTopItems: UITableViewCell, Reusable, NibLoadable {
+class CollectionViewCellShowArticleTopItems: UICollectionViewCell, Reusable, NibLoadable {
     
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var thumbImageView: UIImageView!

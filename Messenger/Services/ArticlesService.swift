@@ -48,7 +48,6 @@ struct ArticlesService {
                 completion?(Result.error(NetworkError(statusCode: 500)))
                 return
             }
-            print(log, value)
             completion?(Result.success(article))
         }
     }

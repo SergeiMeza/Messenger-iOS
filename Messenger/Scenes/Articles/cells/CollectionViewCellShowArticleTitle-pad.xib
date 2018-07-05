@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="iPi-dq-Kkb" customClass="CollectionViewCellShowArticleTitle" customModule="Messenger" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="1038" height="297"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="1038" height="297"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="shX-I6-ePj">
+                        <rect key="frame" x="16" y="5" width="1006" height="282"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEq-KU-X6f">
+                                <rect key="frame" x="0.0" y="0.0" width="1006" height="271"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4R3-iL-7yA" userLabel="underLine">
+                                <rect key="frame" x="0.0" y="281" width="1006" height="1"/>
+                                <color key="backgroundColor" red="1" green="0.26274509800000001" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="1" green="0.26274509800000001" blue="0.3803921569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="gZV-Lj-is8"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                    </stackView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="NVA-V5-N1i" firstAttribute="trailing" secondItem="shX-I6-ePj" secondAttribute="trailing" constant="16" id="45O-lx-67E"/>
+                <constraint firstItem="shX-I6-ePj" firstAttribute="leading" secondItem="NVA-V5-N1i" secondAttribute="leading" constant="16" id="EKC-kz-YNV"/>
+                <constraint firstItem="shX-I6-ePj" firstAttribute="top" secondItem="NVA-V5-N1i" secondAttribute="top" constant="5" id="m9B-FN-1oY"/>
+                <constraint firstItem="NVA-V5-N1i" firstAttribute="bottom" secondItem="shX-I6-ePj" secondAttribute="bottom" constant="10" id="nlA-Ki-cuD"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="NVA-V5-N1i"/>
+            <size key="customSize" width="1038" height="297"/>
+            <connections>
+                <outlet property="subTitleLabel" destination="gEq-KU-X6f" id="5Vo-yh-Mfp"/>
+                <outlet property="viewUnderLine" destination="4R3-iL-7yA" id="Nwc-jB-NTu"/>
+            </connections>
+            <point key="canvasLocation" x="-6" y="129.5"/>
+        </collectionViewCell>
+    </objects>
+</document>

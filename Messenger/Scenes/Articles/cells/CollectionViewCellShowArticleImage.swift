@@ -2,7 +2,7 @@ import AlamofireImage
 import UIKit
 import SnapKit
 
-class TableViewCellShowArticleImage: UITableViewCell, Reusable, NibLoadable {
+class CollectionViewCellShowArticleImage: UICollectionViewCell, Reusable, NibLoadable {
     
     @IBOutlet weak var articleImageView: UIImageView!
     
