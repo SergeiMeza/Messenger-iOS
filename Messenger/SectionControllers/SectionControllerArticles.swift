@@ -40,10 +40,13 @@ class SectionControllerArticles: ListSectionController {
     }
     
     override func didSelectItem(at index: Int) {
-        guard let articles = articles else { return }
-        let vc = ViewControllerShowArticle.instantiate()
-        vc.articleId = articles[index].objectId
-        vc.hidesBottomBarWhenPushed = true
+//        guard let articles = articles else { return }
+        let url = URL(string: "https://www.appcrunch.net/language.html")!
+        let vc = SiteWebViewController.init(url: url, title: "Hello World")
         viewController?.navigationController?.pushViewController(vc, animated: true)
+//        let vc = ViewControllerShowArticle.instantiate()
+//        vc.articleId = articles[index].objectId
+//        vc.hidesBottomBarWhenPushed = true
+//        viewController?.navigationController?.pushViewController(vc, animated: true)
     }
 }
