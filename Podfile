@@ -49,4 +49,6 @@ target 'Messenger' do
     
     pod 'TTTAttributedLabel'
 
+    pod 'Hero'
+
 end
