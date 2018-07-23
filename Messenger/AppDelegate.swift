@@ -23,114 +23,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         
-        //  Realm objects initialization
-        let config = Realm.Configuration(schemaVersion: 6, migrationBlock: { (migration, oldSchemaVersion) in
-        })
-        Realm.Configuration.defaultConfiguration = config
-        _ = try! Realm()
-        
-        #if DEBUG
-        print(log, NSHomeDirectory())
-        
-//        generateRandomUsersWithFirebaseDatabase()
-//        generateRandomUsersWithFirebaseFirestore()
-//        getUsersFromFirebaseDatabaseAndSaveInRealm()
-//        getUsersFromFirebaseFirestoreAndSaveInRealm()
-        
-        #else
-        print(log, "RELEASE")
-        #endif
-        
         window = UIWindow()
         window?.makeKeyAndVisible()
         
-        let homeViewController = NavigationController.init(rootViewController: ViewControllerHome.instantiate())
-        homeViewController.view.backgroundColor = .backgroundColor
-        homeViewController.tabBarItem.image = UIImage.init(named: "home")
-        homeViewController.tabBarItem.imageInsets = .init(top: 4, left: 0, bottom: -4, right: 0)
+        let theURL = Bundle.main.url(forResource:"cafe", withExtension: "mov")
         
-        let chatsRootViewController = SplitViewControllerChat.instantiate()
-        chatsRootViewController.tabBarItem.image = UIImage.init(named: "home")
-        chatsRootViewController.tabBarItem.imageInsets = .init(top: 4, left: 0, bottom: -4, right: 0)
-        let chatsViewController = NavigationController.init(rootViewController: ViewControllerChats.instantiate())
-        let vc = UIViewController()
-        vc.view.backgroundColor = .backgroundColor
-        chatsRootViewController.viewControllers = [chatsViewController, vc]
+        let vc = HeroViewController(videoUrl: theURL)
+        let navController = TransparentNavigationController.init(rootViewController: vc)
         
-        let tabBarControllerMain = TabBarControllerMain()
-        tabBarControllerMain.viewControllers = [homeViewController, chatsRootViewController]
-        tabBarControllerMain.tabTitles = ["Home", "Chats"]
-        
-        window?.rootViewController = tabBarControllerMain
+        window?.rootViewController = navController
         
         return true
     }
-    
-    func applicationWillResignActive(_ application: UIApplication) {
-        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-        // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
-    }
-
-    func applicationDidEnterBackground(_ application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-    }
-
-    func applicationWillEnterForeground(_ application: UIApplication) {
-        // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
-    }
-
-    func applicationDidBecomeActive(_ application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-    }
-
-    func applicationWillTerminate(_ application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    }
-
-    /*
-     func generateRandomUsersWithFirebaseFirestore() {
-     let database = Firestore.firestore()
-     let randomGenerator = GKRandomDistribution.init(lowestValue: 0, highestValue: 4)
-     for index in 1...100 {
-     let user = database.document(DeviceConst.firebaseDatabaseRootURL.appendingPathComponent("USERS/active_users/\(index)").absoluteString)
-     user.setData([
-     "name":["David", "Rose", "Mary", "John", "Paul"][randomGenerator.nextInt()],
-     "age": [13, 10, 18, 22, 24][randomGenerator.nextInt()],
-     "gender": [0 , 1, 2, 3][randomGenerator.nextInt() % 4],
-     "favorite_color": ["red", "blue", "orange", "pink", "yellow"][min(randomGenerator.nextInt(), 3)],
-     "is_wizard": [true, false][randomGenerator.nextInt() % 2]
-     ], options: .merge()) { (error) in
-     if let error = error {
-     print("Error adding document: \(error)")
-     } else {
-     print("Document added with ID: \(user.documentID)")
-     }
-     }
-     }
-     }
-     */
-    
-    /**
-     func getUsersFromFirebaseFirestoreAndSaveInRealm() {
-     Service.users.getUsersFromFirestore(paginate: false) { result in
-     switch result {
-     case .error(let error):
-     print(error)
-     case .success(let users, _):
-     DispatchQueue.init(label: "background", qos: DispatchQoS.background).async {
-     autoreleasepool {
-     let realm = try! Realm()
-     try! realm.write {
-     users.forEach {
-     realm.add($0, update: true)
-     }
-     }
-     }
-     }
-     }
-     }
-     }
-     */
 }
 

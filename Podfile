@@ -50,5 +50,7 @@ target 'Messenger' do
     pod 'TTTAttributedLabel'
 
     pod 'Hero'
+    
+    pod 'Spring', :git => 'https://github.com/MengTo/Spring.git'
 
 end

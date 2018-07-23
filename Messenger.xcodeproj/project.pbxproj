@@ -50,7 +50,11 @@
 		E829456620E5A10100DECB80 /* DataSourceShowArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E829456520E5A10100DECB80 /* DataSourceShowArticle.swift */; };
 		E829456820E5A15800DECB80 /* SectionControllerArticleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E829456720E5A15800DECB80 /* SectionControllerArticleItem.swift */; };
 		E829456A20E5A83100DECB80 /* CollectionViewCellShowArticleLinkImage-pad.xib in Resources */ = {isa = PBXBuildFile; fileRef = E829456920E5A83100DECB80 /* CollectionViewCellShowArticleLinkImage-pad.xib */; };
-		E829DECD20EE12E000429352 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E829DECC20EE12E000429352 /* WebViewController.swift */; };
+		E829DECD20EE12E000429352 /* SiteWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E829DECC20EE12E000429352 /* SiteWebViewController.swift */; };
+		E837836520EE28F9000AB904 /* HeroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E837836420EE28F9000AB904 /* HeroViewController.swift */; };
+		E837836820EE29B3000AB904 /* TransparentNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E837836720EE29B3000AB904 /* TransparentNavigationController.swift */; };
+		E837836B20EE2CD6000AB904 /* VideoBackgroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E837836A20EE2CD6000AB904 /* VideoBackgroundViewController.swift */; };
+		E837836F20EE31E3000AB904 /* cafe.mov in Resources */ = {isa = PBXBuildFile; fileRef = E837836E20EE31E3000AB904 /* cafe.mov */; };
 		E854494720E365C90013D864 /* CollectionViewCellChat-pad.xib in Resources */ = {isa = PBXBuildFile; fileRef = E854494620E365C90013D864 /* CollectionViewCellChat-pad.xib */; };
 		E854494920E365FC0013D864 /* CollectionViewCellItem-pad.xib in Resources */ = {isa = PBXBuildFile; fileRef = E854494820E365FC0013D864 /* CollectionViewCellItem-pad.xib */; };
 		E868968120C4EF0700EB34EF /* RealmUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E868968020C4EF0700EB34EF /* RealmUser.swift */; };
@@ -243,7 +247,11 @@
 		E829456520E5A10100DECB80 /* DataSourceShowArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceShowArticle.swift; sourceTree = "<group>"; };
 		E829456720E5A15800DECB80 /* SectionControllerArticleItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionControllerArticleItem.swift; sourceTree = "<group>"; };
 		E829456920E5A83100DECB80 /* CollectionViewCellShowArticleLinkImage-pad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "CollectionViewCellShowArticleLinkImage-pad.xib"; sourceTree = "<group>"; };
-		E829DECC20EE12E000429352 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		E829DECC20EE12E000429352 /* SiteWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteWebViewController.swift; sourceTree = "<group>"; };
+		E837836420EE28F9000AB904 /* HeroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroViewController.swift; sourceTree = "<group>"; };
+		E837836720EE29B3000AB904 /* TransparentNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransparentNavigationController.swift; sourceTree = "<group>"; };
+		E837836A20EE2CD6000AB904 /* VideoBackgroundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoBackgroundViewController.swift; sourceTree = "<group>"; };
+		E837836E20EE31E3000AB904 /* cafe.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = cafe.mov; sourceTree = "<group>"; };
 		E854494620E365C90013D864 /* CollectionViewCellChat-pad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "CollectionViewCellChat-pad.xib"; sourceTree = "<group>"; };
 		E854494820E365FC0013D864 /* CollectionViewCellItem-pad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = "CollectionViewCellItem-pad.xib"; sourceTree = "<group>"; };
 		E868968020C4EF0700EB34EF /* RealmUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmUser.swift; sourceTree = "<group>"; };
@@ -584,12 +592,37 @@
 			path = MLModels;
 			sourceTree = "<group>";
 		};
-		E829DECB20EE12CE00429352 /* WebView */ = {
+		E829DECB20EE12CE00429352 /* SiteWebViewController */ = {
 			isa = PBXGroup;
 			children = (
-				E829DECC20EE12E000429352 /* WebViewController.swift */,
+				E829DECC20EE12E000429352 /* SiteWebViewController.swift */,
 			);
-			path = WebView;
+			path = SiteWebViewController;
+			sourceTree = "<group>";
+		};
+		E837836220EE28C8000AB904 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				E837836420EE28F9000AB904 /* HeroViewController.swift */,
+			);
+			name = Onboarding;
+			path = "New Group1";
+			sourceTree = "<group>";
+		};
+		E837836620EE293E000AB904 /* TransparentNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				E837836720EE29B3000AB904 /* TransparentNavigationController.swift */,
+			);
+			path = TransparentNavigationController;
+			sourceTree = "<group>";
+		};
+		E837836920EE2CBE000AB904 /* VideoBackgroundViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E837836A20EE2CD6000AB904 /* VideoBackgroundViewController.swift */,
+			);
+			path = VideoBackgroundViewController;
 			sourceTree = "<group>";
 		};
 		E868967F20C4EEEC00EB34EF /* Realm */ = {
@@ -616,6 +649,9 @@
 		E868969520C5095A00EB34EF /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				E837836920EE2CBE000AB904 /* VideoBackgroundViewController */,
+				E837836620EE293E000AB904 /* TransparentNavigationController */,
+				E829DECB20EE12CE00429352 /* SiteWebViewController */,
 				E8B2DC4F20E409B500C3A32B /* Cells */,
 				E86896DD20C6F77900EB34EF /* Popover */,
 				E86896BF20C5892300EB34EF /* OriginalTab */,
@@ -730,6 +766,7 @@
 		E86AB0E620C3382200657311 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E837836E20EE31E3000AB904 /* cafe.mov */,
 				E86896B920C5228000EB34EF /* Colors.xcassets */,
 			);
 			path = Resources;
@@ -801,7 +838,7 @@
 		E86AB0ED20C3388400657311 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				E829DECB20EE12CE00429352 /* WebView */,
+				E837836220EE28C8000AB904 /* Onboarding */,
 				E8B9638E20E50D8F0069E50F /* Articles */,
 				E80A08B120E3FDAD00197BA7 /* Search */,
 				E81B891820E36D1B00C81A8B /* Home */,
@@ -1100,6 +1137,7 @@
 				E854494720E365C90013D864 /* CollectionViewCellChat-pad.xib in Resources */,
 				E80A08CA20E4064C00197BA7 /* CollectionViewCellHeaderItem-pad.xib in Resources */,
 				E801A59720E53A510068215F /* CollectionViewCellShowArticleTopItems.xib in Resources */,
+				E837836F20EE31E3000AB904 /* cafe.mov in Resources */,
 				E86896BA20C5228000EB34EF /* Colors.xcassets in Resources */,
 				E89FE77220E595E100FB4957 /* CollectionViewCellShowArticleTitle-pad.xib in Resources */,
 				E89FE77C20E596B000FB4957 /* CollectionViewCellShowArticleSubtitle-pad.xib in Resources */,
@@ -1191,6 +1229,7 @@
 				"${BUILT_PRODUCTS_DIR}/Reachability/Reachability.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Spring/Spring.framework",
 				"${BUILT_PRODUCTS_DIR}/TTTAttributedLabel/TTTAttributedLabel.framework",
 				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
 				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
@@ -1218,6 +1257,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spring.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TTTAttributedLabel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
@@ -1290,7 +1330,7 @@
 				E8F4653B20E14F7C00066173 /* Dir.swift in Sources */,
 				E801A58D20E538E80068215F /* UrlLinkTapEvent.swift in Sources */,
 				E86896B820C51FE300EB34EF /* UserDefaults+Extension.swift in Sources */,
-				E829DECD20EE12E000429352 /* WebViewController.swift in Sources */,
+				E829DECD20EE12E000429352 /* SiteWebViewController.swift in Sources */,
 				E829456420E59CB700DECB80 /* ViewModelShowArticle.swift in Sources */,
 				E8F4652A20E13B5500066173 /* SectionControllerChat.swift in Sources */,
 				E86AB10D20C3401F00657311 /* UILabel+Extension.swift in Sources */,
@@ -1303,6 +1343,7 @@
 				E868969B20C50A5100EB34EF /* SectionControllerUser.swift in Sources */,
 				E8F4652820E13ABF00066173 /* DataSourceChats.swift in Sources */,
 				E868968720C4F9BF00EB34EF /* Result.swift in Sources */,
+				E837836820EE29B3000AB904 /* TransparentNavigationController.swift in Sources */,
 				E801A58020E5362D0068215F /* CollectionViewCellShowArticleQuotation.swift in Sources */,
 				E86AB11420C3401F00657311 /* UIApplication+Extension.swift in Sources */,
 				E86AB11820C3401F00657311 /* ListCollectionView+Extension.swift in Sources */,
@@ -1339,6 +1380,7 @@
 				E868968D20C504E000EB34EF /* ViewControllerUsers.swift in Sources */,
 				E829456620E5A10100DECB80 /* DataSourceShowArticle.swift in Sources */,
 				E86896D520C6158D00EB34EF /* OriginalTabCell.swift in Sources */,
+				E837836520EE28F9000AB904 /* HeroViewController.swift in Sources */,
 				E86AB0F620C33C6F00657311 /* Date+Extension.swift in Sources */,
 				E86AB12C20C342F600657311 /* Searchable.swift in Sources */,
 				E801A57B20E5351D0068215F /* ArticleItem.swift in Sources */,
@@ -1360,6 +1402,7 @@
 				E86AB10E20C3401F00657311 /* UIView+Extension.swift in Sources */,
 				E8F4653620E14A0500066173 /* NavigationController.swift in Sources */,
 				E86AB10C20C3401F00657311 /* NSObject+propertyNames.swift in Sources */,
+				E837836B20EE2CD6000AB904 /* VideoBackgroundViewController.swift in Sources */,
 				E86896DA20C6F03E00EB34EF /* TabBarControllerMain.swift in Sources */,
 				E86896CD20C60A1500EB34EF /* OriginalTabPageViewControllerDelegate.swift in Sources */,
 				E86896A320C50C4E00EB34EF /* ViewModelUsers.swift in Sources */,

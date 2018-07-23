@@ -153,6 +153,7 @@ PODS:
   - SinchRTC (3.12.5)
   - SinchVerification (2.0.6)
   - SnapKit (4.0.0)
+  - Spring (1.0.5)
   - TTTAttributedLabel (2.0.0)
   - TwitterCore (3.1.0)
   - TwitterKit (3.3.0):
@@ -180,6 +181,7 @@ DEPENDENCIES:
   - SinchRTC
   - SinchVerification
   - SnapKit (~> 4.0.0)
+  - Spring (from `https://github.com/MengTo/Spring.git`)
   - TTTAttributedLabel
   - TwitterCore
   - TwitterKit
@@ -227,6 +229,15 @@ SPEC REPOS:
     - TwitterCore
     - TwitterKit
 
+EXTERNAL SOURCES:
+  Spring:
+    :git: https://github.com/MengTo/Spring.git
+
+CHECKOUT OPTIONS:
+  Spring:
+    :commit: c540239f3590bbaf4a35c3959c329dd5ed4e3eee
+    :git: https://github.com/MengTo/Spring.git
+
 SPEC CHECKSUMS:
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   BoringSSL: 60dd24df4af296bf41d78e5841dbb95d75f88c0d
@@ -265,10 +276,11 @@ SPEC CHECKSUMS:
   SinchRTC: c19ff673b25292d247a868b077582f2d11d9dfc6
   SinchVerification: 3bf62ff2d57eb10ecc27796ce9736c786644fe23
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  Spring: 3c7666eccefdeb87140008dc81043f89f8dbb787
   TTTAttributedLabel: 8cffe8e127e4e82ff3af1e5386d4cd0ad000b656
   TwitterCore: 644d59e75abccb26cf0a9050d2c4dea0e5412241
   TwitterKit: a2e60ddcedbf54091eac6f27685ca7a87681e1d7
 
-PODFILE CHECKSUM: 49ecf7f7ba8009fee82cd4c049d75f5c932a04d7
+PODFILE CHECKSUM: 60cc013f708b131d774273f683af0bf50692f867
 
 COCOAPODS: 1.5.2
