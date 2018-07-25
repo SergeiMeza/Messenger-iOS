@@ -6,7 +6,7 @@
 //  Copyright © 2018 Sergei Meza. All rights reserved.
 //
 
-import IGListKit
+import IGListKitSectionControllerUsers
 
 class SectionControllerLoading: ListSectionController {
     

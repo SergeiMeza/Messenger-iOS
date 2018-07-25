@@ -99,8 +99,6 @@
 		E86AB0AA20C32D0200657311 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E86AB0A920C32D0200657311 /* GoogleService-Info.plist */; };
 		E86AB0AD20C3323500657311 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86AB0AC20C3323500657311 /* AudioToolbox.framework */; };
 		E86AB0C720C3343500657311 /* RxMoya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86AB0AF20C3343300657311 /* RxMoya.framework */; };
-		E86AB0C820C3343500657311 /* DZNEmptyDataSet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86AB0B020C3343300657311 /* DZNEmptyDataSet.framework */; };
-		E86AB0C920C3343500657311 /* BonMot.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86AB0B120C3343400657311 /* BonMot.framework */; };
 		E86AB0CA20C3343500657311 /* MessageKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86AB0B220C3343400657311 /* MessageKit.framework */; };
 		E86AB0CC20C3343500657311 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86AB0B420C3343400657311 /* Alamofire.framework */; };
 		E86AB0CD20C3343500657311 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86AB0B520C3343400657311 /* AlamofireImage.framework */; };
@@ -404,8 +402,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E86AB0C720C3343500657311 /* RxMoya.framework in Frameworks */,
-				E86AB0C820C3343500657311 /* DZNEmptyDataSet.framework in Frameworks */,
-				E86AB0C920C3343500657311 /* BonMot.framework in Frameworks */,
 				E86AB0CA20C3343500657311 /* MessageKit.framework in Frameworks */,
 				E86AB0CC20C3343500657311 /* Alamofire.framework in Frameworks */,
 				E86AB0CD20C3343500657311 /* AlamofireImage.framework in Frameworks */,
@@ -1243,7 +1239,6 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/AlamofireImage.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/BonMot.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/DZNEmptyDataSet.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/FileKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/IGListKit.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/LazyTransitions.framework",
